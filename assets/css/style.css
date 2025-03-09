@@ -8,6 +8,7 @@ body {
     padding-top: 70px;
     background-color: #e8e9e2 !important; /* Light gray */
     color: #333; /* Dark gray text */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
 }
 
 /* Section Backgrounds */
