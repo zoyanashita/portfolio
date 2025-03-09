@@ -1,70 +1,57 @@
-/* Enabling Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
-/* prevent navbar from hiding stuff */
-body {
-    padding-top: 70px;
-    background-color: #e8e9e2 !important; /* Light gray */
-    color: #333; /* Dark gray text */
-    font-family:monospace !important;
-}
-/* Section Headers with Background */
-h2 {
-    background: linear-gradient(45deg, #8fcdb5, #ff5e62);    
-    color: white; /* Text color */
-    padding: 10px 20px; /* Space inside the background */
-    display: inline-block; /* Keeps background wrapped around text */
-    border-radius: 5px; /* Rounded corners */
-}
-/* Bordered paragraphs class*/
-p.bordered {
-    border: 2px solid #18795b;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-
 /* Section Backgrounds */
 #hero {
     background: linear-gradient(45deg, #8fcdb5, #ff5e62);
-    color: white;
+    border: 1px solid #18795b;
     text-align: center;
     padding: 50px 20px;
     border-radius: 15px; /* Makes edges rounded */
 
 }
-#artwork {
-    background: linear-gradient(45deg, #8fcdb5, #ff5e62);      
-    color: white;
+#artworks {
+    background-color: #e8e9e2;
+    border: 1px solid #18795b;
     margin: auto; /* Centers the section */
-    padding: 60px 20px; /* Adds spacing inside the section */
+    padding: 20px 20px; /* Adds spacing inside the section */
     border-radius: 15px; /* Makes edges rounded */
-
 }
 #projects {
-    background: linear-gradient(45deg, #8fcdb5, #ff5e62);  
-    color: white;
+    background-color: #e8e9e2;
+    border: 1px solid #18795b;
     margin: auto; /* Centers the section */
-    padding: 60px 20px; /* Adds spacing inside the section */
+    padding: 20px 20px; /* Adds spacing inside the section */
     border-radius: 15px; /* Makes edges rounded */
 }
 #character {
-    background: linear-gradient(45deg, #8fcdb5, #ff5e62);    
-    color: white;
+    background-color: #e8e9e2;
+    border: 1px solid #18795b;
     margin: auto; /* Centers the section */
-    padding: 60px 20px; /* Adds spacing inside the section */
+    padding: 20px 20px; /* Adds spacing inside the section */
+    border-radius: 15px; /* Makes edges rounded */
+}
+#misc {
+    background-color: #e8e9e2;
+    border: 1px solid #18795b;
+    margin: auto; /* Centers the section */
+    padding: 20px 20px; /* Adds spacing inside the section */
+    border-radius: 15px; /* Makes edges rounded */
+}
+#henna {
+    background-color: #e8e9e2;
+    border: 1px solid #18795b;
+    margin: auto; /* Centers the section */
+    padding: 20px 20px; /* Adds spacing inside the section */
     border-radius: 15px; /* Makes edges rounded */
 }
 #about {
     background: linear-gradient(45deg, #8fcdb5, #ff5e62);    
     color: white;
+    border: 1px solid #18795b;
     margin: auto; /* Centers the section */
     padding: 60px 20px; /* Adds spacing inside the section */
     border-radius: 15px; /* Makes edges rounded */
 }
 
-/* Artwork Grid */
+/* CUSTOMIZING CLASSES */
 .portfolio-item {
     position: relative;
     overflow: hidden;
@@ -109,4 +96,86 @@ p.bordered {
     transform: scale(1.05);
     opacity: 0.9;
     box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.8);
+}
+
+/* Section Headers with Background */
+h1{
+    color: #333; /* Dark gray text */
+    text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.8); /* Cyan glow */
+}
+h2 {
+    background: linear-gradient(45deg, #8fcdb5, #ff5e62);   
+    color: white; /* Text color */
+    padding: 10px 20px; /* Space inside the background */
+    display: inline-block; /* Keeps background wrapped around text */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.8); /* Cyan glow */
+}
+
+/* Bordered paragraphs class*/
+p.bordered {
+    border: 2px solid #18795b;
+    background-color: #e8e9e2;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+p.bordered2 {
+    border: 2px solid #18795b;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+.btn {
+    background: linear-gradient(45deg, #8fcdb5, #ff5e62) !important;  
+    color: white;
+    width: 90%; /* Ensures responsiveness */
+    padding: 10px;
+    border: 2px solid #18795b !important;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+.btn-primary { 
+    color: white;
+    width: 90%; /* Ensures responsiveness */
+    padding: 10px;
+    border: 2px solid #18795b !important;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+
+/* Enabling Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/* prevent navbar from hiding stuff */
+body {
+    padding-top: 70px;
+    background-color: #e8e9e2 !important; /* Light gray */
+    color: #333; /* Dark gray text */
+    font-family:monospace !important;
+    margin: auto; 
+
+    position: relative;
+    background-image: url("../images/grid-pattern.jpg") !important;
+    background-repeat: repeat;
+    background-size: 800px 800px;
+    background-attachment: fixed; /* Prevents scrolling issues */
+}
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(232, 233, 226, 0.9); /* White overlay with 50% opacity */
+    z-index: -1;
+}
+
+/* Smooth Transition for Dropdown */
+.collapse {
+    transition: height 0.2s ease-in-out;
 }
