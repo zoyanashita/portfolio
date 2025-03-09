@@ -11,35 +11,56 @@ body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
 }
 
+
+
 /* Section Backgrounds */
+/* Hero Section Gradient */
 #hero {
-    background-color: #88ceb0 !important;; /* Blue */
-    color: black;
+    background: linear-gradient(45deg, #8fcdb5, #ff5e62);
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
 }
+
+/* Section Headers with Background */
+h2 {
+    background: linear-gradient(45deg, #8fcdb5, #ff5e62);    
+    color: white; /* Text color */
+    padding: 10px 20px; /* Space inside the background */
+    display: inline-block; /* Keeps background wrapped around text */
+    border-radius: 5px; /* Rounded corners */
+}
+
+p {
+    border: 2px solid #18795b;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 
 #artwork {
     background-color: #8fcdb5 !important;; /* Light gray */
-    color: black;
+    color: white;
 }
 
 #projects {
     background-color: #8fcdb5 !important;; /* Yellow */
-    color: black;
+    color: white;
 }
 
 #character {
     background-color: #8fcdb5 !important;; /* Yellow */
-    color: black;
+    color: white;
 }
 
 #misc {
     background-color: #8fcdb5 !important;; /* Yellow */
-    color: black;
+    color: white;
 }
 
 #about {
     background-color: #8fcdb5 !important;; /* Light gray */
-    color: black;
+    color: white;
 }
 
 /* Footer */
@@ -66,6 +87,20 @@ footer {
     display: block;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+/* Make All Character Images the Same Height */
+.character-item img {
+    width: 100%; /* Ensures responsiveness */
+    height: 300px; /* Adjust based on your design */
+    object-fit: cover; /* Prevents image distortion */
+}
+
+/* Hover Effect */
+.character-item:hover img {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
 
 /* Hover Effect */
 .portfolio-item:hover img {
