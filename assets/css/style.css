@@ -8,7 +8,6 @@ body {
     background-color: #e8e9e2 !important; /* Light gray */
     color: #333; /* Dark gray text */
     font-family:monospace !important;
-    font-family:Courier, monospace !important;
 }
 /* Section Headers with Background */
 h2 {
