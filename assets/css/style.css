@@ -2,7 +2,6 @@
 html {
     scroll-behavior: smooth;
 }
-
 /* prevent navbar from hiding stuff */
 body {
     padding-top: 70px;
@@ -10,18 +9,6 @@ body {
     color: #333; /* Dark gray text */
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
 }
-
-
-
-/* Section Backgrounds */
-/* Hero Section Gradient */
-#hero {
-    background: linear-gradient(45deg, #8fcdb5, #ff5e62);
-    color: white;
-    text-align: center;
-    padding: 150px 20px;
-}
-
 /* Section Headers with Background */
 h2 {
     background: linear-gradient(45deg, #8fcdb5, #ff5e62);    
@@ -30,48 +17,50 @@ h2 {
     display: inline-block; /* Keeps background wrapped around text */
     border-radius: 5px; /* Rounded corners */
 }
-
-p {
+/* Bordered paragraphs class*/
+p.bordered {
     border: 2px solid #18795b;
     padding: 10px;
     border-radius: 5px;
 }
 
-
-#artwork {
-    background-color: #8fcdb5 !important;; /* Light gray */
+/* Section Backgrounds */
+#hero {
+    background: linear-gradient(45deg, #8fcdb5, #ff5e62);
     color: white;
-}
-
-#projects {
-    background-color: #8fcdb5 !important;; /* Yellow */
-    color: white;
-}
-
-#character {
-    background-color: #8fcdb5 !important;; /* Yellow */
-    color: white;
-}
-
-#misc {
-    background-color: #8fcdb5 !important;; /* Yellow */
-    color: white;
-}
-
-#about {
-    background-color: #8fcdb5 !important;; /* Light gray */
-    color: white;
-}
-
-/* Footer */
-footer {
-    background-color: #18795b !important;
-    color: black;
-}
-
-/* Portfolio Section */
-#artwork {
     text-align: center;
+    padding: 150px 20px;
+    border-radius: 15px; /* Makes edges rounded */
+
+}
+#artwork {
+    background: linear-gradient(45deg, #8fcdb5, #ff5e62);      
+    color: white;
+    margin: auto; /* Centers the section */
+    padding: 60px 20px; /* Adds spacing inside the section */
+    border-radius: 15px; /* Makes edges rounded */
+
+}
+#projects {
+    background: linear-gradient(45deg, #8fcdb5, #ff5e62);  
+    color: white;
+    margin: auto; /* Centers the section */
+    padding: 60px 20px; /* Adds spacing inside the section */
+    border-radius: 15px; /* Makes edges rounded */
+}
+#character {
+    background: linear-gradient(45deg, #8fcdb5, #ff5e62);    
+    color: white;
+    margin: auto; /* Centers the section */
+    padding: 60px 20px; /* Adds spacing inside the section */
+    border-radius: 15px; /* Makes edges rounded */
+}
+#about {
+    background: linear-gradient(45deg, #8fcdb5, #ff5e62);    
+    color: white;
+    margin: auto; /* Centers the section */
+    padding: 60px 20px; /* Adds spacing inside the section */
+    border-radius: 15px; /* Makes edges rounded */
 }
 
 /* Artwork Grid */
@@ -79,44 +68,44 @@ footer {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.portfolio-item img {
     width: 100%;
     display: block;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: box-shadow 0.3s ease-in-out;
 }
-
-/* Make All Character Images the Same Height */
-.character-item img {
-    width: 100%; /* Ensures responsiveness */
-    height: 300px; /* Adjust based on your design */
-    object-fit: cover; /* Prevents image distortion */
-}
-
-/* Hover Effect */
-.character-item:hover img {
-    transform: scale(1.05);
-    opacity: 0.8;
-}
-
-
 /* Hover Effect */
 .portfolio-item:hover img {
     transform: scale(1.05);
     opacity: 0.8;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
-
+/* Make All Character Images the Same Height */
+.character-item img {
+    border-radius: 10px;
+    width: 100%; /* Ensures responsiveness */
+    height: 300px; /* Adjust based on your design */
+    object-fit: cover; /* Prevents image distortion */
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: box-shadow 0.3s ease-in-out;
+}
+/* Hover Effect */
+.character-item:hover img {
+    transform: scale(1.05);
+    opacity: 0.8;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
 /* Portfolio Video Styling */
 .portfolio-item video {
+    border-radius: 10px;
     width: 100%;
     transition: transform 0.3s ease, opacity 0.3s ease;
     cursor: pointer;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: box-shadow 0.3s ease-in-out;
 }
-
 /* Play video when hovered */
 .portfolio-item video:hover {
     transform: scale(1.05);
     opacity: 0.9;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
