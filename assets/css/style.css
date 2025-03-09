@@ -7,7 +7,8 @@ body {
     padding-top: 70px;
     background-color: #e8e9e2 !important; /* Light gray */
     color: #333; /* Dark gray text */
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+    font-family:monospace !important;
+    font-family:Courier, monospace !important;
 }
 /* Section Headers with Background */
 h2 {
@@ -24,12 +25,13 @@ p.bordered {
     border-radius: 5px;
 }
 
+
 /* Section Backgrounds */
 #hero {
     background: linear-gradient(45deg, #8fcdb5, #ff5e62);
     color: white;
     text-align: center;
-    padding: 150px 20px;
+    padding: 50px 20px;
     border-radius: 15px; /* Makes edges rounded */
 
 }
@@ -77,7 +79,7 @@ p.bordered {
 .portfolio-item:hover img {
     transform: scale(1.05);
     opacity: 0.8;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.8);
 }
 /* Make All Character Images the Same Height */
 .character-item img {
@@ -92,7 +94,7 @@ p.bordered {
 .character-item:hover img {
     transform: scale(1.05);
     opacity: 0.8;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.8);
 }
 /* Portfolio Video Styling */
 .portfolio-item video {
@@ -107,5 +109,5 @@ p.bordered {
 .portfolio-item video:hover {
     transform: scale(1.05);
     opacity: 0.9;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.8);
 }
