@@ -176,15 +176,4 @@ body::before{
     z-index: -1;
 }
 
-/* Smoother Expansion & Collapse */
-.collapse {
-    display: block; /* Keeps the section visible while animating */
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-in-out;
-}
 
-/* Expand when Bootstrap adds "show" class */
-.collapse.show {
-    max-height: 1000px; /* Adjust for section size */
-}
