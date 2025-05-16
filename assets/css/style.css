@@ -1,6 +1,6 @@
 /* Section Backgrounds */
 #hero {
-    background: linear-gradient(45deg, #8fcdb5, #ff5e62);
+    background: linear-gradient(0deg, #8fcdb5, #ff5e62);
     border: 1px solid #18795b;
     text-align: center;
     padding: 50px 20px;
@@ -28,6 +28,13 @@
     padding: 20px 20px; /* Adds spacing inside the section */
     border-radius: 15px; /* Makes edges rounded */
 }
+#photography {
+    background-color: #e8e9e2;
+    border: 1px solid #18795b;
+    margin: auto; /* Centers the section */
+    padding: 20px 20px; /* Adds spacing inside the section */
+    border-radius: 15px; /* Makes edges rounded */
+}
 #misc {
     background-color: #e8e9e2;
     border: 1px solid #18795b;
@@ -43,8 +50,7 @@
     border-radius: 15px; /* Makes edges rounded */
 }
 #about {
-    background: linear-gradient(45deg, #8fcdb5, #ff5e62);    
-    color: white;
+    background: linear-gradient(180deg, #8fcdb5, #ff5e62);    
     border: 1px solid #18795b;
     margin: auto; /* Centers the section */
     padding: 60px 20px; /* Adds spacing inside the section */
@@ -104,7 +110,7 @@ h1{
     text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.8); /* Cyan glow */
 }
 h2 {
-    background: linear-gradient(45deg, #8fcdb5, #ff5e62);   
+    background: linear-gradient(90deg, #8fcdb5, #ff5e62);   
     color: white; /* Text color */
     padding: 10px 20px; /* Space inside the background */
     display: inline-block; /* Keeps background wrapped around text */
@@ -128,7 +134,7 @@ p.bordered2 {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
 }
 .btn {
-    background: linear-gradient(45deg, #8fcdb5, #ff5e62) !important;  
+    background: linear-gradient(0deg, #8fcdb5, #ff5e62) !important;  
     color: white;
     width: 90%; /* Ensures responsiveness */
     padding: 10px;
