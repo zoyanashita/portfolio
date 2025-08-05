@@ -283,6 +283,7 @@ body::before {
     line-height: normal;
 }
 #loader-button {
+    color: black;
     width: 139px;
     height: 54px;
     flex-shrink: 0;
