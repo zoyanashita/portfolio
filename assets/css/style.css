@@ -1,60 +1,91 @@
-/* Section Backgrounds */
+#app {
+  display: none;
+}
 #hero {
-    background: linear-gradient(0deg, #8fcdb5, #ff5e62);
+    background: #DD9493;
     border: 1px solid #18795b;
     text-align: center;
     padding: 50px 20px;
-    border-radius: 15px; /* Makes edges rounded */
+    border-radius: 15px;
+    /* Makes edges rounded */
 
 }
+
 #artworks {
     background-color: #e8e9e2;
     border: 1px solid #18795b;
-    margin: auto; /* Centers the section */
-    padding: 20px 20px; /* Adds spacing inside the section */
-    border-radius: 15px; /* Makes edges rounded */
+    margin: auto;
+    /* Centers the section */
+    padding: 20px 20px;
+    /* Adds spacing inside the section */
+    border-radius: 15px;
+    /* Makes edges rounded */
 }
+
 #projects {
     background-color: #e8e9e2;
     border: 1px solid #18795b;
-    margin: auto; /* Centers the section */
-    padding: 20px 20px; /* Adds spacing inside the section */
-    border-radius: 15px; /* Makes edges rounded */
+    margin: auto;
+    /* Centers the section */
+    padding: 20px 20px;
+    /* Adds spacing inside the section */
+    border-radius: 15px;
+    /* Makes edges rounded */
 }
+
 #character {
     background-color: #e8e9e2;
     border: 1px solid #18795b;
-    margin: auto; /* Centers the section */
-    padding: 20px 20px; /* Adds spacing inside the section */
-    border-radius: 15px; /* Makes edges rounded */
+    margin: auto;
+    /* Centers the section */
+    padding: 20px 20px;
+    /* Adds spacing inside the section */
+    border-radius: 15px;
+    /* Makes edges rounded */
 }
+
 #photography {
     background-color: #e8e9e2;
     border: 1px solid #18795b;
-    margin: auto; /* Centers the section */
-    padding: 20px 20px; /* Adds spacing inside the section */
-    border-radius: 15px; /* Makes edges rounded */
+    margin: auto;
+    /* Centers the section */
+    padding: 20px 20px;
+    /* Adds spacing inside the section */
+    border-radius: 15px;
+    /* Makes edges rounded */
 }
+
 #misc {
     background-color: #e8e9e2;
     border: 1px solid #18795b;
-    margin: auto; /* Centers the section */
-    padding: 20px 20px; /* Adds spacing inside the section */
-    border-radius: 15px; /* Makes edges rounded */
+    margin: auto;
+    /* Centers the section */
+    padding: 20px 20px;
+    /* Adds spacing inside the section */
+    border-radius: 15px;
+    /* Makes edges rounded */
 }
+
 #henna {
     background-color: #e8e9e2;
     border: 1px solid #18795b;
-    margin: auto; /* Centers the section */
-    padding: 20px 20px; /* Adds spacing inside the section */
-    border-radius: 15px; /* Makes edges rounded */
+    margin: auto;
+    /* Centers the section */
+    padding: 20px 20px;
+    /* Adds spacing inside the section */
+    border-radius: 15px;
+    /* Makes edges rounded */
 }
+
 #about {
-    background: linear-gradient(180deg, #8fcdb5, #ff5e62);    
+    background: #DD9493;
     border: 1px solid #18795b;
-    margin: auto; /* Centers the section */
-    padding: 60px 20px; /* Adds spacing inside the section */
-    border-radius: 15px; /* Makes edges rounded */
+    margin: auto;
+    /* Centers the section */
+    padding: 60px 20px;
+    /* Adds spacing inside the section */
+    border-radius: 15px;
+    /* Makes edges rounded */
 }
 
 /* CUSTOMIZING CLASSES */
@@ -64,39 +95,50 @@
     border-radius: 10px;
     width: 100%;
     display: block;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    /* Soft shadow */
     transition: box-shadow 0.3s ease-in-out;
 }
+
 /* Hover Effect */
 .portfolio-item:hover img {
     transform: scale(1.05);
     opacity: 0.8;
     box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.8);
 }
+
 /* Make All Character Images the Same Height */
 .character-item img {
     border-radius: 10px;
-    width: 100%; /* Ensures responsiveness */
-    height: 300px; /* Adjust based on your design */
-    object-fit: cover; /* Prevents image distortion */
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    width: 100%;
+    /* Ensures responsiveness */
+    height: 300px;
+    /* Adjust based on your design */
+    object-fit: cover;
+    /* Prevents image distortion */
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    /* Soft shadow */
     transition: box-shadow 0.3s ease-in-out;
 }
+
 /* Hover Effect */
 .character-item:hover img {
     transform: scale(1.05);
     opacity: 0.8;
     box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.8);
 }
+
 /* Portfolio Video Styling */
 .portfolio-item video {
     border-radius: 10px;
     width: 100%;
     transition: transform 0.3s ease, opacity 0.3s ease;
     cursor: pointer;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    /* Soft shadow */
     transition: box-shadow 0.3s ease-in-out;
 }
+
 /* Play video when hovered */
 .portfolio-item video:hover {
     transform: scale(1.05);
@@ -105,18 +147,24 @@
 }
 
 /* Section Headers with Background */
-h1{
-    color: #333; /* Dark gray text */
-    text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.8); /* Cyan glow */
+h1 {
+    color: #333;
+    /* Dark gray text */
+
 }
+
 h2 {
-    background: linear-gradient(90deg, #8fcdb5, #ff5e62);   
-    color: white; /* Text color */
-    padding: 10px 20px; /* Space inside the background */
-    display: inline-block; /* Keeps background wrapped around text */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
-    text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.8); /* Cyan glow */
+    background: #DD9493;
+    color: white;
+    /* Text color */
+    padding: 10px 20px;
+    /* Space inside the background */
+    display: inline-block;
+    /* Keeps background wrapped around text */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    /* Shadow effect */
 }
 
 /* Bordered paragraphs class*/
@@ -125,30 +173,39 @@ p.bordered {
     background-color: #e8e9e2;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    /* Shadow effect */
 }
+
 p.bordered2 {
     border: 2px solid #18795b;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    /* Shadow effect */
 }
+
 .btn {
-    background: linear-gradient(0deg, #8fcdb5, #ff5e62) !important;  
+    background: #DD9493;
     color: white;
-    width: 90%; /* Ensures responsiveness */
+    width: 90%;
+    /* Ensures responsiveness */
     padding: 10px;
     border: 2px solid #18795b !important;
     border-radius: 5px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    /* Shadow effect */
 }
-.btn-primary { 
+
+.btn-primary {
     color: white;
-    width: 90%; /* Ensures responsiveness */
+    width: 90%;
+    /* Ensures responsiveness */
     padding: 10px;
     border: 2px solid #18795b !important;
     border-radius: 5px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    /* Shadow effect */
 }
 
 
@@ -156,30 +213,127 @@ p.bordered2 {
 html {
     scroll-behavior: smooth;
 }
+
 /* prevent navbar from hiding stuff */
 body {
     padding-top: 70px;
-    background-color: #e8e9e2 !important; /* Light gray */
-    color: #333; /* Dark gray text */
-    font-family:monospace !important;
-    margin: auto; 
+    background-color: #e8e9e2 !important;
+    /* Light gray */
+    color: #333;
+    /* Dark gray text */
+    font-family: monospace !important;
+    margin: auto;
 
     position: relative;
-    /* https://pngtree.com/freepng/beautiful-cube-pattern-batik_3633077.html */
-    background-image: url("../images/grid-pattern.jpg") !important;
     background-repeat: repeat;
     background-size: 800px 800px;
-    background-attachment: fixed; /* Prevents scrolling issues */
+    background-attachment: fixed;
+    /* Prevents scrolling issues */
 }
-body::before{
+
+body::before {
     content: "";
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(232, 233, 226, 0.9); /* White overlay with 50% opacity */
+    background: rgba(232, 233, 226, 0.9);
+    /* White overlay with 50% opacity */
     z-index: -1;
 }
 
+/* Section Backgrounds */
+#loader {
+    background-color: #BD5352;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+    position:fixed;
+    overflow: hidden;
+    justify-content: center;
+}
 
+.loader-bar {
+  width: 300px;
+  height: 12px;
+  border: 2px solid #DD9493;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.bar-fill {
+  width: 0%;
+  height: 100%;
+  background-color: #DD9493;
+  transition: width 0.3s ease;    /* smooth growth */
+}
+
+#loader p {
+    color: #DD9493;
+    font-family: Laila;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#loader-button {
+    width: 139px;
+    height: 54px;
+    flex-shrink: 0;
+    border-radius: 27px;
+    background: #DD9493;
+    transition: background-color 0.3s ease;
+}
+#loader-button:hover {
+    box-shadow: 0 4px 4px 2px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s ease;
+}
+
+#loader img {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    border-radius: 310px;
+    border: 6px solid #DD9493;
+    justify-content: center;
+}
+#loader .marquee {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;  /* keep the text all on one line */
+  font-size: 44px;      /* match your existing sizing */
+  line-height: 1;       /* tighten up vertical space */
+  position: absolute;
+  width: 100%;
+}
+
+/* top and bottom placement */
+#loader .marquee-top {
+  top: 0;
+}
+
+#loader .marquee-bottom {
+  bottom: 0;
+}
+
+/* animate the text sliding from right→left */
+@keyframes slide-left {
+  0%   { transform: translateX(100%); }
+  0% { transform: translateX(-100%); }
+}
+
+/* apply the animation */
+#loader .marquee {
+  animation: slide-left 10s linear infinite;
+}
+
+/* if you want the bottom line to go in the opposite direction */
+#loader .marquee-bottom {
+  animation-direction: reverse;
+}

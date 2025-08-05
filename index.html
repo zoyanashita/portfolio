@@ -1,695 +1,743 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoya's Portfolio</title>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <!-- Bootstrap JavaScript (for responsive features) -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Laila -->
+    <link href="https://fonts.googleapis.com/css2?family=Laila:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">Zoya's Portfolio</a>
-    
-                <!-- Mobile Menu Button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#artworks">UMD Works</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#photography">Photography</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Graphics</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#character">Character Design</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#misc">Miscellaneous</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#henna">Henna/Mehendi</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    </ul>
-                </div>
-
-            </div>
-        </nav>
-    </header>
-
-    <section id="hero" class="container text-center my-5">
-        <h1>A Note From Me :D</h1>
-        <p class="bordered2">This website is currently my general archive for projects and artwork.<br>
-        However it also exists to experiment and learn UI/UX design features, along with teaching myself HTML, CSS, and Javascript.<br>
-        I aim for this to eventually be my professional and portfolio site.</p>
-    </section>
-    
-    <section id="artworks" class="container my-5">
-        <h2 class="text-center mb-4">UMD Coursework</h2>
-
-        <div class="row align-items">
-            <div class="col-md-9">
-                <p class="bordered">pieces & projects i've made as an IMD/art student at UMD</p>
-            </div>
-            <div class="col-md-3 text-end">
-                <button class="btn btn-primary btn-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#artworkGallery">
-                    ▼ 
-                </button>
-            </div>
+    <div id="loader">
+        <p class="marquee marquee-top">~ ZOYA’S ~ PORTFOLIO ~ ZOYA’S ~ PORTFOLIO ~ ZOYA’S ~ PORTFOLIO ~ ZOYA’S ~
+            PORTFOLIO ~ ZOYA’S ~ PORTFOLIO ~ ZOYA’S ~ PORTFOLIO</p>
+        <p>Welcome!</p>
+        <div class="loader-bar">
+            <div class="bar-fill"></div>
         </div>
+        <button id="loader-button">Enter</button>
+        <p class="marquee marquee-bottom">~ ZOYA’S ~ PORTFOLIO ~ ZOYA’S ~ PORTFOLIO ~ ZOYA’S ~ PORTFOLIO ~ ZOYA’S ~
+            PORTFOLIO ~ ZOYA’S ~ PORTFOLIO ~ ZOYA’S ~ PORTFOLIO</p>
+    </div>
+    <div id="app">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Zoya's Portfolio</a>
 
-        <div class="collapse mt-3" id="artworkGallery">
-            <div class="row g-4"> 
+                    <!-- Mobile Menu Button -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <!-- Self Portrait -->
-                <div class="col-md-6 col-sm-12">
-                    <div class="portfolio-item">
-                        <img src="assets/images/Self Portrait.jpeg" class="img-fluid rounded" alt="Artwork 1" data-bs-toggle="modal" data-bs-target="#art1Modal">
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#artworks">UMD Works</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#photography">Photography</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#projects">Graphics</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#character">Character Design</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#misc">Miscellaneous</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#henna">Henna/Mehendi</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        </ul>
                     </div>
-                </div>
-                <div class="modal fade" id="art1Modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <img src="assets/images/Self Portrait.jpeg" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Charcoal Pencil -->
-                <div class="col-md-6 col-sm-12">
-                    <div class="portfolio-item">
-                        <img src="assets/images/Charcoal.jpeg" class="img-fluid rounded" alt="Artwork 2" data-bs-toggle="modal" data-bs-target="#art2Modal">
-                    </div>
-                </div>
-                <div class="modal fade" id="art2Modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <img src="assets/images/Charcoal.jpeg" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Reduction -->
-                <div class="col-md-6 col-sm-12">
-                    <div class="portfolio-item">
-                        <img src="assets/images/ARTT110 Reduction.jpg" class="img-fluid rounded" alt="Artwork 4" data-bs-toggle="modal" data-bs-target="#art4Modal">
-                    </div>
-                </div>
-                <div class="modal fade" id="art4Modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <img src="assets/images/ARTT110 Reduction.jpg" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Acrylic -->
-                <div class="col-md-6 col-sm-12">
-                    <div class="portfolio-item">
-                        <img src="assets/images/ARTT 100 Acrylic.jpg" class="img-fluid rounded" alt="Artwork 5" data-bs-toggle="modal" data-bs-target="#art5Modal">
-                    </div>
-                </div>
-                <div class="modal fade" id="art5Modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <img src="assets/images/ARTT 100 Acrylic.jpg" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Fruit! -->
-                <div class="col-md-6 col-sm-12">
-                    <div class="portfolio-item">
-                        <img src="assets/images/Fruits.JPG" class="img-fluid rounded" alt="Artwork 3" data-bs-toggle="modal" data-bs-target="#art3Modal">
-                    </div>
                 </div>
-                <div class="modal fade" id="art3Modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <img src="assets/images/Fruits.JPG" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Surrealist -->
-                <div class="col-md-6 col-sm-12">
-                    <div class="portfolio-item">
-                        <img src="assets/images/Surrealist.jpeg" class="img-fluid rounded" alt="Artwork 6" data-bs-toggle="modal" data-bs-target="#art6Modal">
-                    </div>
-                </div>
-                <div class="modal fade" id="art6Modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <img src="assets/images/Surrealist.jpeg" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Final Project-->
-                <div class="col-md-6 col-sm-12">
-                    <div class="portfolio-item">
-                        <video class="img-fluid rounded" controls>
-                            <source src="assets/images/ARTT 110 Final copy.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
+            </nav>
+        </header>
 
-                <!-- Final Project: YouTube thumbnail link -->
-                <div class="col-md-4 col-sm-12">
-                <div class="portfolio-item">
-                    <a
-                    href="https://youtu.be/TxKyq2n_x-o"
-                    target="_blank"
-                    rel="noopener"
-                    >
-                    <img
-                        src="https://img.youtube.com/vi/TxKyq2n_x-o/hqdefault.jpg"
-                        alt="My Project Video"
-                        class="img-fluid rounded"
-                    >
-                    </a>
+        <section id="hero" class="container text-center my-5">
+            <h1>A Note From Me :D</h1>
+            <p class="bordered2">This website is currently my general archive for projects and artwork.<br>
+                However it also exists to experiment and learn UI/UX design features, along with teaching myself HTML,
+                CSS, and Javascript.<br>
+                I aim for this to eventually be my professional and portfolio site.</p>
+        </section>
+
+        <section id="artworks" class="container my-5">
+            <h2 class="text-center mb-4">UMD Coursework</h2>
+
+            <div class="row align-items">
+                <div class="col-md-9">
+                    <p class="bordered">pieces & projects i've made as an IMD/art student at UMD</p>
                 </div>
+                <div class="col-md-3 text-end">
+                    <button class="btn btn-primary btn-toggle" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#artworkGallery">
+                        ▼
+                    </button>
                 </div>
-
-
-
             </div>
-        </div>
-    </section>
-    
+
+            <div class="collapse mt-3" id="artworkGallery">
+                <div class="row g-4">
+
+                    <!-- Self Portrait -->
+                    <div class="col-md-6 col-sm-12">
+                        <div class="portfolio-item">
+                            <img src="assets/images/Self Portrait.jpeg" class="img-fluid rounded" alt="Artwork 1"
+                                data-bs-toggle="modal" data-bs-target="#art1Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art1Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/Self Portrait.jpeg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Charcoal Pencil -->
+                    <div class="col-md-6 col-sm-12">
+                        <div class="portfolio-item">
+                            <img src="assets/images/Charcoal.jpeg" class="img-fluid rounded" alt="Artwork 2"
+                                data-bs-toggle="modal" data-bs-target="#art2Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art2Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/Charcoal.jpeg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reduction -->
+                    <div class="col-md-6 col-sm-12">
+                        <div class="portfolio-item">
+                            <img src="assets/images/ARTT110 Reduction.jpg" class="img-fluid rounded" alt="Artwork 4"
+                                data-bs-toggle="modal" data-bs-target="#art4Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art4Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/ARTT110 Reduction.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Acrylic -->
+                    <div class="col-md-6 col-sm-12">
+                        <div class="portfolio-item">
+                            <img src="assets/images/ARTT 100 Acrylic.jpg" class="img-fluid rounded" alt="Artwork 5"
+                                data-bs-toggle="modal" data-bs-target="#art5Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art5Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/ARTT 100 Acrylic.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fruit! -->
+                    <div class="col-md-6 col-sm-12">
+                        <div class="portfolio-item">
+                            <img src="assets/images/Fruits.JPG" class="img-fluid rounded" alt="Artwork 3"
+                                data-bs-toggle="modal" data-bs-target="#art3Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art3Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/Fruits.JPG" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Surrealist -->
+                    <div class="col-md-6 col-sm-12">
+                        <div class="portfolio-item">
+                            <img src="assets/images/Surrealist.jpeg" class="img-fluid rounded" alt="Artwork 6"
+                                data-bs-toggle="modal" data-bs-target="#art6Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art6Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/Surrealist.jpeg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Final Project-->
+                    <div class="col-md-6 col-sm-12">
+                        <div class="portfolio-item">
+                            <video class="img-fluid rounded" controls>
+                                <source src="assets/images/ARTT 110 Final copy.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+
+                    <!-- Final Project: YouTube thumbnail link -->
+                    <div class="col-md-4 col-sm-12">
+                        <div class="portfolio-item">
+                            <a href="https://youtu.be/TxKyq2n_x-o" target="_blank" rel="noopener">
+                                <img src="https://img.youtube.com/vi/TxKyq2n_x-o/hqdefault.jpg" alt="My Project Video"
+                                    class="img-fluid rounded">
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+
         <section id="photography" class="container my-5">
-        <h2 class="text-center mb-4">Photography</h2>
+            <h2 class="text-center mb-4">Photography</h2>
 
-        <div class="row align-items-center">
-            <div class="col-md-9">
-                <p class="bordered">my photos, shot on iPhone</p>
-            </div>
-            <div class="col-md-3 text-end">
-                <button class="btn btn-primary btn-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#photoGallery">
-                    ▼ 
-                </button>
-            </div>
-        </div>
-
-        <div class="collapse mt-3" id="photoGallery">
-            <div class="row g-4">
-
-                <!-- 20BDAY -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                         <img src="assets/images/20BDAY.JPG" class="img-fluid rounded" alt="20bday" data-bs-toggle="modal" data-bs-target="#20bdayModal">
-                  </div>
-                 </div>
-                 <div class="modal fade" id="20bdayModal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                       <div class="modal-content">
-                            <div class="modal-body">
-                              <img src="assets/images/20BDAY.JPG" class="img-fluid">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-
-                 <!-- lanterns -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                         <img src="assets/images/lanterns.jpeg" class="img-fluid rounded" alt="lanterns" data-bs-toggle="modal" data-bs-target="#lanternModal">
-                  </div>
-                 </div>
-                 <div class="modal fade" id="lanternModal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                       <div class="modal-content">
-                            <div class="modal-body">
-                              <img src="assets/images/lanterns.jpeg" class="img-fluid">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-
-                  <!-- eid -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                         <img src="assets/images/Eid.JPG" class="img-fluid rounded" alt="eid" data-bs-toggle="modal" data-bs-target="#eidModal">
-                  </div>
-                 </div>
-                 <div class="modal fade" id="eidModal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                       <div class="modal-content">
-                            <div class="modal-body">
-                              <img src="assets/images/Eid.JPG" class="img-fluid">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-
-                <!-- azaeleas -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                         <img src="assets/images/Azaleas.JPG" class="img-fluid rounded" alt="azaeleas" data-bs-toggle="modal" data-bs-target="#azModal">
-                  </div>
+            <div class="row align-items-center">
+                <div class="col-md-9">
+                    <p class="bordered">my photos, shot on iPhone</p>
                 </div>
-                <div class="modal fade" id="azModal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <img src="assets/images/Azaleas.JPG" class="img-fluid">
+                <div class="col-md-3 text-end">
+                    <button class="btn btn-primary btn-toggle" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#photoGallery">
+                        ▼
+                    </button>
+                </div>
+            </div>
+
+            <div class="collapse mt-3" id="photoGallery">
+                <div class="row g-4">
+
+                    <!-- 20BDAY -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <img src="assets/images/20BDAY.JPG" class="img-fluid rounded" alt="20bday"
+                                data-bs-toggle="modal" data-bs-target="#20bdayModal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="20bdayModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/20BDAY.JPG" class="img-fluid">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- college udon -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                         <img src="assets/images/college udon.JPG" class="img-fluid rounded" alt="udon" data-bs-toggle="modal" data-bs-target="#udonModal">
-                  </div>
-                 </div>
-                 <div class="modal fade" id="udonModal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                       <div class="modal-content">
-                            <div class="modal-body">
-                              <img src="assets/images/college udon.JPG" class="img-fluid">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-
-                 <!-- flower -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                         <img src="assets/images/flower.JPG" class="img-fluid rounded" alt="flower" data-bs-toggle="modal" data-bs-target="#flowerModal">
-                  </div>
-                 </div>
-                 <div class="modal fade" id="flowerModal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                       <div class="modal-content">
-                            <div class="modal-body">
-                              <img src="assets/images/flower.JPG" class="img-fluid">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-
-                  <!-- iribe -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                         <img src="assets/images/Iribe.JPG" class="img-fluid rounded" alt="iribe" data-bs-toggle="modal" data-bs-target="#iribeModal">
-                  </div>
-                 </div>
-                 <div class="modal fade" id="iribeModal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                       <div class="modal-content">
-                            <div class="modal-body">
-                              <img src="assets/images/Iribe.JPG" class="img-fluid">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-
-                <!-- comfy -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                         <img src="assets/images/comfy.JPG" class="img-fluid rounded" alt="comfy" data-bs-toggle="modal" data-bs-target="#comfyModal">
-                  </div>
-                 </div>
-                 <div class="modal fade" id="comfyModal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                       <div class="modal-content">
-                            <div class="modal-body">
-                              <img src="assets/images/comfy.JPG" class="img-fluid">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-
-                 <!-- earth -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                         <img src="assets/images/earth.JPG" class="img-fluid rounded" alt="earth" data-bs-toggle="modal" data-bs-target="#earthModal">
-                  </div>
-                 </div>
-                 <div class="modal fade" id="earthModal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                       <div class="modal-content">
-                            <div class="modal-body">
-                              <img src="assets/images/earth.JPG" class="img-fluid">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="container my-5">
-        <h2 class="text-center mb-4">Graphics</h2>
-    
-        <div class="row align-items-center">
-            <div class="col-md-9">
-                <p class="bordered">canva graphics i've made for other organizations, many use creative commons assets</p>
-            </div>
-            <div class="col-md-3 text-end">
-                <button class="btn btn-primary btn-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#graphicGallery">
-                    ▼ 
-                </button>
-            </div>
-        </div>
-
-        <div class="collapse mt-3" id="graphicGallery">
-            <div class="row g-4">
-
-                <!-- SGA Contest -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <img src="assets/images/SGA Contest.png" class="img-fluid rounded" alt="Artwork 6" data-bs-toggle="modal" data-bs-target="#art6Modal">
+                    <!-- lanterns -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <img src="assets/images/lanterns.jpeg" class="img-fluid rounded" alt="lanterns"
+                                data-bs-toggle="modal" data-bs-target="#lanternModal">
+                        </div>
                     </div>
-                </div>
-                <div class="modal fade" id="art6Modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <img src="assets/images/SGA Contest.png" class="img-fluid">
+                    <div class="modal fade" id="lanternModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/lanterns.jpeg" class="img-fluid">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-    
-                <!-- SGA Formal -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <img src="assets/images/Formal.png" class="img-fluid rounded" alt="Artwork 6" data-bs-toggle="modal" data-bs-target="#art7Modal">
+
+                    <!-- eid -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <img src="assets/images/Eid.JPG" class="img-fluid rounded" alt="eid" data-bs-toggle="modal"
+                                data-bs-target="#eidModal">
+                        </div>
                     </div>
-                </div>
-                <div class="modal fade" id="art7Modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <img src="assets/images/Formal.png" class="img-fluid">
+                    <div class="modal fade" id="eidModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/Eid.JPG" class="img-fluid">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-    
-                <!-- Recycle -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <img src="assets/images/Recycle.png" class="img-fluid rounded" alt="Artwork 8" data-bs-toggle="modal" data-bs-target="#art8Modal">
+
+                    <!-- azaeleas -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <img src="assets/images/Azaleas.JPG" class="img-fluid rounded" alt="azaeleas"
+                                data-bs-toggle="modal" data-bs-target="#azModal">
+                        </div>
                     </div>
-                </div>
-                <div class="modal fade" id="art8Modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <img src="assets/images/Recycle.png" class="img-fluid">
+                    <div class="modal fade" id="azModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/Azaleas.JPG" class="img-fluid">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-    
-            </div>
-        </div>
 
-    </section>
-
-    <section id="character" class="container my-5">
-        <h2 class="text-center mb-4">Character Designs</h2>
-
-        <div class="row align-items-center">
-            <div class="col-md-9">
-                <p class="bordered">character design and illustration i've done</p>
-            </div>
-            <div class="col-md-3 text-end">
-                <button class="btn btn-primary btn-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#characterGallery">
-                    ▼ 
-                </button>
-            </div>
-        </div>
-
-        <div class="collapse mt-3" id="characterGallery">
-            <div class="row g-4">
-
-                <!-- Techno Support -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="character-item">
-                        <img src="assets/images/Techno_Support_.jpg" class="img-fluid rounded" alt="Artwork 7" data-bs-toggle="modal" data-bs-target="#art9Modal">
+                    <!-- college udon -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <img src="assets/images/college udon.JPG" class="img-fluid rounded" alt="udon"
+                                data-bs-toggle="modal" data-bs-target="#udonModal">
+                        </div>
                     </div>
-                </div>
-                 <div class="modal fade" id="art9Modal" tabindex="-1" aria-hidden="true">
-                     <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <img src="assets/images/Techno_Support_.jpg" class="img-fluid">
+                    <div class="modal fade" id="udonModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/college udon.JPG" class="img-fluid">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-    
-                <!-- Tommy -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="character-item">
-                         <img src="assets/images/cell shading.jpeg" class="img-fluid rounded" alt="Artwork 7" data-bs-toggle="modal" data-bs-target="#art10Modal">
-                  </div>
-                 </div>
-                 <div class="modal fade" id="art10Modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                       <div class="modal-content">
-                            <div class="modal-body">
-                              <img src="assets/images/cell shading.jpeg" class="img-fluid">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 
-                 <!-- Character Design -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="character-item">
-                         <img src="assets/images/character design.jpg" class="img-fluid rounded" alt="Artwork 11" data-bs-toggle="modal" data-bs-target="#art13Modal">
-                  </div>
-                 </div>
-                 <div class="modal fade" id="art13Modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                       <div class="modal-content">
-                            <div class="modal-body">
-                              <img src="assets/images/character design.jpg" class="img-fluid">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-    
-                <!-- Techno & Steve -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="character-item">
-                         <img src="assets/images/Character Design.JPEG" class="img-fluid rounded" alt="Artwork 11" data-bs-toggle="modal" data-bs-target="#art11Modal">
-                  </div>
-                 </div>
-                 <div class="modal fade" id="art11Modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                       <div class="modal-content">
-                            <div class="modal-body">
-                              <img src="assets/images/Character Design.JPEG" class="img-fluid">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-    
-                 <!-- Techno & Ranboo -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="character-item">
-                         <img src="assets/images/Techno_Ranboo_and_Steve.jpg" class="img-fluid rounded" alt="Artwork 11" data-bs-toggle="modal" data-bs-target="#art12Modal">
+
+                    <!-- flower -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <img src="assets/images/flower.JPG" class="img-fluid rounded" alt="flower"
+                                data-bs-toggle="modal" data-bs-target="#flowerModal">
+                        </div>
                     </div>
+                    <div class="modal fade" id="flowerModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/flower.JPG" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- iribe -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <img src="assets/images/Iribe.JPG" class="img-fluid rounded" alt="iribe"
+                                data-bs-toggle="modal" data-bs-target="#iribeModal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="iribeModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/Iribe.JPG" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- comfy -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <img src="assets/images/comfy.JPG" class="img-fluid rounded" alt="comfy"
+                                data-bs-toggle="modal" data-bs-target="#comfyModal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="comfyModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/comfy.JPG" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- earth -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <img src="assets/images/earth.JPG" class="img-fluid rounded" alt="earth"
+                                data-bs-toggle="modal" data-bs-target="#earthModal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="earthModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/earth.JPG" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="modal fade" id="art12Modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                       <div class="modal-content">
-                            <div class="modal-body">
-                              <img src="assets/images/Techno_Ranboo_and_Steve.jpg" class="img-fluid">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-    
-    
             </div>
-        </div>
-        
-    </section>
+        </section>
 
-    <section id="misc" class="container my-5">
-        <h2 class="text-center mb-4">Miscellaneous</h2>
+        <section id="projects" class="container my-5">
+            <h2 class="text-center mb-4">Graphics</h2>
 
-        <div class="row align-items-center">
-            <div class="col-md-9">
-                <p class="bordered">my miscellaneous works</p>
+            <div class="row align-items-center">
+                <div class="col-md-9">
+                    <p class="bordered">canva graphics i've made for other organizations, many use creative commons
+                        assets</p>
+                </div>
+                <div class="col-md-3 text-end">
+                    <button class="btn btn-primary btn-toggle" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#graphicGallery">
+                        ▼
+                    </button>
+                </div>
             </div>
-            <div class="col-md-3 text-end">
-                <button class="btn btn-primary btn-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#miscGallery">
-                    ▼ 
-                </button>
+
+            <div class="collapse mt-3" id="graphicGallery">
+                <div class="row g-4">
+
+                    <!-- SGA Contest -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <img src="assets/images/SGA Contest.png" class="img-fluid rounded" alt="Artwork 6"
+                                data-bs-toggle="modal" data-bs-target="#art6Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art6Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/SGA Contest.png" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SGA Formal -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <img src="assets/images/Formal.png" class="img-fluid rounded" alt="Artwork 6"
+                                data-bs-toggle="modal" data-bs-target="#art7Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art7Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/Formal.png" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recycle -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <img src="assets/images/Recycle.png" class="img-fluid rounded" alt="Artwork 8"
+                                data-bs-toggle="modal" data-bs-target="#art8Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art8Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/Recycle.png" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
 
-        <div class="collapse mt-3" id="miscGallery">
-            <div class="row g-4">
+        </section>
 
-                <!-- Pig -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                         <img src="assets/images/pig.JPEG" class="img-fluid rounded" alt="Artwork 11" data-bs-toggle="modal" data-bs-target="#art13Modal">
-                  </div>
-                 </div>
-                 <div class="modal fade" id="art13Modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                       <div class="modal-content">
-                            <div class="modal-body">
-                              <img src="assets/images/pig.JPEG" class="img-fluid">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-    
-                 <!-- Quick Animation -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                         <img src="assets/images/Quick Animation.gif" class="img-fluid rounded" alt="Artwork 11" data-bs-toggle="modal" data-bs-target="#art14Modal">
-                  </div>
-                 </div>
-                 <div class="modal fade" id="art14Modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                       <div class="modal-content">
-                            <div class="modal-body">
-                              <img src="assets/images/Quick Animation.gif" class="img-fluid">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-    
-                 <!-- Prismacolor -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                         <img src="assets/images/Color Pencil.jpg" class="img-fluid rounded" alt="Artwork 11" data-bs-toggle="modal" data-bs-target="#art15Modal">
-                  </div>
-                 </div>
-                 <div class="modal fade" id="art15Modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                       <div class="modal-content">
-                            <div class="modal-body">
-                              <img src="assets/images/Color Pencil.jpg" class="img-fluid">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-    
+        <section id="character" class="container my-5">
+            <h2 class="text-center mb-4">Character Designs</h2>
+
+            <div class="row align-items-center">
+                <div class="col-md-9">
+                    <p class="bordered">character design and illustration i've done</p>
+                </div>
+                <div class="col-md-3 text-end">
+                    <button class="btn btn-primary btn-toggle" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#characterGallery">
+                        ▼
+                    </button>
+                </div>
             </div>
-        </div>
 
-    </section>
+            <div class="collapse mt-3" id="characterGallery">
+                <div class="row g-4">
+
+                    <!-- Techno Support -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="character-item">
+                            <img src="assets/images/Techno_Support_.jpg" class="img-fluid rounded" alt="Artwork 7"
+                                data-bs-toggle="modal" data-bs-target="#art9Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art9Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/Techno_Support_.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tommy -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="character-item">
+                            <img src="assets/images/cell shading.jpeg" class="img-fluid rounded" alt="Artwork 7"
+                                data-bs-toggle="modal" data-bs-target="#art10Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art10Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/cell shading.jpeg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character Design -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="character-item">
+                            <img src="assets/images/character design.jpg" class="img-fluid rounded" alt="Artwork 11"
+                                data-bs-toggle="modal" data-bs-target="#art13Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art13Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/character design.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Techno & Steve -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="character-item">
+                            <img src="assets/images/Character Design.JPEG" class="img-fluid rounded" alt="Artwork 11"
+                                data-bs-toggle="modal" data-bs-target="#art11Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art11Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/Character Design.JPEG" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Techno & Ranboo -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="character-item">
+                            <img src="assets/images/Techno_Ranboo_and_Steve.jpg" class="img-fluid rounded"
+                                alt="Artwork 11" data-bs-toggle="modal" data-bs-target="#art12Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art12Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/Techno_Ranboo_and_Steve.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
-    <section id="henna" class="container my-5">
-        <h2 class="text-center mb-4">Henna/Mehendi</h2>
-
-        <div class="row align-items-center">
-            <div class="col-md-9">
-                <p class="bordered">my favorite mehendi designs i've done </p>
+                </div>
             </div>
-            <div class="col-md-3 text-end">
-                <button class="btn btn-primary btn-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#hennaGallery">
-                    ▼ 
-                </button>
+
+        </section>
+
+        <section id="misc" class="container my-5">
+            <h2 class="text-center mb-4">Miscellaneous</h2>
+
+            <div class="row align-items-center">
+                <div class="col-md-9">
+                    <p class="bordered">my miscellaneous works</p>
+                </div>
+                <div class="col-md-3 text-end">
+                    <button class="btn btn-primary btn-toggle" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#miscGallery">
+                        ▼
+                    </button>
+                </div>
             </div>
-        </div>
 
-        <div class="collapse mt-3" id="hennaGallery">
-            <div class="row g-4">
+            <div class="collapse mt-3" id="miscGallery">
+                <div class="row g-4">
 
-                <!-- Fun Henna -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                         <img src="assets/images/Mehendi 2.jpeg" class="img-fluid rounded" alt="Artwork 11" data-bs-toggle="modal" data-bs-target="#art16Modal">
-                  </div>
-                 </div>
-                 <div class="modal fade" id="art16Modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                       <div class="modal-content">
-                            <div class="modal-body">
-                              <img src="assets/images/Mehendi 2.jpeg" class="img-fluid">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-    
-                 <!-- Girly Henna -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                         <img src="assets/images/Mehendi 3.jpeg" class="img-fluid rounded" alt="Artwork 11" data-bs-toggle="modal" data-bs-target="#art17Modal">
-                  </div>
-                 </div>
-                 <div class="modal fade" id="art17Modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                       <div class="modal-content">
-                            <div class="modal-body">
-                              <img src="assets/images/Mehendi 3.jpeg" class="img-fluid">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-    
-                 <!-- Eid Mehendi -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                         <img src="assets/images/Mehendi 4.jpeg" class="img-fluid rounded" alt="Artwork 11" data-bs-toggle="modal" data-bs-target="#art18Modal">
-                  </div>
-                 </div>
-                 <div class="modal fade" id="art18Modal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                       <div class="modal-content">
-                            <div class="modal-body">
-                              <img src="assets/images/Mehendi 4.jpeg" class="img-fluid">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-    
+                    <!-- Pig -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <img src="assets/images/pig.JPEG" class="img-fluid rounded" alt="Artwork 11"
+                                data-bs-toggle="modal" data-bs-target="#art13Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art13Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/pig.JPEG" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Animation -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <img src="assets/images/Quick Animation.gif" class="img-fluid rounded" alt="Artwork 11"
+                                data-bs-toggle="modal" data-bs-target="#art14Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art14Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/Quick Animation.gif" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Prismacolor -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <img src="assets/images/Color Pencil.jpg" class="img-fluid rounded" alt="Artwork 11"
+                                data-bs-toggle="modal" data-bs-target="#art15Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art15Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/Color Pencil.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
 
-    </section>
+        </section>
 
 
-    <section id="about" class="container my-5">
-        <h2 >About Me</h2>
-        <p>Hello! My name is Zoya Rahman, I am a Computer Science: Data Science Track and Immersive Media Design: Emerging Creatives Track Dual Degree student at University of Maryland: College Park.</p>
-        <p>I've been making art my entire life, and wanted to create a space to store some of my favorite works from a variety of skillsets. Hope you enjoy!</p>
-        <p><p>Email: rahmanzn2016@gmail.com</p>Links:</p>
-        <a href="https://github.com/zoyanashita" class="btn-primary">Github</a>
-        <a href="https://www.linkedin.com/in/zoya-rahman-5315a12a3/" class="btn-primary">Linkdin</a>
-        <a href="https://www.instagram.com/zoya.nashita/" class="btn-primary">Instagram</a>
-        
-    </section>
+        <section id="henna" class="container my-5">
+            <h2 class="text-center mb-4">Henna/Mehendi</h2>
 
-    <footer class="text-center py-3 bg-light">
-        <p>©2025 Zoya Rahman | Credits: Github Pages for website domain. BootStrap for building website.</p>
-        <p>W3Schools & ChatGPT for general documentation resources.</p>
-    </footer>
+            <div class="row align-items-center">
+                <div class="col-md-9">
+                    <p class="bordered">my favorite mehendi designs i've done </p>
+                </div>
+                <div class="col-md-3 text-end">
+                    <button class="btn btn-primary btn-toggle" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#hennaGallery">
+                        ▼
+                    </button>
+                </div>
+            </div>
 
+            <div class="collapse mt-3" id="hennaGallery">
+                <div class="row g-4">
+
+                    <!-- Fun Henna -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <img src="assets/images/Mehendi 2.jpeg" class="img-fluid rounded" alt="Artwork 11"
+                                data-bs-toggle="modal" data-bs-target="#art16Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art16Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/Mehendi 2.jpeg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Girly Henna -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <img src="assets/images/Mehendi 3.jpeg" class="img-fluid rounded" alt="Artwork 11"
+                                data-bs-toggle="modal" data-bs-target="#art17Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art17Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/Mehendi 3.jpeg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Eid Mehendi -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <img src="assets/images/Mehendi 4.jpeg" class="img-fluid rounded" alt="Artwork 11"
+                                data-bs-toggle="modal" data-bs-target="#art18Modal">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="art18Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="assets/images/Mehendi 4.jpeg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <section id="about" class="container my-5">
+            <h2>About Me</h2>
+            <p>Hello! My name is Zoya Rahman, I am a Computer Science: Data Science Track and Immersive Media Design:
+                Emerging Creatives Track Dual Degree student at University of Maryland: College Park.</p>
+            <p>I've been making art my entire life, and wanted to create a space to store some of my favorite works from
+                a variety of skillsets. Hope you enjoy!</p>
+            <p>
+            <p>Email: rahmanzn2016@gmail.com</p>Links:</p>
+            <a href="https://github.com/zoyanashita" class="btn-primary">Github</a>
+            <a href="https://www.linkedin.com/in/zoya-rahman-5315a12a3/" class="btn-primary">Linkdin</a>
+            <a href="https://www.instagram.com/zoya.nashita/" class="btn-primary">Instagram</a>
+
+        </section>
+
+        <footer class="text-center py-3 bg-light">
+            <p>©2025 Zoya Rahman | Credits: Github Pages for website domain. BootStrap for building website.</p>
+            <p>W3Schools & ChatGPT for general documentation resources.</p>
+        </footer>
+    </div>
     <!-- Link to JavaScript File -->
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
