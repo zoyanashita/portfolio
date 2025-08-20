@@ -33,17 +33,6 @@
     /* Makes edges rounded */
 }
 
-#character {
-    background-color: #e8e9e2;
-    border: 1px solid #18795b;
-    margin: auto;
-    /* Centers the section */
-    padding: 20px 20px;
-    /* Adds spacing inside the section */
-    border-radius: 15px;
-    /* Makes edges rounded */
-}
-
 #photography {
     background-color: #e8e9e2;
     border: 1px solid #18795b;
@@ -245,7 +234,7 @@ body::before {
 
 /* Section Backgrounds */
 #loader {
-    background-color: #BD5352;
+    background-color: rgb(54, 32, 32);
     top: 0; left: 0;
     width: 100vw; height: 100vh;
     display: flex;
@@ -275,7 +264,7 @@ body::before {
 }
 
 #loader p {
-    color: #DD9493;
+    color: #BD5352;
     font-family: Laila;
     font-size: 44px;
     font-style: normal;
@@ -316,11 +305,11 @@ body::before {
 
 /* top and bottom placement */
 #loader .marquee-top {
-  top: 0;
+  top: 10px;
 }
 
 #loader .marquee-bottom {
-  bottom: 0;
+  bottom: 10px;
 }
 
 /* animate the text sliding from right→left */
