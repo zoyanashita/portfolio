@@ -1,329 +1,193 @@
-#app {
-  display: none;
-}
-#hero {
-    background: #DD9493;
-    border: 1px solid #18795b;
-    text-align: center;
-    padding: 50px 20px;
-    border-radius: 15px;
-    /* Makes edges rounded */
-
-}
-
-#artworks {
-    background-color: #e8e9e2;
-    border: 1px solid #18795b;
-    margin: auto;
-    /* Centers the section */
-    padding: 20px 20px;
-    /* Adds spacing inside the section */
-    border-radius: 15px;
-    /* Makes edges rounded */
-}
-
-#projects {
-    background-color: #e8e9e2;
-    border: 1px solid #18795b;
-    margin: auto;
-    /* Centers the section */
-    padding: 20px 20px;
-    /* Adds spacing inside the section */
-    border-radius: 15px;
-    /* Makes edges rounded */
-}
-
-#photography {
-    background-color: #e8e9e2;
-    border: 1px solid #18795b;
-    margin: auto;
-    /* Centers the section */
-    padding: 20px 20px;
-    /* Adds spacing inside the section */
-    border-radius: 15px;
-    /* Makes edges rounded */
-}
-
-#misc {
-    background-color: #e8e9e2;
-    border: 1px solid #18795b;
-    margin: auto;
-    /* Centers the section */
-    padding: 20px 20px;
-    /* Adds spacing inside the section */
-    border-radius: 15px;
-    /* Makes edges rounded */
-}
-
-#henna {
-    background-color: #e8e9e2;
-    border: 1px solid #18795b;
-    margin: auto;
-    /* Centers the section */
-    padding: 20px 20px;
-    /* Adds spacing inside the section */
-    border-radius: 15px;
-    /* Makes edges rounded */
-}
-
-#about {
-    background: #DD9493;
-    border: 1px solid #18795b;
-    margin: auto;
-    /* Centers the section */
-    padding: 60px 20px;
-    /* Adds spacing inside the section */
-    border-radius: 15px;
-    /* Makes edges rounded */
-}
-
-/* CUSTOMIZING CLASSES */
-.portfolio-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    width: 100%;
-    display: block;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-    /* Soft shadow */
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-/* Hover Effect */
-.portfolio-item:hover img {
-    transform: scale(1.05);
-    opacity: 0.8;
-    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.8);
-}
-
-/* Make All Character Images the Same Height */
-.character-item img {
-    border-radius: 10px;
-    width: 100%;
-    /* Ensures responsiveness */
-    height: 300px;
-    /* Adjust based on your design */
-    object-fit: cover;
-    /* Prevents image distortion */
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-    /* Soft shadow */
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-/* Hover Effect */
-.character-item:hover img {
-    transform: scale(1.05);
-    opacity: 0.8;
-    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.8);
-}
-
-/* Portfolio Video Styling */
-.portfolio-item video {
-    border-radius: 10px;
-    width: 100%;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    cursor: pointer;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-    /* Soft shadow */
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-/* Play video when hovered */
-.portfolio-item video:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
-    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.8);
-}
-
-/* Section Headers with Background */
-h1 {
-    color: #333;
-    /* Dark gray text */
-
-}
-
-h2 {
-    background: #DD9493;
-    color: white;
-    /* Text color */
-    padding: 10px 20px;
-    /* Space inside the background */
-    display: inline-block;
-    /* Keeps background wrapped around text */
-    border-radius: 10px;
-    /* Rounded corners */
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-    /* Shadow effect */
-}
-
-/* Bordered paragraphs class*/
-p.bordered {
-    border: 2px solid #18795b;
-    background-color: #e8e9e2;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-    /* Shadow effect */
-}
-
-p.bordered2 {
-    border: 2px solid #18795b;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-    /* Shadow effect */
-}
-
-.btn {
-    background: #DD9493;
-    color: white;
-    width: 90%;
-    /* Ensures responsiveness */
-    padding: 10px;
-    border: 2px solid #18795b !important;
-    border-radius: 5px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-    /* Shadow effect */
-}
-
-.btn-primary {
-    color: white;
-    width: 90%;
-    /* Ensures responsiveness */
-    padding: 10px;
-    border: 2px solid #18795b !important;
-    border-radius: 5px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-    /* Shadow effect */
-}
-
-
-/* Enabling Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* prevent navbar from hiding stuff */
 body {
-    padding-top: 70px;
-    background-color: #e8e9e2 !important;
-    /* Light gray */
-    color: #333;
-    /* Dark gray text */
-    font-family: monospace !important;
-    margin: auto;
-
-    position: relative;
-    background-repeat: repeat;
-    background-size: 800px 800px;
-    background-attachment: fixed;
-    /* Prevents scrolling issues */
+    padding-top: 95px;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
+.navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #BD5352 !important;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+#aboutMe {
+    background-color: #f6f6f6;
+    padding-top: 3rem !important;
+    adding-top: 8rem !important;
+}
+
+.about-title {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.accent {
+    color: #c65b57;
+}
+
+.about-description {
+    font-size: clamp(1.35rem, 2vw, 2.1rem);
+    line-height: 1.45;
+    max-width: 560px;
+}
+
+.endeavors-section {
+    margin-top: 2rem;
+}
+
+.endeavors-label {
+    display: inline-block;
+    background-color: #e6a19d;
+    border: 2px solid #2a2a2a;
+    border-radius: 18px;
+    padding: 0.6rem 1.4rem;
+    font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+}
+
+.endeavors-date {
+    font-size: 1.2rem;
+    color: #555;
+    margin-left: 1rem;
+}
+
+.endeavors-list {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding-left: 2rem;
+    max-width: 560px;
+}
+
+.about-image-wrapper {
+    width: 100%;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 760px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 4rem;
+    display: block;
+    margin: 0 auto;
+}
+
+#featured-projects {
+    background-color: #f5f5f5;
+}
+
+.project-image-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #d9d9d9;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.project-image-placeholder img {
     width: 100%;
     height: 100%;
-    background: rgba(232, 233, 226, 0.9);
-    /* White overlay with 50% opacity */
-    z-index: -1;
+    object-fit: cover;
+    display: block;
 }
 
-/* Section Backgrounds */
-#loader {
-    background-color: rgb(54, 32, 32);
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 9999;
-    transition: opacity 0.5s ease;
-    position:fixed;
+#art-archive {
+    background: #f5f5f5;
     overflow: hidden;
-    justify-content: center;
 }
 
-.loader-bar {
-  width: 300px;
-  height: 12px;
-  border: 2px solid #DD9493;
-  border-radius: 6px;
-  overflow: hidden;
-  margin: 1rem 0;
+.art-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1;
+    margin-bottom: 0.5rem;
 }
 
-.bar-fill {
-  width: 0%;
-  height: 100%;
-  background-color: #DD9493;
-  transition: width 0.3s ease;    /* smooth growth */
+.accent {
+    color: #c65c57;
 }
 
-#loader p {
-    color: #BD5352;
-    font-family: Laila;
-    font-size: 44px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-#loader-button {
-    color: black;
-    width: 139px;
-    height: 54px;
-    flex-shrink: 0;
-    border-radius: 27px;
-    background: #DD9493;
-    transition: background-color 0.3s ease;
-}
-#loader-button:hover {
-    box-shadow: 0 4px 4px 2px rgba(0, 0, 0, 0.25);
-    transition: background-color 0.3s ease;
+.art-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 0;
 }
 
-#loader img {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    border-radius: 310px;
-    border: 6px solid #DD9493;
-    justify-content: center;
-}
-#loader .marquee {
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;  /* keep the text all on one line */
-  font-size: 44px;      /* match your existing sizing */
-  line-height: 1;       /* tighten up vertical space */
-  position: absolute;
-  width: 100%;
+.art-filters {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: #c65c57;
+    border-radius: 999px;
 }
 
-/* top and bottom placement */
-#loader .marquee-top {
-  top: 10px;
+.filter-pill {
+    border: 1px solid #222;
+    background: #e9a4a1;
+    border-radius: 999px;
+    padding: 0.45rem 1.5rem;
+    font-size: 1.4rem;
+    line-height: 1;
 }
 
-#loader .marquee-bottom {
-  bottom: 10px;
+.filter-pill.active {
+    background: transparent;
+    border-color: transparent;
 }
 
-/* animate the text sliding from right→left */
-@keyframes slide-left {
-  0%   { transform: translateX(100%); }
-  0% { transform: translateX(-100%); }
+#artSplide {
+    position: relative;
+    padding-inline: 5rem;
 }
 
-/* apply the animation */
-#loader .marquee {
-  animation: slide-left 10s linear infinite;
+.art-card {
+    aspect-ratio: 1 / 1;
+    background: #d9d9d9;
+    overflow: hidden;
 }
 
-/* if you want the bottom line to go in the opposite direction */
-#loader .marquee-bottom {
-  animation-direction: reverse;
+.art-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* custom circle arrows */
+.art-arrow {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #d86a67;
+    border: none;
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.art-arrow::after {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.art-arrow-prev {
+    left: -55px;
+}
+
+.art-arrow-next {
+    right: -55px;
+}
+
+.art-caption {
+    max-width: 700px;
+    font-size: 1.25rem;
 }
