@@ -191,3 +191,83 @@ body {
     max-width: 700px;
     font-size: 1.25rem;
 }
+
+.contact-section {
+  background-color: #f6f6f6;
+}
+
+.contact-title {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.contact-image-placeholder {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 16 / 9;
+  background: #d9d9d9;
+  margin: 0 auto;
+}
+
+.contact-heading {
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+}
+
+.contact-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 550px;
+  margin-bottom: 0.5rem;
+}
+
+.contact-link {
+  font-size: 1.2rem;
+  color: #222;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.back-to-top-btn {
+  display: inline-block;
+  background-color: #de9a98;
+  color: #111;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  border-radius: 999px;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  border: 2px solid transparent;
+}
+
+.back-to-top-btn:hover {
+  border-color: #222;
+}
+
+.contact-footer {
+  background-color: #c75b57;
+  padding: 1.5rem 0;
+}
+
+.contact-footer p {
+  font-size: 1.2rem;
+  color: #111;
+}
+
+.project-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.project-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

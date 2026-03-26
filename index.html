@@ -20,7 +20,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#">Zoya's Portfolio</a>
+                <a class="navbar-brand" style="font-size: 24pt;" href="#">Zoya Rahman</a>
 
                 <!-- Mobile Menu Button -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -47,24 +47,35 @@
                 <!-- Left content -->
                 <div class="col-12 col-lg-6">
                     <div class="about-text pe-lg-4">
-                        <h2 class="about-title mb-3">
+                        <h2 class="about-title mb-3" style="font-size: 24pt;">
                             About <span class="accent">Me</span>!
                         </h2>
 
-                        <p class="about-description mb-5">
-                            Hi everyone! My name is Zoya- <br> this is still a work in progress!
+                        <p class="about-description mb-5" style="font-size: 12pt">
+                            I’m a B.S. and B.A. student at the University of Maryland: College Park studying Computer
+                            Science and Immersive Media Design. My current research interests cover Computer Vision,
+                            Computational Biology, HCI, and Deep Learning, while also currently exploring Computational
+                            Imaging, and Graphics. I also utilize my IMD studies to explore the intersection between Art
+                            and Technology. My goal is to pursue my PhD post undergrad in a Computer Vision related
+                            field. <br>
+                            Outside of school and research I work as a graphic designer and UI/UX developer for the
+                            Association of Women in Computing at UMD.
                         </p>
 
                         <div class="endeavors-section">
-                            <div class="endeavors-label">
+                            <!-- <div class="endeavors-label">
                                 Current Endeavors
-                            </div>
+                            </div> -->
 
-                            <p class="endeavors-date mb-2">As of Fall 2025</p>
+                            <p class="endeavors-date mb-2"><b>As of Spring 2026</b></p>
 
-                            <ul class="endeavors-list mb-0">
-                                <li>Director of Design for the Association of Women in Computing at UMD.</li>
-                                <li>Conducting bioinformation research.</li>
+                            <ul class="endeavors-list mb-0" style="font-size: 14pt">
+                                <li>Undergraduate Research Assistant in Bioinformatic/Computational Biology (Dr. Fardina
+                                    F. Alam)</li>
+                                <li>Lead of Undergraduate Student Research in Spatiotemporal Deep Learning for
+                                    Hyperspectral Satellite Remote Sensing (Dr. Myungin Lee)
+                                <li>Teaching Assistant for IMDM290 at UMD. </li>
+                                <li>Director of Design for the Association of Women In Computing at UMD. </li>
                             </ul>
                         </div>
                     </div>
@@ -96,11 +107,14 @@
 
             <!-- Project 1 -->
             <div class="row align-items-center g-4 mb-5">
-                <div class="col-12 col-lg-7">
-                    <div class="project-image-placeholder"></div>
+                <div class="col-12 col-lg-4">
+                    <a href="https://www.youtube.com/watch?v=TxKyq2n_x-o" target="_blank" class="project-video">
+                        <img src="https://img.youtube.com/vi/TxKyq2n_x-o/hqdefault.jpg"
+                            alt="Telekinesis project video thumbnail" class="img-fluid project-thumbnail">
+                    </a>
                 </div>
 
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-lg-8">
                     <h3 class="mb-2">Telekinesis - Give me a Hand</h3>
                     <p class="fs-4 mb-3">IMDM 290 Final Project</p>
                     <p class="mb-3">
@@ -109,15 +123,15 @@
                         Final project for Collaborative Studio I: Image + Time
                     </p>
                     <div class="d-flex gap-3 flex-wrap">
-                        <a href="#" class="text-dark text-decoration-none">Github</a>
-                        <a href="#" class="text-dark text-decoration-none">Youtube</a>
+                        <a href="https://www.youtube.com/watch?v=TxKyq2n_x-o"
+                            class="text-dark text-decoration-none">Youtube</a>
                     </div>
                 </div>
             </div>
 
             <!-- Project 2 -->
             <div class="row align-items-center g-4 mb-5">
-                <div class="col-12 col-lg-5 order-2 order-lg-1 text-lg-end">
+                <div class="col-12 col-lg-5 text-lg-end">
                     <h3 class="mb-2">Analysis of Student Success</h3>
                     <p class="fs-4 mb-3">CMSC 320 Final Project</p>
                     <p class="mb-3">
@@ -131,9 +145,12 @@
                         <a href="#" class="text-dark text-decoration-none">Github</a>
                     </div>
                 </div>
-
-                <div class="col-12 col-lg-7 order-1 order-lg-2">
-                    <div class="project-image-placeholder"></div>
+                <div class="col-12 col-lg-7">
+                    <div class="project-frame">
+                        <iframe src="https://zoyanashita.github.io/analysisOfStudentSuccess/" title="Project preview"
+                            loading="lazy">
+                        </iframe>
+                    </div>
                 </div>
             </div>
 
@@ -155,8 +172,8 @@
             <!-- Filter pills -->
             <div class="art-filters mb-4">
                 <button class="filter-pill active" data-filter="all">See All:</button>
-                <button class="filter-pill" data-filter="photography">Photography</button>
-                <button class="filter-pill" data-filter="coursework">Coursework</button>
+                <button class="filter-pill" data-filter="photography">Touchdesigner</button>
+                <button class="filter-pill" data-filter="coursework">Blender</button>
                 <button class="filter-pill" data-filter="graphics">Graphics</button>
             </div>
 
@@ -176,25 +193,25 @@
 
                         <li class="splide__slide" data-category="coursework">
                             <article class="art-card">
-                                <img src="assets/images/art1.png" alt="Artwork 1" class="art-img">
+                                <img src="assets/images/AWC Graphic Scrap/btsONE.png" alt="Artwork 1" class="art-img">
                             </article>
                         </li>
 
                         <li class="splide__slide" data-category="coursework">
                             <article class="art-card">
-                                <img src="assets/images/art2.png" alt="Artwork 2" class="art-img">
+                                <img src="assets/images/AWC Graphic Scrap/btsTWO.png" alt="Artwork 2" class="art-img">
                             </article>
                         </li>
 
                         <li class="splide__slide" data-category="graphics">
                             <article class="art-card">
-                                <img src="assets/images/art3.png" alt="Artwork 3" class="art-img">
+                                <img src="assets/images/AWC Graphic Scrap/cnONE.png" alt="Artwork 3" class="art-img">
                             </article>
                         </li>
 
                         <li class="splide__slide" data-category="photography">
                             <article class="art-card">
-                                <img src="assets/images/art4.png" alt="Artwork 4" class="art-img">
+                                <img src="assets/images/AWC Graphic Scrap/cnTWO.png" alt="Artwork 4" class="art-img">
                             </article>
                         </li>
 
@@ -212,32 +229,89 @@
             </div>
 
         </div>
-    </section>
-
-
-    <section id="about" class="container my-5">
-        <h2>About Me</h2>
-        <p>Hello! My name is Zoya Rahman, I am a Computer Science: Data Science Track and Immersive Media Design:
-            Emerging Creatives Track Dual Degree student at University of Maryland: College Park.</p>
-        <p>I've been making art my entire life, and wanted to create a space to store some of my favorite works from
-            a variety of skillsets. Hope you enjoy!</p>
-        <p>
-        <p>Email: rahmanzn2016@gmail.com</p>Links:</p>
-        <a href="https://github.com/zoyanashita" class="btn-primary">Github</a>
-        <a href="https://www.linkedin.com/in/zoya-rahman-5315a12a3/" class="btn-primary">Linkdin</a>
-        <a href="https://www.instagram.com/zoya.nashita/" class="btn-primary">Instagram</a>
 
     </section>
 
-    <footer class="text-center py-3 bg-light">
-        <p>©2025 Zoya Rahman | Credits: Github Pages. BootStrap.</p>
-    </footer>
-    </div>
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
 
+            <!-- Top row -->
+            <div class="row align-items-center justify-content-between gy-4 mb-5">
+                <div class="col-12 col-md-3">
+                    <div class="contact-image-placeholder"></div>
+                </div>
+
+                <div class="col-12 col-md-6 text-center">
+                    <h2 class="contact-title mb-0">Stay In Touch!</h2>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <div class="contact-image-placeholder ms-md-auto"></div>
+                </div>
+            </div>
+
+            <!-- Contact content -->
+            <div class="row gy-5">
+                <div class="col-12 col-lg-5 offset-lg-1">
+                    <div class="contact-block mb-5">
+                        <h3 class="contact-heading">LinkedIn</h3>
+                        <p class="contact-text">
+                            Add me on LinkedIn! I’m always doing my best to stay updated and in the
+                            loop, and if you want me in your network or are just looking for a new
+                            peer, make sure to connect and send me a note :)
+                        </p>
+                        <a href="https://www.linkedin.com/" class="contact-link" target="_blank">Website</a>
+                    </div>
+
+                    <div class="contact-block">
+                        <h3 class="contact-heading">Email</h3>
+                        <p class="contact-text">
+                            Write to me for any inquiries or interests here!
+                        </p>
+                        <a href="mailto:rahmanzn2016@gmail.com" class="contact-link">rahmanzn2016@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-5">
+                    <div class="contact-block mb-5">
+                        <h3 class="contact-heading">Github</h3>
+                        <p class="contact-text">
+                            I keep my Github account as updated as possible with all of my new projects,
+                            repositories, and tech stack right on my profile! Make sure to take a look :)
+                        </p>
+                        <a href="https://github.com/zoyanashita" class="contact-link" target="_blank">Website</a>
+                    </div>
+
+                    <div class="d-flex justify-content-lg-center justify-content-start mt-lg-5">
+                        <a href="#top" class="back-to-top-btn">Back to Top</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer strip -->
+        <div class="contact-footer mt-5">
+            <div class="container">
+                <div class="row text-center text-md-start gy-2">
+                    <div class="col-12 col-md-6">
+                        <p class="mb-0">©2026 Zoya Rahman</p>
+                    </div>
+                    <div class="col-12 col-md-6 text-md-end">
+                        <p class="mb-0">Credits: Github Pages for Domain</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const splide = new Splide('#artSplide', {
+            const splideRoot = document.querySelector('#artSplide');
+
+            if (!splideRoot || typeof Splide === 'undefined') return;
+
+            const splide = new Splide(splideRoot, {
                 type: 'slide',
                 perPage: 3,
                 perMove: 1,
@@ -281,6 +355,7 @@
             splide.mount();
         });
     </script>
+</body>
 </body>
 
 </html>
