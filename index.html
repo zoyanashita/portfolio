@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Laila:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-    <script src="assets/js/script.js" defer></script>
 </head>
 
 <body>
@@ -73,7 +72,7 @@
                                 <li>Undergraduate Research Assistant in Bioinformatic/Computational Biology (Dr. Fardina
                                     F. Alam)</li>
                                 <li>Lead of Undergraduate Student Research in Spatiotemporal Deep Learning for
-                                    Hyperspectral Satellite Remote Sensing (Dr. Myungin Lee)
+                                    Hyperspectral Satellite Remote Sensing (Dr. Myungin Lee)</li>
                                 <li>Teaching Assistant for IMDM290 at UMD. </li>
                                 <li>Director of Design for the Association of Women In Computing at UMD. </li>
                             </ul>
@@ -171,57 +170,157 @@
 
             <!-- Filter pills -->
             <div class="art-filters mb-4">
-                <button class="filter-pill active" data-filter="all">See All:</button>
-                <button class="filter-pill" data-filter="photography">Touchdesigner</button>
-                <button class="filter-pill" data-filter="coursework">Blender</button>
+                <button class="filter-pill active" data-filter="all">See All</button>
+                <button class="filter-pill" data-filter="misc">MISC Coursework</button>
+                <button class="filter-pill" data-filter="touchdesigner">Touchdesigner</button>
                 <button class="filter-pill" data-filter="graphics">Graphics</button>
             </div>
 
             <!-- Splide -->
             <section id="artSplide" class="splide" aria-label="Art archive carousel">
-                <!-- custom arrows -->
-                <button class="art-arrow art-arrow-prev splide__arrow splide__arrow--prev" type="button">
-                    <span class="visually-hidden">Previous</span>
-                </button>
-
-                <button class="art-arrow art-arrow-next splide__arrow splide__arrow--next" type="button">
-                    <span class="visually-hidden">Next</span>
-                </button>
 
                 <div class="splide__track">
                     <ul class="splide__list">
 
-                        <li class="splide__slide" data-category="coursework">
+                        <li class="splide__slide" data-category="misc" data-type="video"
+                            data-src="assets/images/old-portfolio/ARTT 110 Final copy.mp4"
+                            data-title="Hand Drawn Headphones Animation">
+                            <article class="art-card">
+                                <video autoplay muted loop playsinline class="art-img">
+                                    <source src="assets/images/old-portfolio/ARTT 110 Final copy.mp4" type="video/mp4">
+                                </video>
+                            </article>
+                        </li>
+
+
+                        <li class="splide__slide" data-category="touchdesigner" data-type="video"
+                            data-src="assets/touchdesigner/pulse.mp4" data-title="Pulse Sensor Activated Animation">
+                            <article class="art-card">
+                                <video autoplay muted loop playsinline class="art-img">
+                                    <source src="assets/touchdesigner/pulse.mp4" type="video/mp4">
+                                </video>
+                            </article>
+                        </li>
+
+                        <li class="splide__slide" data-category="misc" data-type="youtube" data-youtube-id="TxKyq2n_x-o"
+                            data-title="Telekinesis - Give me a Hand">
+                            <article class="art-card youtube-slide">
+                                <div class="youtube-preview">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/TxKyq2n_x-o?autoplay=1&mute=1&loop=1&playlist=TxKyq2n_x-o&playsinline=1&controls=0&modestbranding=1&rel=0"
+                                        title="Telekinesis preview"
+                                        allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li class="splide__slide" data-category="misc" data-type="image"
+                            data-src="assets/images/old-portfolio/Self Portrait.jpeg"
+                            data-title="Self Portraint Drawing">
+                            <article class="art-card">
+                                <img src="assets/images/old-portfolio/Self Portrait.jpeg" alt="Artwork 2"
+                                    class="art-img">
+                            </article>
+                        </li>
+
+                        <li class="splide__slide" data-category="misc" data-type="image"
+                            data-src="assets/images/old-portfolio/Quick Animation.gif"
+                            data-title="Pig Animation">
+                            <article class="art-card">
+                                <img src="assets/images/old-portfolio/Quick Animation.gif" alt="Artwork 3"
+                                    class="art-img">
+                            </article>
+                        </li>
+
+                        <li class="splide__slide" data-category="misc" data-type="image"
+                            data-src="assets/images/old-portfolio/Surrealist.jpeg"
+                            data-title="Surrealist Drawing">
+                            <article class="art-card">
+                                <img src="assets/images/old-portfolio/Surrealist.jpeg" alt="Artwork 8" class="art-img">
+                            </article>
+                        </li>
+
+                        <li class="splide__slide" data-category="misc" data-type="image"
+                            data-src="assets/images/old-portfolio/pig.JPEG"
+                            data-title="Pig Drawing">
+                            <article class="art-card">
+                                <img src="assets/images/old-portfolio/pig.JPEG" alt="Artwork 4" class="art-img">
+                            </article>
+                        </li>
+
+                        <li class="splide__slide" data-category="touchdesigner" data-type="video"
+                            data-src="assets/touchdesigner/ninjago.mp4" data-title="3D Tech Fantasy Animation">
+                            <article class="art-card">
+                                <video autoplay muted loop playsinline class="art-img">
+                                    <source src="assets/touchdesigner/ninjago.mp4" type="video/mp4">
+                                </video>
+                            </article>
+                        </li>
+
+                        <li class="splide__slide" data-category="misc" data-type="image"
+                            data-src="assets/images/old-portfolio/ARTT110 Reduction.JPG"
+                            data-title="Reduction Drawing">
+                            <article class="art-card">
+                                <img src="assets/images/old-portfolio/ARTT110 Reduction.jpg" alt="Artwork 7"
+                                    class="art-img">
+                            </article>
+                        </li>
+
+                        <li class="splide__slide" data-category="touchdesigner" data-type="video"
+                            data-src="assets/touchdesigner/dancing.mp4" data-title="Cube Animation">
+                            <article class="art-card">
+                                <video autoplay muted loop playsinline class="art-img">
+                                    <source src="assets/touchdesigner/dancing.mp4" type="video/mp4">
+                                </video>
+                            </article>
+                        </li>
+
+                        <li class="splide__slide" data-category="misc" data-type="image"
+                            data-src="assets/images/old-portfolio/Fruits.JPG"
+                            data-title="Fruits Drawing">
+                            <article class="art-card">
+                                <img src="assets/images/old-portfolio/Fruits.JPG" alt="Artwork 6" class="art-img">
+                            </article>
+                        </li>
+
+                        <li class="splide__slide" data-category="graphics" data-type="image"
+                            data-src="assets/images/AWC Graphic Scrap/btsONE.png"
+                            data-title="Behind the Scenes Graphic">
                             <article class="art-card">
                                 <img src="assets/images/AWC Graphic Scrap/btsONE.png" alt="Artwork 1" class="art-img">
                             </article>
                         </li>
 
-                        <li class="splide__slide" data-category="coursework">
+                        <li class="splide__slide" data-category="graphics" data-type="image"
+                            data-src="assets/images/AWC Graphic Scrap/btsTWO.png"
+                            data-title="Behind the Scenes Graphic">
                             <article class="art-card">
-                                <img src="assets/images/AWC Graphic Scrap/btsTWO.png" alt="Artwork 2" class="art-img">
+                                <img src="assets/images/AWC Graphic Scrap/btsTWO.png" alt="Artwork 6" class="art-img">
                             </article>
                         </li>
 
-                        <li class="splide__slide" data-category="graphics">
+                        <li class="splide__slide" data-category="graphics" data-type="image"
+                            data-src="assets/images/AWC Graphic Scrap/cnONE.png" data-title="Casino Night Graphic">
                             <article class="art-card">
-                                <img src="assets/images/AWC Graphic Scrap/cnONE.png" alt="Artwork 3" class="art-img">
+                                <img src="assets/images/AWC Graphic Scrap/cnONE.png" alt="Artwork 6" class="art-img">
                             </article>
                         </li>
 
-                        <li class="splide__slide" data-category="photography">
+                        <li class="splide__slide" data-category="graphics" data-type="image"
+                            data-src="assets/images/AWC Graphic Scrap/cnTWO.png" data-title="Casino Night Graphic">
                             <article class="art-card">
-                                <img src="assets/images/AWC Graphic Scrap/cnTWO.png" alt="Artwork 4" class="art-img">
+                                <img src="assets/images/AWC Graphic Scrap/cnTWO.png" alt="Artwork 6" class="art-img">
                             </article>
                         </li>
-
                     </ul>
                 </div>
+
             </section>
 
             <!-- Description text -->
             <div class="art-caption mt-4">
-                <p><strong>Category:</strong> Coursework.</p>
+                <p><strong>Category:</strong> MISC Coursework.</p>
                 <p>
                     Pieces I’ve made as a student at the University of Maryland:
                     College Park
@@ -232,7 +331,7 @@
 
     </section>
 
-    <section id="contact" class="contact-section py-5">
+    <section id="about" class="contact-section py-5">
         <div class="container">
 
             <!-- Top row -->
@@ -260,7 +359,8 @@
                             loop, and if you want me in your network or are just looking for a new
                             peer, make sure to connect and send me a note :)
                         </p>
-                        <a href="https://www.linkedin.com/" class="contact-link" target="_blank">Website</a>
+                        <a href="https://www.linkedin.com/in/zoya-rahman-dmv" class="contact-link"
+                            target="_blank">Linkedin</a>
                     </div>
 
                     <div class="contact-block">
@@ -279,7 +379,7 @@
                             I keep my Github account as updated as possible with all of my new projects,
                             repositories, and tech stack right on my profile! Make sure to take a look :)
                         </p>
-                        <a href="https://github.com/zoyanashita" class="contact-link" target="_blank">Website</a>
+                        <a href="https://github.com/zoyanashita" class="contact-link" target="_blank">Github</a>
                     </div>
 
                     <div class="d-flex justify-content-lg-center justify-content-start mt-lg-5">
@@ -304,58 +404,171 @@
             </div>
         </div>
     </section>
+
+
+    <div class="modal fade" id="artModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content art-modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="artModalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center" id="artModalBody">
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const splideRoot = document.querySelector('#artSplide');
-
+            const splideRoot = document.getElementById('artSplide');
             if (!splideRoot || typeof Splide === 'undefined') return;
 
-            const splide = new Splide(splideRoot, {
-                type: 'slide',
-                perPage: 3,
-                perMove: 1,
-                gap: '2rem',
-                pagination: false,
-                arrows: true,
-                rewind: true,
-                breakpoints: {
-                    992: { perPage: 2 },
-                    576: { perPage: 1 }
-                }
-            });
+            const list = splideRoot.querySelector('.splide__list');
+            const filterButtons = document.querySelectorAll('.filter-pill');
 
-            const captions = [
-                {
-                    category: 'Coursework',
-                    text: 'Pieces I’ve made as a student at the University of Maryland: College Park'
+            const modalEl = document.getElementById('artModal');
+            const modalBody = document.getElementById('artModalBody');
+            const modalTitle = document.getElementById('artModalTitle');
+            const artModal = new bootstrap.Modal(modalEl);
+
+            const allSlides = Array.from(list.querySelectorAll('.splide__slide')).map(slide =>
+                slide.cloneNode(true)
+            );
+
+            const captionsByCategory = {
+                all: {
+                    category: 'All',
+                    text: 'An archive of my favorite work across different tools and styles.'
                 },
-                {
-                    category: 'Coursework',
-                    text: 'Another student project description here.'
+                misc: {
+                    category: 'MISC Coursework',
+                    text: 'A collection of pieces and projects I have made as an IMD/art student at UMD.'
                 },
-                {
+                touchdesigner: {
+                    category: 'TouchDesigner',
+                    text: 'Interactive visual experiments and motion studies made in TouchDesigner.'
+                },
+                graphics: {
                     category: 'Graphics',
-                    text: 'Graphic design and branding work.'
-                },
-                {
-                    category: 'Photography',
-                    text: 'A collection of favorite photography shots.'
+                    text: 'Graphic design, branding, and visual communication work.'
                 }
-            ];
+            };
 
-            splide.on('mounted move', function () {
-                const current = captions[splide.index];
-                document.querySelector('.art-caption p:first-child').innerHTML =
-                    `<strong>Category:</strong> ${current.category}.`;
-                document.querySelector('.art-caption p:last-child').textContent =
-                    current.text;
+            let splide;
+
+            function updateCaption(filter) {
+                const caption = captionsByCategory[filter] || captionsByCategory.all;
+                const firstP = document.querySelector('.art-caption p:first-child');
+                const lastP = document.querySelector('.art-caption p:last-child');
+
+                if (firstP && lastP) {
+                    firstP.innerHTML = `<strong>Category:</strong> ${caption.category}.`;
+                    lastP.textContent = caption.text;
+                }
+            }
+
+            function bindSlideClicks() {
+                const slides = document.querySelectorAll('#artSplide .splide__slide');
+
+                slides.forEach(slide => {
+                    slide.style.cursor = 'pointer';
+
+                    slide.addEventListener('click', function () {
+                        const type = this.dataset.type || 'image';
+                        const src = this.dataset.src;
+                        const title = this.dataset.title || '';
+
+                        modalTitle.textContent = title;
+                        modalBody.innerHTML = '';
+
+                        if (type === 'video') {
+                            if (!src) return;
+                            modalBody.innerHTML = `
+                        <video controls autoplay muted loop playsinline class="img-fluid rounded">
+                            <source src="${src}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    `;
+                        } else if (type === 'youtube') {
+                            const videoId = this.dataset.youtubeId;
+                            if (!videoId) return;
+
+                            modalBody.innerHTML = `
+                        <div class="ratio ratio-16x9">
+                            <iframe
+                                src="https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&playsinline=1&rel=0"
+                                title="${title}"
+                                allow="autoplay; encrypted-media; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    `;
+                        } else {
+                            if (!src) return;
+                            modalBody.innerHTML = `
+                        <img src="${src}" alt="${title}" class="img-fluid rounded">
+                    `;
+                        }
+
+                        artModal.show();
+                    });
+                });
+            }
+
+            function mountSplide() {
+                splide = new Splide('#artSplide', {
+                    type: 'slide',
+                    perPage: 3,
+                    perMove: 1,
+                    gap: '2rem',
+                    pagination: false,
+                    arrows: true,
+                    rewind: true,
+                    breakpoints: {
+                        992: { perPage: 2 },
+                        576: { perPage: 1 }
+                    }
+                });
+
+                splide.mount();
+                bindSlideClicks();
+            }
+
+            function renderSlides(filter) {
+                if (splide) {
+                    splide.destroy(true);
+                }
+
+                list.innerHTML = '';
+
+                const filteredSlides = allSlides.filter(slide => {
+                    return filter === 'all' || slide.dataset.category === filter;
+                });
+
+                filteredSlides.forEach(slide => {
+                    list.appendChild(slide.cloneNode(true));
+                });
+
+                mountSplide();
+                updateCaption(filter);
+            }
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    renderSlides(this.dataset.filter);
+                });
             });
 
-            splide.mount();
+            modalEl.addEventListener('hidden.bs.modal', function () {
+                modalBody.innerHTML = '';
+            });
+
+            renderSlides('all');
         });
     </script>
-</body>
 </body>
 
 </html>
