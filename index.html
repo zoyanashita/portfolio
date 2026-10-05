@@ -3,572 +3,731 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoya's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zoya Rahman — Computer vision research & design</title>
+    <meta name="description"
+        content="Zoya Rahman studies Computer Science and Immersive Media Design at the University of Maryland, researching computer vision, computational biology, and HCI.">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- Laila -->
-    <link href="https://fonts.googleapis.com/css2?family=Laila:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 </head>
 
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <div class="container">
-                <a class="navbar-brand" style="font-size: 24pt;" href="#">Zoya Rahman</a>
+<body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-                <!-- Mobile Menu Button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!-- ============ NAV ============ -->
+    <header class="site-header">
+        <nav class="nav wrap" aria-label="Main">
+            <a class="nav__brand" href="#top">Zoya Rahman</a>
 
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#aboutMe">About Me</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#featured-projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#art-archive">Artwork</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">Contact</a></li>
-                    </ul>
-                </div>
+            <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navLinks">
+                <span class="visually-hidden">Menu</span>
+                <span class="nav__toggle-bar"></span>
+            </button>
 
-            </div>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#initiatives">Teaching</a></li>
+                <li><a href="#art">Art</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- TODO: drop your CV PDF into assets/ and keep this link -->
+                <li><a class="nav__cv" href="assets/Zoya_Rahman_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+            </ul>
         </nav>
     </header>
 
-    <section id="aboutMe" class="py-5">
-        <div class="container">
-            <div class="row align-items-start gy-5 gx-lg-5">
+    <main id="main">
 
-                <!-- Left content -->
-                <div class="col-12 col-lg-6">
-                    <div class="about-text pe-lg-4">
-                        <h2 class="about-title mb-3" style="font-size: 24pt;">
-                            About <span class="accent">Me</span>!
-                        </h2>
+        <!-- ============ HERO ============ -->
+        <section class="hero">
+            <div class="wrap hero__grid">
+                <div class="hero__text">
+                    <h1 class="hero__name">
+                        <span class="hero__solid">Zoya</span>
+                        <span class="hero__solid">Rahman</span>
+                        <span class="hero__echo" aria-hidden="true">Rahman</span>
+                        <span class="hero__echo hero__echo--2" aria-hidden="true">Rahman</span>
+                    </h1>
 
-                        <p class="about-description mb-5" style="font-size: 12pt">
-                            I’m a B.S. and B.A. student at the University of Maryland: College Park studying Computer
-                            Science and Immersive Media Design. My current research interests cover Computer Vision,
-                            Computational Biology, HCI, and Deep Learning, while also currently exploring Computational
-                            Imaging, and Graphics. I also utilize my IMD studies to explore the intersection between Art
-                            and Technology. My goal is to pursue my PhD post undergrad in a Computer Vision related
-                            field. <br>
-                            Outside of school and research I work as a graphic designer and UI/UX developer for the
-                            Association of Women in Computing at UMD.
-                        </p>
+                    <p class="hero__lede">
+                        Computer vision researcher and designer at the University of Maryland, College Park.
+                        I study how machines see, and I build things people can step inside.
+                    </p>
 
-                        <div class="endeavors-section">
-                            <!-- <div class="endeavors-label">
-                                Current Endeavors
-                            </div> -->
+                    <ul class="hero__links">
+                        <li><a href="https://github.com/zoyanashita" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/zoya-rahman-dmv" target="_blank"
+                                rel="noopener">LinkedIn</a></li>
+                        <li><a href="mailto:rahmanzn2016@gmail.com">Email</a></li>
+                    </ul>
+                </div>
 
-                            <p class="endeavors-date mb-2"><b>As of Spring 2026</b></p>
+                <figure class="hero__portrait">
+                    <img src="assets/images/headshot-1600.jpg"
+                        srcset="assets/images/headshot-900.jpg 900w, assets/images/headshot-1600.jpg 1600w"
+                        sizes="(max-width: 860px) 100vw, 55vw"
+                        alt="Portrait of Zoya Rahman" width="1600" height="1067" fetchpriority="high">
+                </figure>
+            </div>
+        </section>
 
-                            <ul class="endeavors-list mb-0" style="font-size: 14pt">
-                                <li>Undergraduate Research Assistant in Bioinformatic/Computational Biology (Dr. Fardina
-                                    F. Alam)</li>
-                                <li>Lead of Undergraduate Student Research in Spatiotemporal Deep Learning for
-                                    Hyperspectral Satellite Remote Sensing (Dr. Myungin Lee)</li>
-                                <li>Teaching Assistant for IMDM290 at UMD. </li>
-                                <li>Director of Design for the Association of Women In Computing at UMD. </li>
+        <!-- ============ ABOUT ============ -->
+        <section id="about" class="section about">
+            <div class="wrap about__grid">
+                <div class="about__bio">
+                    <h2 class="section-title">About</h2>
+                    <p>
+                        I'm completing a B.S. in Computer Science and a B.A. in Immersive Media Design at the
+                        University of Maryland. My research spans computer vision, computational biology, HCI,
+                        and deep learning, and I'm currently exploring computational imaging and graphics.
+                    </p>
+                    <p>
+                        My immersive media work lets me test those ideas where art and technology meet. After
+                        my undergraduate degree, I plan to pursue a PhD in a computer vision field.
+                    </p>
+
+                    <h3 class="about__subhead">Research interests</h3>
+                    <ul class="tag-list">
+                        <li>Computer vision</li>
+                        <li>Computational imaging</li>
+                        <li>Remote sensing</li>
+                        <li>Computational biology</li>
+                        <li>Human–computer interaction</li>
+                        <li>Graphics</li>
+                    </ul>
+                </div>
+
+                <aside class="about__now" aria-labelledby="nowTitle">
+                    <h3 class="about__subhead" id="nowTitle">Spring 2026</h3>
+                    <ul class="now-list">
+                        <li>
+                            <strong>Lead undergraduate researcher</strong>
+                            Spatiotemporal deep learning for hyperspectral satellite remote sensing, with
+                            Dr. Myungin Lee
+                        </li>
+                        <li>
+                            <strong>Undergraduate research assistant</strong>
+                            Bioinformatics and computational biology, FAIR Lab, with Dr. Fardina F. Alam
+                        </li>
+                        <li>
+                            <strong>Teaching assistant</strong>
+                            IMDM 290, Collaborative Studio I: Image + Time
+                        </li>
+                        <li>
+                            <strong>Director of Design</strong>
+                            Association of Women in Computing at UMD
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ============ WORK (two tabs, one carousel each) ============ -->
+        <section id="work" class="section work">
+            <div class="wrap">
+                <div class="work__head">
+                    <h2 class="section-title">Selected work</h2>
+
+                    <div class="tabs" role="tablist" aria-label="Type of work">
+                        <button class="tab" role="tab" id="tab-research" aria-controls="panel-research"
+                            aria-selected="true">Research &amp; CS</button>
+                        <button class="tab" role="tab" id="tab-design" aria-controls="panel-design"
+                            aria-selected="false" tabindex="-1">Design &amp; immersive</button>
+                    </div>
+                </div>
+
+                <!--
+                  HOW TO EDIT A PROJECT
+                  Each project is one <li class="splide__slide">. Replace every <span class="todo">…</span>
+                  with real text (they show a dashed underline so you can't miss them — search for "todo").
+                  To add an image: replace the <div class="media-ph"> with
+                  <img src="assets/images/your-file.jpg" alt="Describe the image">
+                -->
+
+                <!-- ---------- RESEARCH & CS ---------- -->
+                <div class="tab-panel" role="tabpanel" id="panel-research" aria-labelledby="tab-research">
+                    <p class="tab-panel__intro">Research positions and technical projects, with my role in each.</p>
+
+                    <div class="splide project-splide" aria-label="Research and computer science projects">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+
+                                <!-- Spatiotemporal CNN -->
+                                <li class="splide__slide">
+                                    <article class="project">
+                                        <div class="project__media">
+                                            <div class="media-ph" role="img"
+                                                aria-label="Placeholder for hyperspectral imagery figure">
+                                                Model diagram or hyperspectral sample
+                                            </div>
+                                        </div>
+                                        <div class="project__body">
+                                            <p class="project__context">Undergraduate research, advised by Dr. Myungin Lee</p>
+                                            <h3 class="project__title">Spatiotemporal deep learning for hyperspectral remote sensing</h3>
+                                            <p class="project__summary">
+                                                Spatiotemporal convolutional networks for hyperspectral satellite
+                                                imagery. <span class="todo">One sentence on the question the model answers.</span>
+                                            </p>
+                                            <dl class="project__facts">
+                                                <div>
+                                                    <dt>My role</dt>
+                                                    <dd>Lead of the undergraduate research team. <span class="todo">What you
+                                                            personally designed, trained, or evaluated.</span></dd>
+                                                </div>
+                                                <div>
+                                                    <dt>What's new</dt>
+                                                    <dd><span class="todo">What this does that prior approaches don't.</span></dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Tools</dt>
+                                                    <dd><span class="todo">PyTorch, …</span></dd>
+                                                </div>
+                                            </dl>
+                                            <ul class="project__links">
+                                                <li><a href="#"><span class="todo">Poster / paper</span></a></li>
+                                                <li><a href="#"><span class="todo">GitHub</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </li>
+
+                                <!-- FAIR Lab -->
+                                <li class="splide__slide">
+                                    <article class="project">
+                                        <div class="project__media">
+                                            <div class="media-ph" role="img"
+                                                aria-label="Placeholder for bioinformatics figure">
+                                                Pipeline diagram or result figure
+                                            </div>
+                                        </div>
+                                        <div class="project__body">
+                                            <p class="project__context">FAIR Lab, advised by Dr. Fardina F. Alam</p>
+                                            <h3 class="project__title">Bioinformatics research</h3>
+                                            <p class="project__summary">
+                                                <span class="todo">One or two sentences: the biological question and the
+                                                    computational method.</span>
+                                            </p>
+                                            <dl class="project__facts">
+                                                <div>
+                                                    <dt>My role</dt>
+                                                    <dd>Undergraduate research assistant. <span class="todo">Your specific
+                                                            contribution.</span></dd>
+                                                </div>
+                                                <div>
+                                                    <dt>What's new</dt>
+                                                    <dd><span class="todo">The contribution, in plain language.</span></dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Tools</dt>
+                                                    <dd><span class="todo">Python, …</span></dd>
+                                                </div>
+                                            </dl>
+                                            <ul class="project__links">
+                                                <li><a href="#"><span class="todo">Documentation</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </li>
+
+                                <!-- Embodied Dynamics Lab -->
+                                <li class="splide__slide">
+                                    <article class="project">
+                                        <div class="project__media">
+                                            <div class="media-ph" role="img"
+                                                aria-label="Placeholder for FocusLens interface screenshot">
+                                                FocusLens / LeadErr screenshot
+                                            </div>
+                                        </div>
+                                        <div class="project__body">
+                                            <p class="project__context">Embodied Dynamics Laboratory</p>
+                                            <h3 class="project__title">FocusLens &amp; LeadErr</h3>
+                                            <p class="project__summary">
+                                                <span class="todo">What each tool is, one sentence each.</span>
+                                            </p>
+                                            <dl class="project__facts">
+                                                <div>
+                                                    <dt>My role</dt>
+                                                    <dd><span class="todo">What you contributed to each.</span></dd>
+                                                </div>
+                                                <div>
+                                                    <dt>What's new</dt>
+                                                    <dd><span class="todo">…</span></dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Tools</dt>
+                                                    <dd><span class="todo">…</span></dd>
+                                                </div>
+                                            </dl>
+                                            <ul class="project__links">
+                                                <li><a href="#"><span class="todo">Documentation</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </li>
+
+                                <!-- Student Success -->
+                                <li class="splide__slide">
+                                    <article class="project">
+                                        <div class="project__media">
+                                            <!-- Swap for a screenshot of the site: assets/images/student-success.png -->
+                                            <div class="media-ph" role="img"
+                                                aria-label="Placeholder for data science project screenshot">
+                                                Site screenshot
+                                            </div>
+                                        </div>
+                                        <div class="project__body">
+                                            <p class="project__context">CMSC 320, Introduction to Data Science</p>
+                                            <h3 class="project__title">Analysis of student success</h3>
+                                            <p class="project__summary">
+                                                A data science and machine learning study of the factors that
+                                                contribute to student success.
+                                            </p>
+                                            <dl class="project__facts">
+                                                <div>
+                                                    <dt>My role</dt>
+                                                    <dd><span class="todo">Solo or team? What you owned.</span></dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Findings</dt>
+                                                    <dd><span class="todo">The one result worth remembering.</span></dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Tools</dt>
+                                                    <dd><span class="todo">pandas, scikit-learn, …</span></dd>
+                                                </div>
+                                            </dl>
+                                            <ul class="project__links">
+                                                <li><a href="https://zoyanashita.github.io/analysisOfStudentSuccess/"
+                                                        target="_blank" rel="noopener">Website</a></li>
+                                                <li><a href="#"><span class="todo">GitHub</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </li>
+
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right image -->
-                <div class="col-12 col-lg-6">
-                    <div class="about-image-wrapper">
-                        <img src="assets/images/aboutMe.png" alt="Portrait of Zoya" class="about-image img-fluid">
-                    </div>
-                </div>
+                <!-- ---------- DESIGN & IMMERSIVE ---------- -->
+                <div class="tab-panel" role="tabpanel" id="panel-design" aria-labelledby="tab-design" hidden>
+                    <p class="tab-panel__intro">Interactive installations, immersive media, and interface design.</p>
 
-            </div>
-        </div>
-    </section>
+                    <div class="splide project-splide" aria-label="Design and immersive media projects">
+                        <div class="splide__track">
+                            <ul class="splide__list">
 
-    <section id="featured-projects" class="py-5">
-        <div class="container">
+                                <!-- Memento of Self -->
+                                <li class="splide__slide">
+                                    <article class="project">
+                                        <div class="project__media">
+                                            <div class="media-ph" role="img"
+                                                aria-label="Placeholder for Memento of Self photobooth photo">
+                                                Photobooth setup or reconstructed output
+                                            </div>
+                                        </div>
+                                        <div class="project__body">
+                                            <p class="project__context">Project lead</p>
+                                            <h3 class="project__title">Memento of Self</h3>
+                                            <p class="project__summary">
+                                                A photobooth that reconstructs visitors in 3D. <span class="todo">What a
+                                                    visitor experiences and what they leave with.</span>
+                                            </p>
+                                            <dl class="project__facts">
+                                                <div>
+                                                    <dt>My role</dt>
+                                                    <dd>Project lead. <span class="todo">Team size, what you built
+                                                            yourself.</span></dd>
+                                                </div>
+                                                <div>
+                                                    <dt>What's new</dt>
+                                                    <dd><span class="todo">The reconstruction approach and why it matters.</span></dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Tools</dt>
+                                                    <dd><span class="todo">…</span></dd>
+                                                </div>
+                                            </dl>
+                                            <ul class="project__links">
+                                                <li><a href="#"><span class="todo">Process documentation</span></a></li>
+                                                <li><a href="#"><span class="todo">Video</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </li>
 
-            <!-- Section heading -->
-            <div class="mb-5">
-                <h2 class="display-3 fw-normal">
-                    Featured <span class="text-danger">Projects</span>
-                </h2>
-                <a href="#" class="btn btn-outline-dark rounded-pill px-4">
-                    See more works!
-                </a>
-            </div>
+                                <!-- Cy Keener -->
+                                <li class="splide__slide">
+                                    <article class="project">
+                                        <div class="project__media">
+                                            <div class="media-ph" role="img" aria-label="Placeholder for project image">
+                                                Project image
+                                            </div>
+                                        </div>
+                                        <div class="project__body">
+                                            <p class="project__context">Independent project with Cy Keener</p>
+                                            <h3 class="project__title"><span class="todo">Project title</span></h3>
+                                            <p class="project__summary">
+                                                <span class="todo">What it is, in one or two sentences.</span>
+                                            </p>
+                                            <dl class="project__facts">
+                                                <div>
+                                                    <dt>My role</dt>
+                                                    <dd><span class="todo">…</span></dd>
+                                                </div>
+                                                <div>
+                                                    <dt>What's new</dt>
+                                                    <dd><span class="todo">…</span></dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Tools</dt>
+                                                    <dd><span class="todo">…</span></dd>
+                                                </div>
+                                            </dl>
+                                            <ul class="project__links">
+                                                <li><a href="#"><span class="todo">Documentation</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </li>
 
-            <!-- Project 1 -->
-            <div class="row align-items-center g-4 mb-5">
-                <div class="col-12 col-lg-4">
-                    <a href="https://www.youtube.com/watch?v=TxKyq2n_x-o" target="_blank" class="project-video">
-                        <img src="https://img.youtube.com/vi/TxKyq2n_x-o/hqdefault.jpg"
-                            alt="Telekinesis project video thumbnail" class="img-fluid project-thumbnail">
-                    </a>
-                </div>
+                                <!-- AWC UI/UX -->
+                                <li class="splide__slide">
+                                    <article class="project">
+                                        <div class="project__media">
+                                            <div class="media-ph" role="img"
+                                                aria-label="Placeholder for AWC interface designs">
+                                                Before / after screens or Figma frames
+                                            </div>
+                                        </div>
+                                        <div class="project__body">
+                                            <p class="project__context">Association of Women in Computing at UMD</p>
+                                            <h3 class="project__title"><span class="todo">AWC website redesign</span></h3>
+                                            <p class="project__summary">
+                                                <span class="todo">The problem members had, and what you changed.</span>
+                                            </p>
+                                            <dl class="project__facts">
+                                                <div>
+                                                    <dt>My role</dt>
+                                                    <dd>Director of Design; UI/UX design and front-end development.</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Process</dt>
+                                                    <dd><span class="todo">Research → wireframes → prototype → build. One line
+                                                            each is enough.</span></dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Tools</dt>
+                                                    <dd><span class="todo">Figma, …</span></dd>
+                                                </div>
+                                            </dl>
+                                            <ul class="project__links">
+                                                <li><a href="#"><span class="todo">Case study</span></a></li>
+                                                <li><a href="#"><span class="todo">Live site</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </li>
 
-                <div class="col-12 col-lg-8">
-                    <h3 class="mb-2">Telekinesis - Give me a Hand</h3>
-                    <p class="fs-4 mb-3">IMDM 290 Final Project</p>
-                    <p class="mb-3">
-                        An immersive, virtual reality obstacle course that only uses hand
-                        tracking controls to allow for object interaction and manipulation.
-                        Final project for Collaborative Studio I: Image + Time
-                    </p>
-                    <div class="d-flex gap-3 flex-wrap">
-                        <a href="https://www.youtube.com/watch?v=TxKyq2n_x-o"
-                            class="text-dark text-decoration-none">Youtube</a>
-                    </div>
-                </div>
-            </div>
+                                <!-- Telekinesis -->
+                                <li class="splide__slide">
+                                    <article class="project">
+                                        <div class="project__media">
+                                            <a class="video-thumb" href="https://www.youtube.com/watch?v=TxKyq2n_x-o"
+                                                target="_blank" rel="noopener">
+                                                <img src="https://img.youtube.com/vi/TxKyq2n_x-o/hqdefault.jpg"
+                                                    alt="Telekinesis VR obstacle course, video thumbnail" loading="lazy">
+                                                <span class="video-thumb__play">Play video</span>
+                                            </a>
+                                        </div>
+                                        <div class="project__body">
+                                            <p class="project__context">IMDM 290, Collaborative Studio I: Image + Time</p>
+                                            <h3 class="project__title">Telekinesis: Give Me a Hand</h3>
+                                            <p class="project__summary">
+                                                A virtual reality obstacle course controlled entirely by hand tracking:
+                                                players grab, move, and manipulate objects with no controllers.
+                                            </p>
+                                            <dl class="project__facts">
+                                                <div>
+                                                    <dt>My role</dt>
+                                                    <dd><span class="todo">…</span></dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Tools</dt>
+                                                    <dd><span class="todo">Engine, headset, …</span></dd>
+                                                </div>
+                                            </dl>
+                                            <ul class="project__links">
+                                                <li><a href="https://www.youtube.com/watch?v=TxKyq2n_x-o" target="_blank"
+                                                        rel="noopener">Watch on YouTube</a></li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </li>
 
-            <!-- Project 2 -->
-            <div class="row align-items-center g-4 mb-5">
-                <div class="col-12 col-lg-5 text-lg-end">
-                    <h3 class="mb-2">Analysis of Student Success</h3>
-                    <p class="fs-4 mb-3">CMSC 320 Final Project</p>
-                    <p class="mb-3">
-                        An in depth Data Science / Machine Learning Project that aimed to
-                        uncover factors that contributed to student success, while practicing
-                        common DS/ML libraries and techniques. Final project for Intro to
-                        Data Science.
-                    </p>
-                    <div class="d-flex gap-3 flex-wrap justify-content-lg-end">
-                        <a href="#" class="text-dark text-decoration-none">Website</a>
-                        <a href="#" class="text-dark text-decoration-none">Github</a>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-7">
-                    <div class="project-frame">
-                        <iframe src="https://zoyanashita.github.io/analysisOfStudentSuccess/" title="Project preview"
-                            loading="lazy">
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <section id="art-archive" class="py-5">
-        <div class="container position-relative">
-
-            <!-- Heading -->
-            <div class="mb-4">
-                <h2 class="art-title">
-                    The <span class="accent">Art</span>~
-                </h2>
-                <p class="art-subtitle">An archive of my favorites.</p>
-            </div>
-
-            <!-- Filter pills -->
-            <div class="art-filters mb-4">
-                <button class="filter-pill active" data-filter="all">See All</button>
-                <button class="filter-pill" data-filter="misc">MISC Coursework</button>
-                <button class="filter-pill" data-filter="touchdesigner">Touchdesigner</button>
-                <button class="filter-pill" data-filter="graphics">Graphics</button>
-            </div>
-
-            <!-- Splide -->
-            <section id="artSplide" class="splide" aria-label="Art archive carousel">
-
-                <div class="splide__track">
-                    <ul class="splide__list">
-
-                        <li class="splide__slide" data-category="misc" data-type="video"
-                            data-src="assets/images/old-portfolio/ARTT 110 Final copy.mp4"
-                            data-title="Hand Drawn Headphones Animation">
-                            <article class="art-card">
-                                <video autoplay muted loop playsinline class="art-img">
-                                    <source src="assets/images/old-portfolio/ARTT 110 Final copy.mp4" type="video/mp4">
-                                </video>
-                            </article>
-                        </li>
-
-
-                        <li class="splide__slide" data-category="touchdesigner" data-type="video"
-                            data-src="assets/touchdesigner/pulse.mp4" data-title="Pulse Sensor Activated Animation">
-                            <article class="art-card">
-                                <video autoplay muted loop playsinline class="art-img">
-                                    <source src="assets/touchdesigner/pulse.mp4" type="video/mp4">
-                                </video>
-                            </article>
-                        </li>
-
-                        <li class="splide__slide" data-category="misc" data-type="youtube" data-youtube-id="TxKyq2n_x-o"
-                            data-title="Telekinesis - Give me a Hand">
-                            <article class="art-card youtube-slide">
-                                <div class="youtube-preview">
-                                    <iframe
-                                        src="https://www.youtube.com/embed/TxKyq2n_x-o?autoplay=1&mute=1&loop=1&playlist=TxKyq2n_x-o&playsinline=1&controls=0&modestbranding=1&rel=0"
-                                        title="Telekinesis preview"
-                                        allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen>
-                                    </iframe>
-                                </div>
-                            </article>
-                        </li>
-
-                        <li class="splide__slide" data-category="misc" data-type="image"
-                            data-src="assets/images/old-portfolio/Self Portrait.jpeg"
-                            data-title="Self Portraint Drawing">
-                            <article class="art-card">
-                                <img src="assets/images/old-portfolio/Self Portrait.jpeg" alt="Artwork 2"
-                                    class="art-img">
-                            </article>
-                        </li>
-
-                        <li class="splide__slide" data-category="misc" data-type="image"
-                            data-src="assets/images/old-portfolio/Quick Animation.gif"
-                            data-title="Pig Animation">
-                            <article class="art-card">
-                                <img src="assets/images/old-portfolio/Quick Animation.gif" alt="Artwork 3"
-                                    class="art-img">
-                            </article>
-                        </li>
-
-                        <li class="splide__slide" data-category="misc" data-type="image"
-                            data-src="assets/images/old-portfolio/Surrealist.jpeg"
-                            data-title="Surrealist Drawing">
-                            <article class="art-card">
-                                <img src="assets/images/old-portfolio/Surrealist.jpeg" alt="Artwork 8" class="art-img">
-                            </article>
-                        </li>
-
-                        <li class="splide__slide" data-category="misc" data-type="image"
-                            data-src="assets/images/old-portfolio/pig.JPEG"
-                            data-title="Pig Drawing">
-                            <article class="art-card">
-                                <img src="assets/images/old-portfolio/pig.JPEG" alt="Artwork 4" class="art-img">
-                            </article>
-                        </li>
-
-                        <li class="splide__slide" data-category="touchdesigner" data-type="video"
-                            data-src="assets/touchdesigner/ninjago.mp4" data-title="3D Tech Fantasy Animation">
-                            <article class="art-card">
-                                <video autoplay muted loop playsinline class="art-img">
-                                    <source src="assets/touchdesigner/ninjago.mp4" type="video/mp4">
-                                </video>
-                            </article>
-                        </li>
-
-                        <li class="splide__slide" data-category="misc" data-type="image"
-                            data-src="assets/images/old-portfolio/ARTT110 Reduction.JPG"
-                            data-title="Reduction Drawing">
-                            <article class="art-card">
-                                <img src="assets/images/old-portfolio/ARTT110 Reduction.jpg" alt="Artwork 7"
-                                    class="art-img">
-                            </article>
-                        </li>
-
-                        <li class="splide__slide" data-category="touchdesigner" data-type="video"
-                            data-src="assets/touchdesigner/dancing.mp4" data-title="Cube Animation">
-                            <article class="art-card">
-                                <video autoplay muted loop playsinline class="art-img">
-                                    <source src="assets/touchdesigner/dancing.mp4" type="video/mp4">
-                                </video>
-                            </article>
-                        </li>
-
-                        <li class="splide__slide" data-category="misc" data-type="image"
-                            data-src="assets/images/old-portfolio/Fruits.JPG"
-                            data-title="Fruits Drawing">
-                            <article class="art-card">
-                                <img src="assets/images/old-portfolio/Fruits.JPG" alt="Artwork 6" class="art-img">
-                            </article>
-                        </li>
-
-                        <li class="splide__slide" data-category="graphics" data-type="image"
-                            data-src="assets/images/AWC Graphic Scrap/btsONE.png"
-                            data-title="Behind the Scenes Graphic">
-                            <article class="art-card">
-                                <img src="assets/images/AWC Graphic Scrap/btsONE.png" alt="Artwork 1" class="art-img">
-                            </article>
-                        </li>
-
-                        <li class="splide__slide" data-category="graphics" data-type="image"
-                            data-src="assets/images/AWC Graphic Scrap/btsTWO.png"
-                            data-title="Behind the Scenes Graphic">
-                            <article class="art-card">
-                                <img src="assets/images/AWC Graphic Scrap/btsTWO.png" alt="Artwork 6" class="art-img">
-                            </article>
-                        </li>
-
-                        <li class="splide__slide" data-category="graphics" data-type="image"
-                            data-src="assets/images/AWC Graphic Scrap/cnONE.png" data-title="Casino Night Graphic">
-                            <article class="art-card">
-                                <img src="assets/images/AWC Graphic Scrap/cnONE.png" alt="Artwork 6" class="art-img">
-                            </article>
-                        </li>
-
-                        <li class="splide__slide" data-category="graphics" data-type="image"
-                            data-src="assets/images/AWC Graphic Scrap/cnTWO.png" data-title="Casino Night Graphic">
-                            <article class="art-card">
-                                <img src="assets/images/AWC Graphic Scrap/cnTWO.png" alt="Artwork 6" class="art-img">
-                            </article>
-                        </li>
-                    </ul>
-                </div>
-
-            </section>
-
-            <!-- Description text -->
-            <div class="art-caption mt-4">
-                <p><strong>Category:</strong> MISC Coursework.</p>
-                <p>
-                    Pieces I’ve made as a student at the University of Maryland:
-                    College Park
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="about" class="contact-section py-5">
-        <div class="container">
-
-            <!-- Top row -->
-            <div class="row align-items-center justify-content-between gy-4 mb-5">
-                <div class="col-12 col-md-3">
-                    <div class="contact-image-placeholder"></div>
-                </div>
-
-                <div class="col-12 col-md-6 text-center">
-                    <h2 class="contact-title mb-0">Stay In Touch!</h2>
-                </div>
-
-                <div class="col-12 col-md-3">
-                    <div class="contact-image-placeholder ms-md-auto"></div>
-                </div>
-            </div>
-
-            <!-- Contact content -->
-            <div class="row gy-5">
-                <div class="col-12 col-lg-5 offset-lg-1">
-                    <div class="contact-block mb-5">
-                        <h3 class="contact-heading">LinkedIn</h3>
-                        <p class="contact-text">
-                            Add me on LinkedIn! I’m always doing my best to stay updated and in the
-                            loop, and if you want me in your network or are just looking for a new
-                            peer, make sure to connect and send me a note :)
-                        </p>
-                        <a href="https://www.linkedin.com/in/zoya-rahman-dmv" class="contact-link"
-                            target="_blank">Linkedin</a>
-                    </div>
-
-                    <div class="contact-block">
-                        <h3 class="contact-heading">Email</h3>
-                        <p class="contact-text">
-                            Write to me for any inquiries or interests here!
-                        </p>
-                        <a href="mailto:rahmanzn2016@gmail.com" class="contact-link">rahmanzn2016@gmail.com</a>
-                    </div>
-                </div>
-
-                <div class="col-12 col-lg-5">
-                    <div class="contact-block mb-5">
-                        <h3 class="contact-heading">Github</h3>
-                        <p class="contact-text">
-                            I keep my Github account as updated as possible with all of my new projects,
-                            repositories, and tech stack right on my profile! Make sure to take a look :)
-                        </p>
-                        <a href="https://github.com/zoyanashita" class="contact-link" target="_blank">Github</a>
-                    </div>
-
-                    <div class="d-flex justify-content-lg-center justify-content-start mt-lg-5">
-                        <a href="#top" class="back-to-top-btn">Back to Top</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Footer strip -->
-        <div class="contact-footer mt-5">
-            <div class="container">
-                <div class="row text-center text-md-start gy-2">
-                    <div class="col-12 col-md-6">
-                        <p class="mb-0">©2026 Zoya Rahman</p>
-                    </div>
-                    <div class="col-12 col-md-6 text-md-end">
-                        <p class="mb-0">Credits: Github Pages for Domain</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <div class="modal fade" id="artModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content art-modal-content">
-                <div class="modal-header border-0">
-                    <h5 class="modal-title" id="artModalTitle"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body text-center" id="artModalBody">
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const splideRoot = document.getElementById('artSplide');
-            if (!splideRoot || typeof Splide === 'undefined') return;
-
-            const list = splideRoot.querySelector('.splide__list');
-            const filterButtons = document.querySelectorAll('.filter-pill');
-
-            const modalEl = document.getElementById('artModal');
-            const modalBody = document.getElementById('artModalBody');
-            const modalTitle = document.getElementById('artModalTitle');
-            const artModal = new bootstrap.Modal(modalEl);
-
-            const allSlides = Array.from(list.querySelectorAll('.splide__slide')).map(slide =>
-                slide.cloneNode(true)
-            );
-
-            const captionsByCategory = {
-                all: {
-                    category: 'All',
-                    text: 'An archive of my favorite work across different tools and styles.'
-                },
-                misc: {
-                    category: 'MISC Coursework',
-                    text: 'A collection of pieces and projects I have made as an IMD/art student at UMD.'
-                },
-                touchdesigner: {
-                    category: 'TouchDesigner',
-                    text: 'Interactive visual experiments and motion studies made in TouchDesigner.'
-                },
-                graphics: {
-                    category: 'Graphics',
-                    text: 'Graphic design, branding, and visual communication work.'
-                }
-            };
-
-            let splide;
-
-            function updateCaption(filter) {
-                const caption = captionsByCategory[filter] || captionsByCategory.all;
-                const firstP = document.querySelector('.art-caption p:first-child');
-                const lastP = document.querySelector('.art-caption p:last-child');
-
-                if (firstP && lastP) {
-                    firstP.innerHTML = `<strong>Category:</strong> ${caption.category}.`;
-                    lastP.textContent = caption.text;
-                }
-            }
-
-            function bindSlideClicks() {
-                const slides = document.querySelectorAll('#artSplide .splide__slide');
-
-                slides.forEach(slide => {
-                    slide.style.cursor = 'pointer';
-
-                    slide.addEventListener('click', function () {
-                        const type = this.dataset.type || 'image';
-                        const src = this.dataset.src;
-                        const title = this.dataset.title || '';
-
-                        modalTitle.textContent = title;
-                        modalBody.innerHTML = '';
-
-                        if (type === 'video') {
-                            if (!src) return;
-                            modalBody.innerHTML = `
-                        <video controls autoplay muted loop playsinline class="img-fluid rounded">
-                            <source src="${src}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    `;
-                        } else if (type === 'youtube') {
-                            const videoId = this.dataset.youtubeId;
-                            if (!videoId) return;
-
-                            modalBody.innerHTML = `
-                        <div class="ratio ratio-16x9">
-                            <iframe
-                                src="https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&playsinline=1&rel=0"
-                                title="${title}"
-                                allow="autoplay; encrypted-media; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
+                            </ul>
                         </div>
-                    `;
-                        } else {
-                            if (!src) return;
-                            modalBody.innerHTML = `
-                        <img src="${src}" alt="${title}" class="img-fluid rounded">
-                    `;
-                        }
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        artModal.show();
-                    });
-                });
-            }
+        <!-- ============ TEACHING & INITIATIVES ============ -->
+        <section id="initiatives" class="section initiatives">
+            <div class="wrap">
+                <h2 class="section-title">Teaching &amp; initiatives</h2>
+                <p class="section-intro">Programs I've started or run, and the students I've worked with.</p>
 
-            function mountSplide() {
-                splide = new Splide('#artSplide', {
-                    type: 'slide',
-                    perPage: 3,
-                    perMove: 1,
-                    gap: '2rem',
-                    pagination: false,
-                    arrows: true,
-                    rewind: true,
-                    breakpoints: {
-                        992: { perPage: 2 },
-                        576: { perPage: 1 }
-                    }
-                });
+                <div class="splide" id="initiativeSplide" aria-label="Teaching and initiatives">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <article class="initiative">
+                                    <p class="initiative__role"><span class="todo">Founder / organizer</span></p>
+                                    <h3 class="initiative__title">IMMERSE Initiative</h3>
+                                    <p><span class="todo">What it is, who it serves, and one number (members, events,
+                                            workshops).</span></p>
+                                </article>
+                            </li>
+                            <li class="splide__slide">
+                                <article class="initiative">
+                                    <p class="initiative__role">Teaching assistant</p>
+                                    <h3 class="initiative__title">IMDM 290</h3>
+                                    <p>Collaborative Studio I: Image + Time. <span class="todo">What you teach or run:
+                                            labs, critiques, office hours.</span></p>
+                                </article>
+                            </li>
+                            <li class="splide__slide">
+                                <article class="initiative">
+                                    <p class="initiative__role">Peer advisor</p>
+                                    <h3 class="initiative__title"><span class="todo">Program name</span></h3>
+                                    <p><span class="todo">Who you advise and on what.</span></p>
+                                </article>
+                            </li>
+                            <li class="splide__slide">
+                                <article class="initiative">
+                                    <p class="initiative__role">Director of Design</p>
+                                    <h3 class="initiative__title">Association of Women in Computing</h3>
+                                    <p>Graphic design and UI/UX for UMD's AWC chapter. <span class="todo">Scope: events,
+                                            branding, website.</span></p>
+                                </article>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                splide.mount();
-                bindSlideClicks();
-            }
+        <!-- ============ ART ============ -->
+        <section id="art" class="section art">
+            <div class="wrap">
+                <div class="art__head">
+                    <div>
+                        <h2 class="section-title">Art archive</h2>
+                        <p class="section-intro" id="artCaption">Favorite pieces across drawing, motion, and graphic
+                            design.</p>
+                    </div>
 
-            function renderSlides(filter) {
-                if (splide) {
-                    splide.destroy(true);
-                }
+                    <div class="filters" role="group" aria-label="Filter artwork">
+                        <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+                        <button class="filter" type="button" data-filter="misc" aria-pressed="false">Coursework</button>
+                        <button class="filter" type="button" data-filter="touchdesigner"
+                            aria-pressed="false">TouchDesigner</button>
+                        <button class="filter" type="button" data-filter="graphics" aria-pressed="false">Graphics</button>
+                    </div>
+                </div>
 
-                list.innerHTML = '';
+                <!-- Each slide is a button so it works with keyboard. data-* fills the lightbox. -->
+                <div class="splide" id="artSplide" aria-label="Art archive">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide" data-category="misc">
+                                <button class="art-tile" type="button" data-type="video"
+                                    data-src="assets/images/old-portfolio/ARTT 110 Final copy.mp4"
+                                    data-title="Hand-drawn headphones animation">
+                                    <video muted loop playsinline autoplay preload="metadata"
+                                        src="assets/images/old-portfolio/ARTT 110 Final copy.mp4"></video>
+                                    <span class="art-tile__label">Hand-drawn headphones animation</span>
+                                </button>
+                            </li>
+                            <li class="splide__slide" data-category="touchdesigner">
+                                <button class="art-tile" type="button" data-type="video"
+                                    data-src="assets/touchdesigner/pulse.mp4"
+                                    data-title="Pulse-sensor activated animation">
+                                    <video muted loop playsinline autoplay preload="metadata"
+                                        src="assets/touchdesigner/pulse.mp4"></video>
+                                    <span class="art-tile__label">Pulse-sensor activated animation</span>
+                                </button>
+                            </li>
+                            <li class="splide__slide" data-category="misc">
+                                <button class="art-tile" type="button" data-type="youtube" data-youtube-id="TxKyq2n_x-o"
+                                    data-title="Telekinesis: Give Me a Hand">
+                                    <img src="https://img.youtube.com/vi/TxKyq2n_x-o/hqdefault.jpg"
+                                        alt="Telekinesis VR project" loading="lazy">
+                                    <span class="art-tile__label">Telekinesis: Give Me a Hand</span>
+                                </button>
+                            </li>
+                            <li class="splide__slide" data-category="misc">
+                                <button class="art-tile" type="button" data-type="image"
+                                    data-src="assets/images/old-portfolio/Self Portrait.jpeg"
+                                    data-title="Self-portrait drawing">
+                                    <img src="assets/images/old-portfolio/Self Portrait.jpeg" alt="Self-portrait drawing"
+                                        loading="lazy">
+                                    <span class="art-tile__label">Self-portrait drawing</span>
+                                </button>
+                            </li>
+                            <li class="splide__slide" data-category="misc">
+                                <button class="art-tile" type="button" data-type="image"
+                                    data-src="assets/images/old-portfolio/Quick Animation.gif" data-title="Pig animation">
+                                    <img src="assets/images/old-portfolio/Quick Animation.gif" alt="Pig animation"
+                                        loading="lazy">
+                                    <span class="art-tile__label">Pig animation</span>
+                                </button>
+                            </li>
+                            <li class="splide__slide" data-category="misc">
+                                <button class="art-tile" type="button" data-type="image"
+                                    data-src="assets/images/old-portfolio/Surrealist.jpeg" data-title="Surrealist drawing">
+                                    <img src="assets/images/old-portfolio/Surrealist.jpeg" alt="Surrealist drawing"
+                                        loading="lazy">
+                                    <span class="art-tile__label">Surrealist drawing</span>
+                                </button>
+                            </li>
+                            <li class="splide__slide" data-category="misc">
+                                <button class="art-tile" type="button" data-type="image"
+                                    data-src="assets/images/old-portfolio/pig.JPEG" data-title="Pig drawing">
+                                    <img src="assets/images/old-portfolio/pig.JPEG" alt="Pig drawing" loading="lazy">
+                                    <span class="art-tile__label">Pig drawing</span>
+                                </button>
+                            </li>
+                            <li class="splide__slide" data-category="touchdesigner">
+                                <button class="art-tile" type="button" data-type="video"
+                                    data-src="assets/touchdesigner/ninjago.mp4" data-title="3D tech fantasy animation">
+                                    <video muted loop playsinline autoplay preload="metadata"
+                                        src="assets/touchdesigner/ninjago.mp4"></video>
+                                    <span class="art-tile__label">3D tech fantasy animation</span>
+                                </button>
+                            </li>
+                            <li class="splide__slide" data-category="misc">
+                                <!-- Check this filename's case: GitHub Pages treats .JPG and .jpg as different files -->
+                                <button class="art-tile" type="button" data-type="image"
+                                    data-src="assets/images/old-portfolio/ARTT110 Reduction.JPG"
+                                    data-title="Reduction drawing">
+                                    <img src="assets/images/old-portfolio/ARTT110 Reduction.JPG" alt="Reduction drawing"
+                                        loading="lazy">
+                                    <span class="art-tile__label">Reduction drawing</span>
+                                </button>
+                            </li>
+                            <li class="splide__slide" data-category="touchdesigner">
+                                <button class="art-tile" type="button" data-type="video"
+                                    data-src="assets/touchdesigner/dancing.mp4" data-title="Cube animation">
+                                    <video muted loop playsinline autoplay preload="metadata"
+                                        src="assets/touchdesigner/dancing.mp4"></video>
+                                    <span class="art-tile__label">Cube animation</span>
+                                </button>
+                            </li>
+                            <li class="splide__slide" data-category="misc">
+                                <button class="art-tile" type="button" data-type="image"
+                                    data-src="assets/images/old-portfolio/Fruits.JPG" data-title="Fruit still life">
+                                    <img src="assets/images/old-portfolio/Fruits.JPG" alt="Fruit still life drawing"
+                                        loading="lazy">
+                                    <span class="art-tile__label">Fruit still life</span>
+                                </button>
+                            </li>
+                            <li class="splide__slide" data-category="graphics">
+                                <button class="art-tile" type="button" data-type="image"
+                                    data-src="assets/images/AWC Graphic Scrap/btsONE.png"
+                                    data-title="AWC Behind the Scenes graphic">
+                                    <img src="assets/images/AWC Graphic Scrap/btsONE.png"
+                                        alt="AWC Behind the Scenes event graphic" loading="lazy">
+                                    <span class="art-tile__label">AWC Behind the Scenes, 1</span>
+                                </button>
+                            </li>
+                            <li class="splide__slide" data-category="graphics">
+                                <button class="art-tile" type="button" data-type="image"
+                                    data-src="assets/images/AWC Graphic Scrap/btsTWO.png"
+                                    data-title="AWC Behind the Scenes graphic">
+                                    <img src="assets/images/AWC Graphic Scrap/btsTWO.png"
+                                        alt="AWC Behind the Scenes event graphic, second version" loading="lazy">
+                                    <span class="art-tile__label">AWC Behind the Scenes, 2</span>
+                                </button>
+                            </li>
+                            <li class="splide__slide" data-category="graphics">
+                                <button class="art-tile" type="button" data-type="image"
+                                    data-src="assets/images/AWC Graphic Scrap/cnONE.png"
+                                    data-title="AWC Casino Night graphic">
+                                    <img src="assets/images/AWC Graphic Scrap/cnONE.png" alt="AWC Casino Night event graphic"
+                                        loading="lazy">
+                                    <span class="art-tile__label">AWC Casino Night, 1</span>
+                                </button>
+                            </li>
+                            <li class="splide__slide" data-category="graphics">
+                                <button class="art-tile" type="button" data-type="image"
+                                    data-src="assets/images/AWC Graphic Scrap/cnTWO.png"
+                                    data-title="AWC Casino Night graphic">
+                                    <img src="assets/images/AWC Graphic Scrap/cnTWO.png"
+                                        alt="AWC Casino Night event graphic, second version" loading="lazy">
+                                    <span class="art-tile__label">AWC Casino Night, 2</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                const filteredSlides = allSlides.filter(slide => {
-                    return filter === 'all' || slide.dataset.category === filter;
-                });
+        <!-- ============ CONTACT ============ -->
+        <section id="contact" class="section contact">
+            <div class="wrap contact__grid">
+                <h2 class="contact__title">Get in touch</h2>
 
-                filteredSlides.forEach(slide => {
-                    list.appendChild(slide.cloneNode(true));
-                });
+                <ul class="contact__list">
+                    <li>
+                        <span class="contact__label">Email</span>
+                        <a href="mailto:rahmanzn2016@gmail.com">rahmanzn2016@gmail.com</a>
+                    </li>
+                    <li>
+                        <span class="contact__label">LinkedIn</span>
+                        <a href="https://www.linkedin.com/in/zoya-rahman-dmv" target="_blank"
+                            rel="noopener">zoya-rahman-dmv</a>
+                    </li>
+                    <li>
+                        <span class="contact__label">GitHub</span>
+                        <a href="https://github.com/zoyanashita" target="_blank" rel="noopener">zoyanashita</a>
+                    </li>
+                    <li>
+                        <span class="contact__label">CV</span>
+                        <a href="assets/Zoya_Rahman_CV.pdf" target="_blank" rel="noopener">Download PDF</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
-                mountSplide();
-                updateCaption(filter);
-            }
+    <footer class="footer">
+        <div class="wrap footer__inner">
+            <p>© 2026 Zoya Rahman</p>
+            <a href="#top">Back to top</a>
+        </div>
+    </footer>
 
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    renderSlides(this.dataset.filter);
-                });
-            });
+    <!-- Art lightbox (native dialog, no Bootstrap needed) -->
+    <dialog class="lightbox" id="artDialog" aria-labelledby="artDialogTitle">
+        <div class="lightbox__bar">
+            <h2 class="lightbox__title" id="artDialogTitle"></h2>
+            <button class="lightbox__close" type="button" aria-label="Close">Close</button>
+        </div>
+        <div class="lightbox__body" id="artDialogBody"></div>
+    </dialog>
 
-            modalEl.addEventListener('hidden.bs.modal', function () {
-                modalBody.innerHTML = '';
-            });
-
-            renderSlides('all');
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
