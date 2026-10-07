@@ -33,7 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
             pagination: true,
             arrows: true,
         });
+        // Size the track to the active slide so shorter cards don't leave empty space
+        const fitHeight = () => {
+            const active = splide.Components.Slides.getAt(splide.index);
+            if (active) splide.Components.Elements.track.style.height = active.slide.offsetHeight + 'px';
+        };
+        splide.on('mounted move resized', fitHeight);
         splide.mount();
+        window.addEventListener('load', fitHeight);
         projectCarousels.set(panel, splide);
     }
 
@@ -50,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const panel = document.getElementById(tab.getAttribute('aria-controls'));
         mountProjects(panel);
         projectCarousels.get(panel)?.refresh();
+        projectCarousels.get(panel)?.emit('resized');
     }
 
     tabs.forEach((tab, i) => {
@@ -87,9 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const captions = {
         all: 'Favorite pieces across drawing, motion, and graphic design.',
-        misc: 'Drawings, animation, and VR from my art and IMD coursework at UMD.',
+        misc: 'Drawings, animation, and VR from my IMD coursework at UMD.',
         touchdesigner: 'Interactive visuals and motion studies built in TouchDesigner.',
-        graphics: 'Event graphics and branding for the Association of Women in Computing.',
+        graphics: 'Event graphics for the Association for Women in Computing.',
     };
 
     let artSplide;

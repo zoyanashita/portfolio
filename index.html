@@ -33,7 +33,8 @@
             <ul class="nav__links" id="navLinks">
                 <li><a href="#about">About</a></li>
                 <li><a href="#work">Work</a></li>
-                <li><a href="#initiatives">Teaching</a></li>
+                <li><a href="#publications">Papers</a></li>
+                <li><a href="#initiatives">Leadership</a></li>
                 <li><a href="#art">Art</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <!-- TODO: drop your CV PDF into assets/ and keep this link -->
@@ -56,8 +57,9 @@
                     </h1>
 
                     <p class="hero__lede">
-                        Computer vision researcher and designer at the University of Maryland, College Park.
-                        I study how machines see, and I build things people can step inside.
+                        I'm a researcher at the University of Maryland studying how learned representations hold up
+                        beyond their training data, in protein structure, satellite oceanography, and 3D reconstruction.
+                        I also design and build the physical systems to test them.
                     </p>
 
                     <ul class="hero__links">
@@ -95,33 +97,67 @@
                     <h3 class="about__subhead">Research interests</h3>
                     <ul class="tag-list">
                         <li>Computer vision</li>
-                        <li>Computational imaging</li>
-                        <li>Remote sensing</li>
+                        <li>Representation learning</li>
+                        <li>Hyperspectral remote sensing</li>
                         <li>Computational biology</li>
+                        <li>3D reconstruction</li>
                         <li>Human–computer interaction</li>
-                        <li>Graphics</li>
                     </ul>
+                    <h3 class="about__subhead">Skills</h3>
+                    <dl class="skills">
+                        <div>
+                            <dt>Languages</dt>
+                            <dd>Python, C#, JavaScript, HTML/CSS, Git<span class="todo">, add others (e.g. Java, C)</span></dd>
+                        </div>
+                        <div>
+                            <dt>Machine learning</dt>
+                            <dd>PyTorch, CNNs, autoencoders, statistical evaluation, HPC clusters</dd>
+                        </div>
+                        <div>
+                            <dt>Vision &amp; 3D</dt>
+                            <dd>Gaussian Splatting, depth sensing, hyperspectral imagery</dd>
+                        </div>
+                        <div>
+                            <dt>XR &amp; making</dt>
+                            <dd>Unity, Unreal Engine, Meta Quest, TouchDesigner, CNC fabrication, physical computing</dd>
+                        </div>
+                        <div>
+                            <dt>Research methods</dt>
+                            <dd>Human-subjects studies, eye tracking, physiological sensing</dd>
+                        </div>
+                        <div>
+                            <dt>Design</dt>
+                            <dd>Figma, Illustrator, Procreate, Canva</dd>
+                        </div>
+                    </dl>
                 </div>
 
                 <aside class="about__now" aria-labelledby="nowTitle">
-                    <h3 class="about__subhead" id="nowTitle">Spring 2026</h3>
+                    <h3 class="about__subhead" id="nowTitle">Fall 2026</h3>
                     <ul class="now-list">
                         <li>
-                            <strong>Lead undergraduate researcher</strong>
-                            Spatiotemporal deep learning for hyperspectral satellite remote sensing, with
-                            Dr. Myungin Lee
-                        </li>
-                        <li>
                             <strong>Undergraduate research assistant</strong>
-                            Bioinformatics and computational biology, FAIR Lab, with Dr. Fardina F. Alam
+                            Embodied Dynamics Laboratory, with Dr. Jun Nishida
                         </li>
                         <li>
-                            <strong>Teaching assistant</strong>
-                            IMDM 290, Collaborative Studio I: Image + Time
+                            <strong>Research lead</strong>
+                            Deep learning for satellite-based plankton estimation, with Dr. Myungin Lee
                         </li>
                         <li>
-                            <strong>Director of Design</strong>
-                            Association of Women in Computing at UMD
+                            <strong>Research apprentice</strong>
+                            Protein structure representation learning, FAIR Lab, with Dr. Fardina F. Alam
+                        </li>
+                        <li>
+                            <strong>Peer advisor</strong>
+                            Immersive Media Design Undergraduate Administrative Services
+                        </li>
+                        <li>
+                            <strong>Co-Director of Design</strong>
+                            Association for Women in Computing at UMD
+                        </li>
+                        <li>
+                            <strong>Co-president</strong>
+                            IMMERSE
                         </li>
                     </ul>
                 </aside>
@@ -158,79 +194,38 @@
                         <div class="splide__track">
                             <ul class="splide__list">
 
-                                <!-- Spatiotemporal CNN -->
+                                <!-- PACE satellite plankton project -->
                                 <li class="splide__slide">
                                     <article class="project">
                                         <div class="project__media">
-                                            <div class="media-ph" role="img"
-                                                aria-label="Placeholder for hyperspectral imagery figure">
-                                                Model diagram or hyperspectral sample
+                                            <div class="media-ph" role="img" aria-label="Placeholder for PACE satellite imagery">
+                                                Public NASA PACE imagery (not a figure from the paper)
                                             </div>
                                         </div>
                                         <div class="project__body">
-                                            <p class="project__context">Undergraduate research, advised by Dr. Myungin Lee</p>
-                                            <h3 class="project__title">Spatiotemporal deep learning for hyperspectral remote sensing</h3>
-                                            <p class="project__summary">
-                                                Spatiotemporal convolutional networks for hyperspectral satellite
-                                                imagery. <span class="todo">One sentence on the question the model answers.</span>
-                                            </p>
+                                            <p class="project__lens">Initiative</p>
+                                            <p class="project__context">First author, advised by Dr. Myungin Lee</p>
+                                            <h3 class="project__title">Deep learning for plankton estimation from satellite imagery</h3>
+                                            <p class="project__summary">Shipboard instruments measure plankton one point at a time, while NASA's PACE satellite observes the entire ocean surface. I develop compact deep learning models that estimate plankton from hyperspectral satellite data when paired training examples are scarce.</p>
                                             <dl class="project__facts">
                                                 <div>
-                                                    <dt>My role</dt>
-                                                    <dd>Lead of the undergraduate research team. <span class="todo">What you
-                                                            personally designed, trained, or evaluated.</span></dd>
+                                                    <dt>The change I made</dt>
+                                                    <dd>The project began as visualization work on NASA's PACE data. Because I already had independent research experience, I was encouraged to branch off, and I redirected it toward deep learning: estimating plankton directly from the satellite imagery.</dd>
                                                 </div>
-                                                <div>
-                                                    <dt>What's new</dt>
-                                                    <dd><span class="todo">What this does that prior approaches don't.</span></dd>
-                                                </div>
-                                                <div>
-                                                    <dt>Tools</dt>
-                                                    <dd><span class="todo">PyTorch, …</span></dd>
-                                                </div>
-                                            </dl>
-                                            <ul class="project__links">
-                                                <li><a href="#"><span class="todo">Poster / paper</span></a></li>
-                                                <li><a href="#"><span class="todo">GitHub</span></a></li>
-                                            </ul>
-                                        </div>
-                                    </article>
-                                </li>
-
-                                <!-- FAIR Lab -->
-                                <li class="splide__slide">
-                                    <article class="project">
-                                        <div class="project__media">
-                                            <div class="media-ph" role="img"
-                                                aria-label="Placeholder for bioinformatics figure">
-                                                Pipeline diagram or result figure
-                                            </div>
-                                        </div>
-                                        <div class="project__body">
-                                            <p class="project__context">FAIR Lab, advised by Dr. Fardina F. Alam</p>
-                                            <h3 class="project__title">Bioinformatics research</h3>
-                                            <p class="project__summary">
-                                                <span class="todo">One or two sentences: the biological question and the
-                                                    computational method.</span>
-                                            </p>
-                                            <dl class="project__facts">
                                                 <div>
                                                     <dt>My role</dt>
-                                                    <dd>Undergraduate research assistant. <span class="todo">Your specific
-                                                            contribution.</span></dd>
+                                                    <dd>Project lead and first author. I designed and built the models, and grew the work from an independent study into a team project.</dd>
                                                 </div>
                                                 <div>
-                                                    <dt>What's new</dt>
-                                                    <dd><span class="todo">The contribution, in plain language.</span></dd>
+                                                    <dt>Approach</dt>
+                                                    <dd>Compact convolutional models evaluated under a strict grouped protocol, so near-duplicate data never appears in both training and testing.</dd>
                                                 </div>
                                                 <div>
-                                                    <dt>Tools</dt>
-                                                    <dd><span class="todo">Python, …</span></dd>
+                                                    <dt>Timeline</dt>
+                                                    <dd>January 2026 to present</dd>
                                                 </div>
                                             </dl>
-                                            <ul class="project__links">
-                                                <li><a href="#"><span class="todo">Documentation</span></a></li>
-                                            </ul>
+                                            <p class="project__status">First-author manuscript currently under review.</p>
                                         </div>
                                     </article>
                                 </li>
@@ -239,28 +234,102 @@
                                 <li class="splide__slide">
                                     <article class="project">
                                         <div class="project__media">
-                                            <div class="media-ph" role="img"
-                                                aria-label="Placeholder for FocusLens interface screenshot">
-                                                FocusLens / LeadErr screenshot
+                                            <div class="media-ph" role="img" aria-label="Placeholder for Embodied Dynamics Lab photo">
+                                                Lab or study-setup photo (check with Dr. Nishida before posting)
                                             </div>
                                         </div>
                                         <div class="project__body">
-                                            <p class="project__context">Embodied Dynamics Laboratory</p>
-                                            <h3 class="project__title">FocusLens &amp; LeadErr</h3>
-                                            <p class="project__summary">
-                                                <span class="todo">What each tool is, one sentence each.</span>
-                                            </p>
+                                            <p class="project__context">Undergraduate research assistant, advised by Dr. Jun Nishida</p>
+                                            <h3 class="project__title">Embodied Dynamics Laboratory</h3>
+                                            <p class="project__summary">The EmD Lab engineers on-body interfaces that change how people perceive, learn, and share physical skills. I work on two of its human-subjects studies.</p>
+                                            <dl class="project__facts">
+                                                <div>
+                                                    <dt>Wearable perception study</dt>
+                                                    <dd>A study of wearable displays that change what the wearer sees during a task, measured through physiological sensing and self-report. I developed software for the Meta Quest baseline condition and help run study sessions.</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Embodied skill study</dt>
+                                                    <dd>A study in preparation on how wearable sensing (eye, head, and wrist tracking) captures hesitation during skilled physical tasks. <span class="todo">Your role, described generally.</span></dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Tools</dt>
+                                                    <dd>Meta Quest, eye tracking, physiological sensors, <span class="todo">your software stack</span></dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Timeline</dt>
+                                                    <dd><span class="todo">Start date</span> to present</dd>
+                                                </div>
+                                            </dl>
+                                            <ul class="project__links">
+                                                <li><a href="#"><span class="todo">Lab website</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </li>
+
+                                <!-- Protein representation learning (FAIR Lab) -->
+                                <li class="splide__slide">
+                                    <article class="project">
+                                        <div class="project__media">
+                                            <div class="media-ph" role="img" aria-label="Placeholder for protein structure image">
+                                                General protein structure image (not a figure from the paper)
+                                            </div>
+                                        </div>
+                                        <div class="project__body">
+                                            <p class="project__context">FAIR Lab, advised by Dr. Fardina F. Alam</p>
+                                            <h3 class="project__title">Representation learning for protein structure</h3>
+                                            <p class="project__summary">I study whether deep representations of protein structure generalize to protein families never seen during training, a central challenge for detecting distant evolutionary relationships between proteins.</p>
                                             <dl class="project__facts">
                                                 <div>
                                                     <dt>My role</dt>
-                                                    <dd><span class="todo">What you contributed to each.</span></dd>
+                                                    <dd>Co-first author (equal contribution). <span class="todo">What you did, described generally: e.g. designing evaluation protocols, running benchmarks, statistical analysis.</span></dd>
                                                 </div>
                                                 <div>
-                                                    <dt>What's new</dt>
+                                                    <dt>Approach</dt>
+                                                    <dd>Deep autoencoder models trained on protein structure data and evaluated on held-out protein families, with statistical testing of the results.</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Tools</dt>
+                                                    <dd>PyTorch, public protein structure databases, UMD high-performance computing</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Timeline</dt>
+                                                    <dd>September 2025 to present</dd>
+                                                </div>
+                                            </dl>
+                                            <p class="project__status">Two manuscripts currently under review, both as co-first author.</p>
+                                        </div>
+                                    </article>
+                                </li>
+
+                                <!-- Cy Keener: iceberg reconstruction -->
+                                <li class="splide__slide">
+                                    <article class="project">
+                                        <div class="project__media">
+                                            <div class="media-ph" role="img" aria-label="Placeholder for iceberg reconstruction image">
+                                                Camera frame beside sonar data, or a reconstruction
+                                            </div>
+                                        </div>
+                                        <div class="project__body">
+                                            <p class="project__lens">Fundamentals</p>
+                                            <p class="project__context">Independent project with Cy Keener</p>
+                                            <h3 class="project__title">Iceberg reconstruction from camera and sonar data</h3>
+                                            <p class="project__summary"><span class="todo">One or two sentences: what you reconstruct, from which data, and why.</span></p>
+                                            <dl class="project__facts">
+                                                <div>
+                                                    <dt>Fundamentals</dt>
+                                                    <dd><span class="todo">The data science groundwork you did yourself: cleaning, aligning, and preprocessing camera and sonar data, then reconstructing the image.</span></dd>
+                                                </div>
+                                                <div>
+                                                    <dt>My role</dt>
                                                     <dd><span class="todo">…</span></dd>
                                                 </div>
                                                 <div>
                                                     <dt>Tools</dt>
+                                                    <dd><span class="todo">…</span></dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Timeline</dt>
                                                     <dd><span class="todo">…</span></dd>
                                                 </div>
                                             </dl>
@@ -276,41 +345,39 @@
                                     <article class="project">
                                         <div class="project__media">
                                             <!-- Swap for a screenshot of the site: assets/images/student-success.png -->
-                                            <div class="media-ph" role="img"
-                                                aria-label="Placeholder for data science project screenshot">
+                                            <div class="media-ph" role="img" aria-label="Placeholder for data science project screenshot">
                                                 Site screenshot
                                             </div>
                                         </div>
                                         <div class="project__body">
                                             <p class="project__context">CMSC 320, Introduction to Data Science</p>
-                                            <h3 class="project__title">Analysis of student success</h3>
-                                            <p class="project__summary">
-                                                A data science and machine learning study of the factors that
-                                                contribute to student success.
-                                            </p>
+                                            <h3 class="project__title">Analyzing student success factors</h3>
+                                            <p class="project__summary">A machine learning model that predicts student success from performance-related features, trained on a real dataset from a professor's course roster. We published it as a step-by-step tutorial so anyone can follow the full workflow.</p>
                                             <dl class="project__facts">
                                                 <div>
                                                     <dt>My role</dt>
-                                                    <dd><span class="todo">Solo or team? What you owned.</span></dd>
+                                                    <dd>Project lead on a team of four. I developed the ML model and led the statistical analysis.</dd>
                                                 </div>
                                                 <div>
                                                     <dt>Findings</dt>
-                                                    <dd><span class="todo">The one result worth remembering.</span></dd>
+                                                    <dd><span class="todo">The one result worth remembering</span></dd>
                                                 </div>
                                                 <div>
                                                     <dt>Tools</dt>
                                                     <dd><span class="todo">pandas, scikit-learn, …</span></dd>
                                                 </div>
+                                                <div>
+                                                    <dt>Timeline</dt>
+                                                    <dd>Summer 2025</dd>
+                                                </div>
                                             </dl>
                                             <ul class="project__links">
-                                                <li><a href="https://zoyanashita.github.io/analysisOfStudentSuccess/"
-                                                        target="_blank" rel="noopener">Website</a></li>
+                                                <li><a href="https://zoyanashita.github.io/analysisOfStudentSuccess/" target="_blank" rel="noopener">Tutorial site</a></li>
                                                 <li><a href="#"><span class="todo">GitHub</span></a></li>
                                             </ul>
                                         </div>
                                     </article>
                                 </li>
-
                             </ul>
                         </div>
                     </div>
@@ -328,110 +395,38 @@
                                 <li class="splide__slide">
                                     <article class="project">
                                         <div class="project__media">
-                                            <div class="media-ph" role="img"
-                                                aria-label="Placeholder for Memento of Self photobooth photo">
-                                                Photobooth setup or reconstructed output
-                                            </div>
+                                            <img class="is-figure" src="assets/images/memento.jpeg"
+                                                alt="Reconstructed portrait of me and my collaborator Abdul Rahem, from the Memento of Self photobooth"
+                                                loading="lazy">
                                         </div>
                                         <div class="project__body">
-                                            <p class="project__context">Project lead</p>
+                                            <p class="project__lens">Creative direction</p>
+                                            <p class="project__context">Project lead, with collaborator Abdul Rahem</p>
                                             <h3 class="project__title">Memento of Self</h3>
-                                            <p class="project__summary">
-                                                A photobooth that reconstructs visitors in 3D. <span class="todo">What a
-                                                    visitor experiences and what they leave with.</span>
-                                            </p>
+                                            <p class="project__summary">An interactive installation about the gap between a fluid, ever-changing self and its fixed digital capture. A multi-camera booth photographs each visitor, custom software reconstructs them as a painterly, dissolving 3D portrait, and they leave with a printed copy.</p>
                                             <dl class="project__facts">
                                                 <div>
-                                                    <dt>My role</dt>
-                                                    <dd>Project lead. <span class="todo">Team size, what you built
-                                                            yourself.</span></dd>
+                                                    <dt>The creative decision</dt>
+                                                    <dd>Rather than aiming for a faithful 3D replica, I chose to render each visitor as a painterly, dissolving portrait, so the reconstruction itself expresses the idea that a person can't be fixed in a single capture. <span class="todo">Confirm or rewrite in your own words.</span></dd>
                                                 </div>
                                                 <div>
-                                                    <dt>What's new</dt>
-                                                    <dd><span class="todo">The reconstruction approach and why it matters.</span></dd>
+                                                    <dt>Research question</dt>
+                                                    <dd>Does appearance-based (photometric) reconstruction degrade more gracefully than geometric accuracy when only a few camera views are available? An Azure Kinect depth camera provides independent geometric ground truth.</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>My role</dt>
+                                                    <dd>I built the sparse-view Gaussian Splatting reconstruction pipeline, designed and fabricated the booth (housing, camera mounts, lighting, and trigger systems), and integrated live rendering in Unreal Engine for exhibition.</dd>
                                                 </div>
                                                 <div>
                                                     <dt>Tools</dt>
-                                                    <dd><span class="todo">…</span></dd>
+                                                    <dd>Gaussian Splatting, Azure Kinect, Unreal Engine, CNC fabrication, physical computing</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Timeline</dt>
+                                                    <dd>June 2026 to present</dd>
                                                 </div>
                                             </dl>
-                                            <ul class="project__links">
-                                                <li><a href="#"><span class="todo">Process documentation</span></a></li>
-                                                <li><a href="#"><span class="todo">Video</span></a></li>
-                                            </ul>
-                                        </div>
-                                    </article>
-                                </li>
-
-                                <!-- Cy Keener -->
-                                <li class="splide__slide">
-                                    <article class="project">
-                                        <div class="project__media">
-                                            <div class="media-ph" role="img" aria-label="Placeholder for project image">
-                                                Project image
-                                            </div>
-                                        </div>
-                                        <div class="project__body">
-                                            <p class="project__context">Independent project with Cy Keener</p>
-                                            <h3 class="project__title"><span class="todo">Project title</span></h3>
-                                            <p class="project__summary">
-                                                <span class="todo">What it is, in one or two sentences.</span>
-                                            </p>
-                                            <dl class="project__facts">
-                                                <div>
-                                                    <dt>My role</dt>
-                                                    <dd><span class="todo">…</span></dd>
-                                                </div>
-                                                <div>
-                                                    <dt>What's new</dt>
-                                                    <dd><span class="todo">…</span></dd>
-                                                </div>
-                                                <div>
-                                                    <dt>Tools</dt>
-                                                    <dd><span class="todo">…</span></dd>
-                                                </div>
-                                            </dl>
-                                            <ul class="project__links">
-                                                <li><a href="#"><span class="todo">Documentation</span></a></li>
-                                            </ul>
-                                        </div>
-                                    </article>
-                                </li>
-
-                                <!-- AWC UI/UX -->
-                                <li class="splide__slide">
-                                    <article class="project">
-                                        <div class="project__media">
-                                            <div class="media-ph" role="img"
-                                                aria-label="Placeholder for AWC interface designs">
-                                                Before / after screens or Figma frames
-                                            </div>
-                                        </div>
-                                        <div class="project__body">
-                                            <p class="project__context">Association of Women in Computing at UMD</p>
-                                            <h3 class="project__title"><span class="todo">AWC website redesign</span></h3>
-                                            <p class="project__summary">
-                                                <span class="todo">The problem members had, and what you changed.</span>
-                                            </p>
-                                            <dl class="project__facts">
-                                                <div>
-                                                    <dt>My role</dt>
-                                                    <dd>Director of Design; UI/UX design and front-end development.</dd>
-                                                </div>
-                                                <div>
-                                                    <dt>Process</dt>
-                                                    <dd><span class="todo">Research → wireframes → prototype → build. One line
-                                                            each is enough.</span></dd>
-                                                </div>
-                                                <div>
-                                                    <dt>Tools</dt>
-                                                    <dd><span class="todo">Figma, …</span></dd>
-                                                </div>
-                                            </dl>
-                                            <ul class="project__links">
-                                                <li><a href="#"><span class="todo">Case study</span></a></li>
-                                                <li><a href="#"><span class="todo">Live site</span></a></li>
-                                            </ul>
+                                            <p class="project__status">In progress. Documentation coming soon.</p>
                                         </div>
                                     </article>
                                 </li>
@@ -448,6 +443,7 @@
                                             </a>
                                         </div>
                                         <div class="project__body">
+                                            <p class="project__lens">Teamwork</p>
                                             <p class="project__context">IMDM 290, Collaborative Studio I: Image + Time</p>
                                             <h3 class="project__title">Telekinesis: Give Me a Hand</h3>
                                             <p class="project__summary">
@@ -456,8 +452,8 @@
                                             </p>
                                             <dl class="project__facts">
                                                 <div>
-                                                    <dt>My role</dt>
-                                                    <dd><span class="todo">…</span></dd>
+                                                    <dt>Teamwork</dt>
+                                                    <dd>One of five teammates. I took the lead computer science role and also contributed to design. <span class="todo">What you built, and how the team divided the work.</span></dd>
                                                 </div>
                                                 <div>
                                                     <dt>Tools</dt>
@@ -472,6 +468,39 @@
                                     </article>
                                 </li>
 
+                                <!-- AWC UI/UX -->
+                                <li class="splide__slide">
+                                    <article class="project">
+                                        <div class="project__media">
+                                            <div class="media-ph" role="img" aria-label="Placeholder for AWC interface designs">
+                                                Before / after screens or Figma frames
+                                            </div>
+                                        </div>
+                                        <div class="project__body">
+                                            <p class="project__context">Association for Women in Computing at UMD</p>
+                                            <h3 class="project__title"><span class="todo">AWC website redesign</span></h3>
+                                            <p class="project__summary"><span class="todo">The problem members had, and what you changed.</span></p>
+                                            <dl class="project__facts">
+                                                <div>
+                                                    <dt>My role</dt>
+                                                    <dd>Director (now Co-Director) of Design. I handle UI/UX design and front-end development for the AWC website and our yearly Casino Night site.</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Process</dt>
+                                                    <dd><span class="todo">Research → wireframes → prototype → build. One line each is enough.</span></dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Tools</dt>
+                                                    <dd>Figma, <span class="todo">front-end stack</span></dd>
+                                                </div>
+                                            </dl>
+                                            <ul class="project__links">
+                                                <li><a href="#"><span class="todo">Case study</span></a></li>
+                                                <li><a href="#"><span class="todo">Live site</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -479,44 +508,67 @@
             </div>
         </section>
 
+        <!-- ============ PAPERS (general descriptions only while under review) ============ -->
+        <section id="publications" class="section publications">
+            <div class="wrap">
+                <h2 class="section-title">Papers</h2>
+                <ol class="pub-list">
+                    <li class="pub">
+                        <h3 class="pub__title">Deep learning for satellite-based plankton estimation</h3>
+                        <p class="pub__authors"><strong>Zoya Rahman</strong> (first author), advised by Dr. Myungin Lee, University of Maryland</p>
+                        <p class="pub__venue">Submitted</p>
+                    </li>
+                    <li class="pub">
+                        <h3 class="pub__title">Representation learning for protein structure</h3>
+                        <p class="pub__authors"><strong>Zoya Rahman*</strong> (co-first author), FAIR Lab, advised by Dr. Fardina F. Alam</p>
+                        <p class="pub__venue">Submitted</p>
+                    </li>
+                    <li class="pub">
+                        <h3 class="pub__title">Probabilistic representation learning for protein structure</h3>
+                        <p class="pub__authors"><strong>Zoya Rahman*</strong> (co-first author), FAIR Lab, advised by Dr. Fardina F. Alam</p>
+                        <p class="pub__venue">Submitted</p>
+                    </li>
+                </ol>
+                <p class="pub-note">* Equal contribution</p>
+            </div>
+        </section>
+
         <!-- ============ TEACHING & INITIATIVES ============ -->
         <section id="initiatives" class="section initiatives">
             <div class="wrap">
-                <h2 class="section-title">Teaching &amp; initiatives</h2>
-                <p class="section-intro">Programs I've started or run, and the students I've worked with.</p>
+                <h2 class="section-title">Leadership &amp; initiatives</h2>
+                <p class="section-intro">Organizations I've built and led, and the students I've supported along the way.</p>
 
-                <div class="splide" id="initiativeSplide" aria-label="Teaching and initiatives">
+                <div class="splide" id="initiativeSplide" aria-label="Leadership and initiatives">
                     <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide">
                                 <article class="initiative">
-                                    <p class="initiative__role"><span class="todo">Founder / organizer</span></p>
-                                    <h3 class="initiative__title">IMMERSE Initiative</h3>
-                                    <p><span class="todo">What it is, who it serves, and one number (members, events,
-                                            workshops).</span></p>
+                                    <p class="initiative__role">Co-president, September 2025 to present</p>
+                                    <h3 class="initiative__title">IMMERSE</h3>
+                                    <p class="initiative__sub">Immersive Media Makers Engaging in Reality, Simulation, and Experience</p>
+                                    <p>I led the transition of IMD's departmental student advisory board into an independent student organization for art and technology. I wrote its constitution, executive board structure, and committee framework; designed its website, logo, and apparel; secured departmental funding; and launched its flagship events.</p>
                                 </article>
                             </li>
                             <li class="splide__slide">
                                 <article class="initiative">
-                                    <p class="initiative__role">Teaching assistant</p>
-                                    <h3 class="initiative__title">IMDM 290</h3>
-                                    <p>Collaborative Studio I: Image + Time. <span class="todo">What you teach or run:
-                                            labs, critiques, office hours.</span></p>
+                                    <p class="initiative__role">Director, now Co-Director of Design</p>
+                                    <h3 class="initiative__title">Association for Women in Computing</h3>
+                                    <p>I lead AWC's visual identity across social media, professional materials, merch, our website, and Casino Night. I also manage the design team: delegating work, mentoring designers, running check-ins, and representing design to the executive board.</p>
                                 </article>
                             </li>
                             <li class="splide__slide">
                                 <article class="initiative">
-                                    <p class="initiative__role">Peer advisor</p>
-                                    <h3 class="initiative__title"><span class="todo">Program name</span></h3>
-                                    <p><span class="todo">Who you advise and on what.</span></p>
+                                    <p class="initiative__role">Teaching assistant, Spring 2026</p>
+                                    <h3 class="initiative__title">IMDM 290: Collaborative Studio I</h3>
+                                    <p>A capstone course built on Unity (C#) and collaborative GitHub workflows. I held office hours four days a week for debugging and GitHub help, checked in with each project group twice a week, and documented lectures for students who missed class.</p>
                                 </article>
                             </li>
                             <li class="splide__slide">
                                 <article class="initiative">
-                                    <p class="initiative__role">Director of Design</p>
-                                    <h3 class="initiative__title">Association of Women in Computing</h3>
-                                    <p>Graphic design and UI/UX for UMD's AWC chapter. <span class="todo">Scope: events,
-                                            branding, website.</span></p>
+                                    <p class="initiative__role">Peer advisor, July 2026 to present</p>
+                                    <h3 class="initiative__title">IMD Administrative Services</h3>
+                                    <p>I'm a first point of contact for current and prospective Immersive Media Design students, offering drop-in advising and academic planning, and helping run outreach like open houses.</p>
                                 </article>
                             </li>
                         </ul>
@@ -617,9 +669,9 @@
                             <li class="splide__slide" data-category="misc">
                                 <!-- Check this filename's case: GitHub Pages treats .JPG and .jpg as different files -->
                                 <button class="art-tile" type="button" data-type="image"
-                                    data-src="assets/images/old-portfolio/ARTT110 Reduction.jpg"
+                                    data-src="assets/images/old-portfolio/ARTT110 Reduction.JPG"
                                     data-title="Reduction drawing">
-                                    <img src="assets/images/old-portfolio/ARTT110 Reduction.jpg" alt="Reduction drawing"
+                                    <img src="assets/images/old-portfolio/ARTT110 Reduction.JPG" alt="Reduction drawing"
                                         loading="lazy">
                                     <span class="art-tile__label">Reduction drawing</span>
                                 </button>

@@ -194,7 +194,7 @@ a:hover { text-decoration-color: var(--rose); }
     from { transform: translateY(-0.5em); opacity: 0; }
 }
 
-.hero__lede { font-size: var(--step-1); line-height: 1.5; max-width: 34ch; }
+.hero__lede { font-size: var(--step-1); line-height: 1.5; max-width: 40ch; }
 
 .hero__links {
     display: flex; flex-wrap: wrap; gap: 0.75rem 1.75rem;
@@ -247,6 +247,19 @@ a:hover { text-decoration-color: var(--rose); }
     font-weight: 500;
 }
 
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.1rem 2rem;
+    margin: 0;
+}
+.skills > div { border-top: 1px solid rgba(21, 32, 27, 0.18); padding-top: 0.6rem; }
+.skills dt { font-weight: 600; margin-bottom: 0.15rem; }
+.skills dd { margin: 0; font-size: var(--step--1); line-height: 1.5; }
+@media (max-width: 480px) {
+    .skills { grid-template-columns: minmax(0, 1fr); }
+}
+
 .now-list {
     list-style: none; margin: 0; padding: 0;
     border-left: 2px solid var(--forest);
@@ -294,15 +307,31 @@ a:hover { text-decoration-color: var(--rose); }
 
 .tab-panel__intro { margin-bottom: 2rem; color: var(--forest); }
 
+/* Card layout: image + header side by side on top, facts in two columns underneath.
+   .project__body uses display: contents so its children join the card's grid
+   without changing the HTML. */
 .project {
     display: grid;
-    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
-    gap: clamp(1.5rem, 4vw, 3.5rem);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto auto auto 1fr;
+    column-gap: clamp(1.5rem, 4vw, 3.5rem);
     align-items: start;
     background: var(--paper);
     padding: clamp(1.25rem, 3vw, 2.5rem);
-    min-height: 100%;
 }
+.project__body { display: contents; }
+.project__media { grid-column: 1; grid-row: 1 / span 4; }
+.project__lens,
+.project__context,
+.project__title,
+.project__summary { grid-column: 2; justify-self: start; }
+.project__facts,
+.project__links,
+.project__status { grid-column: 1 / -1; }
+
+/* Each project slide keeps its own height; the track resizes to the active slide (see script.js) */
+.project-splide .splide__list { align-items: flex-start; }
+.project-splide .splide__track { transition: height 0.35s ease; }
 
 .project__media img,
 .media-ph,
@@ -328,6 +357,13 @@ a:hover { text-decoration-color: var(--rose); }
     font-weight: 600; font-size: var(--step--1);
 }
 
+.project__lens {
+    display: inline-block;
+    background: var(--mustard); color: var(--ink);
+    font-size: var(--step--1); font-weight: 600;
+    border-radius: 999px; padding: 0.15rem 0.8rem;
+    margin-bottom: 0.75rem;
+}
 .project__context { font-size: var(--step--1); font-weight: 600; color: var(--rose); margin-bottom: 0.5rem; }
 
 .project__title {
@@ -339,26 +375,51 @@ a:hover { text-decoration-color: var(--rose); }
 
 .project__summary { max-width: 52ch; }
 
-.project__facts { margin: 1.25rem 0; }
-.project__facts > div {
-    display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem;
-    padding: 0.7rem 0;
+.project__facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(1.5rem, 4vw, 3.5rem);
+    margin: 2rem 0 1.25rem;
     border-top: 1px solid rgba(21, 32, 27, 0.18);
 }
-.project__facts dt { font-weight: 600; }
-.project__facts dd { margin: 0; }
+.project__facts > div {
+    padding: 1.1rem 0;
+    border-bottom: 1px solid rgba(21, 32, 27, 0.18);
+}
+.project__facts dt {
+    font-family: var(--display);
+    font-size: var(--step-1);
+    line-height: 1.2;
+    margin-bottom: 0.35rem;
+}
+.project__facts dd { margin: 0; max-width: 60ch; }
 
 .project__links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; list-style: none; margin: 0; padding: 0; }
+.project__status { font-weight: 600; color: var(--forest); margin: 0; }
 .project__links a { font-weight: 600; text-decoration-color: var(--rose); text-decoration-thickness: 2px; }
 
 @media (max-width: 860px) {
-    .project { grid-template-columns: 1fr; }
+    .project { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; }
+    .project__media { grid-column: 1; grid-row: auto; margin-bottom: 1.5rem; }
+    .project__lens, .project__context, .project__title, .project__summary { grid-column: 1; }
+}
+@media (max-width: 640px) {
+    .project__facts { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 480px) {
-    .project__facts > div { grid-template-columns: 1fr; gap: 0.15rem; }
     .tabs { width: 100%; }
     .tab { flex: 1; padding-inline: 0.6rem; }
 }
+
+/* ---------- publications ---------- */
+.pub-list { list-style: none; margin: 1rem 0 0; padding: 0; max-width: 62rem; }
+.pub { padding: 1.5rem 0; border-top: 1px solid rgba(21, 32, 27, 0.18); }
+.pub:last-child { border-bottom: 1px solid rgba(21, 32, 27, 0.18); }
+.pub__title { font-family: var(--display); font-size: var(--step-1); line-height: 1.25; margin-bottom: 0.5rem; }
+.pub__authors { margin-bottom: 0.25rem; }
+.pub__authors strong { font-weight: 600; }
+.pub__venue { font-weight: 600; color: var(--rose); margin: 0; }
+.pub-note { margin-top: 1rem; font-size: var(--step--1); }
 
 /* ---------- initiatives ---------- */
 .initiatives { background: var(--forest); color: var(--paper); }
@@ -371,6 +432,7 @@ a:hover { text-decoration-color: var(--rose); }
 }
 .initiative__role { font-size: var(--step--1); font-weight: 600; color: var(--mustard); margin-bottom: 0.4rem; }
 .initiative__title { font-family: var(--display); font-size: var(--step-2); line-height: 1.1; margin-bottom: 0.75rem; }
+.initiative__sub { font-size: var(--step--1); font-style: italic; opacity: 0.85; margin-top: -0.4rem; }
 
 /* ---------- art ---------- */
 .art__head {
@@ -511,4 +573,13 @@ a:hover { text-decoration-color: var(--rose); }
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* Diagrams and figures: show the whole image instead of cropping to fill the box */
+.project__media img.is-figure {
+    aspect-ratio: auto;
+    height: auto;
+    object-fit: contain;
+    background: #fff;
+    padding: 0.75rem;
 }
