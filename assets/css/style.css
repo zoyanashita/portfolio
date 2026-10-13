@@ -56,6 +56,8 @@ a:hover { text-decoration-color: var(--rose); }
 
 .wrap { width: min(1200px, 100%); margin-inline: auto; padding-inline: var(--gutter); }
 
+.nowrap { white-space: nowrap; }
+
 .visually-hidden {
     position: absolute; width: 1px; height: 1px; overflow: hidden;
     clip: rect(0 0 0 0); white-space: nowrap;
@@ -137,7 +139,7 @@ a:hover { text-decoration-color: var(--rose); }
 .nav__toggle-bar::before { top: -7px; }
 .nav__toggle-bar::after { top: 7px; }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
     .nav__toggle { display: block; }
     .nav__links {
         position: absolute; top: 100%; left: 0; right: 0;
@@ -234,6 +236,7 @@ a:hover { text-decoration-color: var(--rose); }
 .about__subhead {
     font-family: var(--display);
     font-size: var(--step-2);
+    line-height: 1.15;
     margin: 2rem 0 1rem;
 }
 .about__now .about__subhead { margin-top: 0.4rem; }
@@ -420,6 +423,20 @@ a:hover { text-decoration-color: var(--rose); }
 .pub__authors strong { font-weight: 600; }
 .pub__venue { font-weight: 600; color: var(--rose); margin: 0; }
 .pub-note { margin-top: 1rem; font-size: var(--step--1); }
+
+/* ---------- exhibitions & honors ---------- */
+.recognition { background: var(--paper-dim); }
+.recognition__grid {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem clamp(2rem, 6vw, 5rem); margin-top: 1rem;
+}
+.recognition__head { font-family: var(--display); font-size: var(--step-1); margin: 0 0 0.5rem; }
+.recognition__list + .recognition__head { margin-top: 2rem; }
+.recognition__list { list-style: none; margin: 0; padding: 0; border-top: 1px solid rgba(21, 32, 27, 0.18); }
+.recognition__list li { padding: 0.8rem 0; border-bottom: 1px solid rgba(21, 32, 27, 0.18); }
+.recognition__list strong { display: block; font-weight: 600; }
+.recognition__note { margin: 1.5rem 0 0; font-size: var(--step--1); }
+@media (max-width: 760px) { .recognition__grid { grid-template-columns: minmax(0, 1fr); } }
 
 /* ---------- initiatives ---------- */
 .initiatives { background: var(--forest); color: var(--paper); }
