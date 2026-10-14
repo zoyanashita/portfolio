@@ -33,9 +33,9 @@
             <ul class="nav__links" id="navLinks">
                 <li><a href="#about">About</a></li>
                 <li><a href="#work">Work</a></li>
-                <li><a href="#publications">Papers</a></li>
+                <!-- <li><a href="#publications">Papers</a></li> (papers are in the combined section for now) -->
                 <li><a href="#initiatives">Leadership</a></li>
-                <li><a href="#honors">Honors</a></li>
+                <li><a href="#honors">Papers &amp; Honors</a></li>
                 <li><a href="#art">Art</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <!-- TODO: add the PUBLIC CV (no under-review project details) as assets/Zoya_Rahman_CV.pdf before launch -->
@@ -58,9 +58,9 @@
                     </h1>
 
                     <p class="hero__lede">
-                        I'm an HCI researcher at the University of Maryland building capture and rendering systems for
+                        I'm an undergraduate HCI researcher at the University of Maryland building capture and rendering systems for
                         embodied interaction that adapt to the people using them, prioritizing what they perceive over
-                        pixel-level accuracy. I build the physical systems and run the user studies to test them.
+                        pixel-level accuracy. My research spans HCI, computer vision, and immersive media design. 
                     </p>
 
                     <ul class="hero__links">
@@ -145,19 +145,19 @@
                     <h3 class="about__subhead" id="nowTitle">Current activities <span class="nowrap">(Fall 2026)</span></h3>
                     <ul class="now-list">
                         <li>
-                            <strong>Undergraduate research assistant</strong>
+                            <strong>Undergraduate Research Assistant</strong>
                             Embodied Dynamics Laboratory, with Dr. Jun Nishida
                         </li>
                         <li>
-                            <strong>Independent researcher</strong>
+                            <strong>Independent Researcher</strong>
                             Iceberg 3D reconstruction, with Prof. Cy Keener
                         </li>
                         <li>
-                            <strong>Undergraduate research assistant</strong>
+                            <strong>Undergraduate Research Assistant</strong>
                             Protein structure representation learning, FAIR Lab, with Dr. Fardina F. Alam
                         </li>
                         <li>
-                            <strong>Peer advisor</strong>
+                            <strong>Peer Advisor</strong>
                             Immersive Media Design Undergraduate Administrative Services
                         </li>
                         <li>
@@ -165,7 +165,7 @@
                             Association for Women in Computing at UMD
                         </li>
                         <li>
-                            <strong>Co-president</strong>
+                            <strong>Co-President</strong>
                             IMMERSE
                         </li>
                     </ul>
@@ -197,7 +197,7 @@
 
                 <!-- ---------- RESEARCH & CS ---------- -->
                 <div class="tab-panel" role="tabpanel" id="panel-research" aria-labelledby="tab-research">
-                    <p class="tab-panel__intro">Research positions and technical projects, with my role in each.</p>
+                    <p class="tab-panel__intro">Research positions and technical projects featuring my role in each.</p>
 
                     <div class="splide project-splide" aria-label="Research and computer science projects">
                         <div class="splide__track">
@@ -208,6 +208,7 @@
                                     <article class="project">
                                         <div class="project__media">
                                             <img src="assets/images/SURC Poster Presentation.png" alt="SURC Poster Presentation" loading="lazy">
+                                            <p class="project__credit">Figure: Pipeline of PACE OCI data input for plankton bloom estimation and classification, made in Illustrator by me.</p>
                                         </div>
                                         <div class="project__body">
                                             <p class="project__lens">Initiative</p>
@@ -249,24 +250,28 @@
                                             <p class="project__summary">The EmD Lab engineers on-body interfaces that change how people perceive, learn, and share physical skills. I work on two of its human-subjects studies.</p>
                                             <dl class="project__facts">
                                                 <div>
+                                                    <dt>My role</dt>
+                                                    <dd>I build study software and experimental conditions in Unity (C#) for Meta Quest 3, including a blur-based view-filtering effect grounded in visual-attention research. I also fabricate study hardware in Autodesk Fusion, set up and pilot-test studies, run participant sessions, and help annotate and analyze the data.</dd>
+                                                </div>
+                                                <div>
                                                     <dt>Wearable perception study</dt>
-                                                    <dd>A study of wearable displays that change what the wearer sees during a task, measured through physiological sensing and self-report. I developed software for the Meta Quest baseline condition and help run study sessions.</dd>
+                                                    <dd>A study of wearable displays that change what the wearer sees during a task, measured through physiological sensing and self-report.</dd>
                                                 </div>
                                                 <div>
                                                     <dt>Embodied skill study</dt>
-                                                    <dd>A study in preparation on how wearable sensing (eye, head, and wrist tracking) captures hesitation during skilled physical tasks. <span class="todo">Your role, described generally.</span></dd>
+                                                    <dd>A study in preparation on how wearable sensing (eye, head, and wrist tracking) captures hesitation during skilled physical tasks.</dd>
                                                 </div>
                                                 <div>
                                                     <dt>Tools</dt>
-                                                    <dd>Meta Quest, eye tracking, physiological sensors, <span class="todo">your software stack</span></dd>
+                                                    <dd>Unity, C#, Meta Quest 3, Autodesk Fusion, eye tracking, physiological sensing (heart-rate variability, skin conductance)</dd>
                                                 </div>
                                                 <div>
                                                     <dt>Timeline</dt>
-                                                    <dd><span class="todo">Start date</span> to present</dd>
+                                                    <dd>August 2026 to present</dd>
                                                 </div>
                                             </dl>
                                             <ul class="project__links">
-                                                <li><a href="#"><span class="todo">Lab website</span></a></li>
+                                                <li><a href="https://emd.cs.umd.edu/">Lab Website</a></li>
                                             </ul>
                                         </div>
                                     </article>
@@ -276,7 +281,8 @@
                                 <li class="splide__slide">
                                     <article class="project">
                                         <div class="project__media">
-                                            <img src="assets/images/Fardina.png" alt="SuperFoldAE Photo" loading="lazy">
+                                            <img src="assets/images/Fardina.png" alt="Architecture diagram of SuperFoldAE, a supervised autoencoder for protein fold classification (S. Patre et al., 2025)" loading="lazy">
+                                            <p class="project__credit">Figure: SuperFoldAE architecture, from S. Patre et al., 2025, the lab's first published work in this line of research.</p>
                                         </div>
                                         <div class="project__body">
                                             <p class="project__context">Undergraduate research assistant, FAIR Lab, advised by Dr. Fardina F. Alam</p>
@@ -309,23 +315,47 @@
                                 <li class="splide__slide">
                                     <article class="project">
                                         <div class="project__media">
-                                            <div class="media-ph" role="img" aria-label="Placeholder for iceberg reconstruction image">
-                                                Camera frame beside sonar data, or a reconstruction
-                                            </div>
+                                            <img src="assets/images/iceberg.jpeg" alt="Placeholder for iceberg reconstruction image" loading="lazy">
                                         </div>
                                         <div class="project__body">
                                             <p class="project__lens">Fundamentals</p>
                                             <p class="project__context">Independent undergraduate research, advised by Prof. Cy Keener</p>
                                             <h3 class="project__title">Iceberg 3D reconstruction</h3>
-                                            <p class="project__summary">A feasibility study testing whether existing camera imagery and sonar data collected from vessels can support 3D reconstruction of floating icebergs.</p>
+                                            <p class="project__summary">A feasibility study testing whether camera imagery and sonar data that vessels already collect can support 3D reconstruction of floating icebergs, without a dedicated capture campaign.</p>
+                                            <div class="project__pipeline" role="group" aria-label="How the iceberg reconstruction works">
+                                                <div class="pipeline__lane">
+                                                    <span class="pipeline__label">Imagery</span>
+                                                    <ol class="pipeline__steps">
+                                                        <li>Vessel camera footage</li>
+                                                        <li>Preprocessing</li>
+                                                        <li>Photogrammetry and NeRF</li>
+                                                    </ol>
+                                                </div>
+                                                <div class="pipeline__lane">
+                                                    <span class="pipeline__label">Sonar</span>
+                                                    <ol class="pipeline__steps">
+                                                        <li>Sonar data</li>
+                                                        <li>Preprocessing</li>
+                                                        <li>Alignment with imagery</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
                                             <dl class="project__facts">
                                                 <div>
+                                                    <dt>Research question</dt>
+                                                    <dd>Can imagery and sonar that vessels already collect support 3D reconstruction of floating icebergs?</dd>
+                                                </div>
+                                                <div>
                                                     <dt>Fundamentals</dt>
-                                                    <dd>Preprocessing and aligning the image and sonar data: the groundwork every reconstruction method here depends on.</dd>
+                                                    <dd>Preprocessing and aligning the camera and sonar data: the groundwork every reconstruction method here depends on.</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Approach</dt>
+                                                    <dd>I am reproducing a vessel-based underwater photogrammetry approach, and extending prior neural radiance field (NeRF) work on Arctic ice reconstruction.</dd>
                                                 </div>
                                                 <div>
                                                     <dt>My role</dt>
-                                                    <dd>Independent researcher. I am reproducing a vessel-based underwater photogrammetry approach and extending prior neural radiance field (NeRF) work on Arctic ice reconstruction.</dd>
+                                                    <dd>Independent researcher, advised by Prof. Cy Keener.</dd>
                                                 </div>
                                                 <div>
                                                     <dt>Tools</dt>
@@ -408,7 +438,6 @@
                                         </div>
                                     </article>
                                 </li> -->
-
                             </ul>
                         </div>
                     </div>
@@ -438,7 +467,7 @@
                                             <dl class="project__facts">
                                                 <div>
                                                     <dt>The creative decision</dt>
-                                                    <dd>Rather than aiming for a faithful 3D replica, I chose to render each visitor as a painterly, dissolving portrait, so the reconstruction itself expresses the idea that a person can't be fixed in a single capture. <span class="todo">Confirm or rewrite in your own words.</span></dd>
+                                                    <dd>Early tests with four cameras failed both visually and geometrically. At seven, appearance held up near the input views while the underlying geometry dissolved and deformed. I chose to keep the seven-camera array and let that dissolve become the portrait itself, since it expressed the piece's idea of a self that can't be fixed in a single capture.</dd>
                                                 </div>
                                                 <div>
                                                     <dt>Research question</dt>
@@ -450,7 +479,7 @@
                                                 </div>
                                                 <div>
                                                     <dt>Finding</dt>
-                                                    <dd>A seven-camera array produced visually convincing reconstructions with deformed geometry, which motivates my research on human-aligned reconstruction.</dd>
+                                                    <dd>Visitors responded positively to the portraits despite their poor geometry, and some older visitors said they reminded them of photos from the early 2000s. That gap between geometric accuracy and what people notice now drives my research on human-aligned reconstruction.</dd>
                                                 </div>
                                                 <div>
                                                     <dt>Exhibitions</dt>
@@ -465,7 +494,6 @@
                                                     <dd>Summer 2026</dd>
                                                 </div>
                                             </dl>
-                                            <p class="project__status">Documentation coming soon.</p>
                                         </div>
                                     </article>
                                 </li>
@@ -474,22 +502,48 @@
                                 <li class="splide__slide">
                                     <article class="project">
                                         <div class="project__media">
-                                            <!-- MP4 plays in every browser; the .mov is a Safari-only fallback until you convert it -->
                                             <video autoplay muted loop playsinline preload="metadata"
                                                 aria-label="Particle cells with trails following a viewer's hands in Into the Veins"
-                                                style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; background: var(--ink);">
+                                                class="project__video">
                                                 <source src="assets/touchdesigner/blood.mp4" type="video/mp4">
                                                 <source src="assets/touchdesigner/blood.mov" type="video/quicktime">
                                             </video>
+                                            <p class="project__credit">Music: “SKINS” (instrumental) by DPR IAN.</p>
                                         </div>
                                         <div class="project__body">
                                             <p class="project__context">Independent final project, ARTT 370</p>
                                             <h3 class="project__title">Into the Veins</h3>
-                                            <p class="project__summary">A real-time interactive animation in which particle "cells" with trails follow each of the viewer's hands, set against a background that moves with the score.</p>
+                                            <p class="project__summary">An interactive installation: stand in front of the screen, wave your hands, and two streams of glowing cells follow them through a pulsing, vein-like space.</p>
+                                            <div class="project__pipeline" role="group" aria-label="How Into the Veins works">
+                                                <div class="pipeline__lane">
+                                                    <span class="pipeline__label">Hands</span>
+                                                    <ol class="pipeline__steps">
+                                                        <li>Camera</li>
+                                                        <li>MediaPipe hand tracking</li>
+                                                        <li>Particle trails per hand</li>
+                                                    </ol>
+                                                </div>
+                                                <div class="pipeline__lane">
+                                                    <span class="pipeline__label">Sound</span>
+                                                    <ol class="pipeline__steps">
+                                                        <li>Score</li>
+                                                        <li>Audio amplitude</li>
+                                                        <li>Background motion</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
                                             <dl class="project__facts">
                                                 <div>
+                                                    <dt>Concept</dt>
+                                                    <dd>The piece imagines being inside a blood vessel. White cells with trailing tails drift through a red, vein-like space, and the viewer's hands become the current that steers them.</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>The experience</dt>
+                                                    <dd>Each hand spawns its own stream of cells that follows it, so two hands create two separate trails. The background pulses with the amplitude of the instrumental of DPR IAN’s “SKINS.”</dd>
+                                                </div>
+                                                <div>
                                                     <dt>What I built</dt>
-                                                    <dd>MediaPipe hand tracking driving an independent particle-trail system for each hand, plus a background animation driven by the audio amplitude of the score, for an audio-reactive environment.</dd>
+                                                    <dd>MediaPipe hand tracking driving an independent particle-trail system for each hand, plus an audio-reactive background driven by the score's amplitude.</dd>
                                                 </div>
                                                 <div>
                                                     <dt>Exhibition</dt>
@@ -595,6 +649,7 @@
         </section>
 
         <!-- ============ PAPERS (general descriptions only while under review) ============ -->
+        <!-- Hidden for now: papers are listed in "Papers, exhibitions, and honors" below.
         <section id="publications" class="section publications">
             <div class="wrap">
                 <h2 class="section-title">Papers</h2>
@@ -618,12 +673,13 @@
                 <p class="pub-note">* Co-first author. Titles generalized and co-authors omitted for confidentiality during review.</p>
             </div>
         </section>
+        -->
 
         <!-- ============ TEACHING & INITIATIVES ============ -->
         <section id="initiatives" class="section initiatives">
             <div class="wrap">
                 <h2 class="section-title">Leadership &amp; initiatives</h2>
-                <p class="section-intro">Organizations I've built and led, and the students I've supported along the way.</p>
+                <p class="section-intro">Organizations and roles I've taken on, supporting accessibility and entry for students in creative-technical fields.</p>
 
                 <div class="splide" id="initiativeSplide" aria-label="Leadership and initiatives">
                     <div class="splide__track">
@@ -633,29 +689,51 @@
                                     <p class="initiative__role">Co-president, September 2025 to present</p>
                                     <h3 class="initiative__title">IMMERSE</h3>
                                     <p class="initiative__sub">Immersive Media Makers Exploring Reality, Simulation, and Experience</p>
-                                    <p>I led the transition of IMD's student advisory board into an independent student organization for art and technology. I wrote its constitution and executive and committee structure, secured $1,000 in departmental funding to launch flagship events, and designed its website and brand. We've grown to 100+ students across our channels, with average event attendance of 40+, including students outside the major.</p>
+                                    <p class="initiative__summary">I turned a departmental advisory board into an independent student organization for art and technology, building it from the ground up.</p>
+                                    <ul class="initiative__points">
+                                        <li>Wrote its constitution and leadership structure</li>
+                                        <li>Secured <strong>$1,000</strong> to launch flagship events</li>
+                                        <li>Built a <strong>100+</strong> member community, averaging <strong>40+</strong> per event</li>
+                                    </ul>
                                 </article>
                             </li>
                             <li class="splide__slide">
                                 <article class="initiative">
                                     <p class="initiative__role">Peer advisor, July 2026 to present</p>
-                                    <h3 class="initiative__title">IMD Administrative Services</h3>
-                                    <p class="initiative__sub">The department's only peer advisor</p>
-                                    <p>I advised about 30 current and prospective students in my first three months on four-year plans, scheduling, and course selection. I'm the student point of contact during departmental transitions and staffing gaps, helped interview candidates for new administrative staff, support outreach like open houses, and have spoken at the department's senior capstone showcase.</p>
+                                    <h3 class="initiative__title">IMD Advising</h3>
+                                    <p class="initiative__sub">Immersive Media Design Undergraduate Administrative Services</p>
+                                    <p class="initiative__summary">As the department's only peer advisor, I'm often the first person students turn to, especially during staffing transitions.</p>
+                                    <ul class="initiative__points">
+                                        <li>Advised <strong>~30</strong> students in my first three months</li>
+                                        <li>Helped interview and hire new administrative staff</li>
+                                        <li>Represent the major at open houses and outreach</li>
+                                    </ul>
                                 </article>
                             </li>
                             <li class="splide__slide">
                                 <article class="initiative">
                                     <p class="initiative__role">Co-Director of Design, June 2025 to present</p>
-                                    <h3 class="initiative__title">Association for Women in Computing</h3>
-                                    <p>I lead AWC's visual identity, website UI/UX, and front-end development. I also manage and mentor the design team: delegating work, running regular check-ins, and serving as liaison to the executive board.</p>
+                                    <h3 class="initiative__title">AWC</h3>
+                                    <p class="initiative__sub">Association for Women in Computing at UMD</p>
+                                    <p class="initiative__summary">I set the direction for AWC's visual identity and lead the design team that carries it out.</p>
+                                    <ul class="initiative__points">
+                                        <li>Mentor designers and delegate the team's work</li>
+                                        <li>Represent design in <strong>weekly</strong> executive board meetings</li>
+                                        <li>Own the brand across web, social media, and merchandise</li>
+                                    </ul>
                                 </article>
                             </li>
                             <li class="splide__slide">
                                 <article class="initiative">
                                     <p class="initiative__role">Teaching assistant, Spring 2026</p>
-                                    <h3 class="initiative__title">IMDM 290: Collaborative Studio I</h3>
-                                    <p>A capstone course built on Unity (C#) and collaborative GitHub workflows. I supported a 28-student section, held office hours four days a week, met with six project groups twice weekly, documented lectures for absent students, and led lecture when the professor was away.</p>
+                                    <h3 class="initiative__title">IMDM 290</h3>
+                                    <p class="initiative__sub">Collaborative Studio I: Image + Time</p>
+                                    <p class="initiative__summary">I helped guide student teams through a capstone studio built on Unity and collaborative GitHub workflows.</p>
+                                    <ul class="initiative__points">
+                                        <li>Mentored <strong>6</strong> project groups, meeting twice weekly</li>
+                                        <li>Supported a <strong>28</strong>-student section with office hours four days a week</li>
+                                        <li>Led lecture when the professor was away</li>
+                                    </ul>
                                 </article>
                             </li>
                         </ul>
@@ -664,33 +742,42 @@
             </div>
         </section>
 
-        <!-- ============ EXHIBITIONS & HONORS ============ -->
+        <!-- ============ PAPERS, EXHIBITIONS & HONORS ============ -->
         <section id="honors" class="section recognition">
             <div class="wrap">
-                <h2 class="section-title">Exhibitions &amp; honors</h2>
+                <h2 class="section-title">Papers, exhibitions, and honors</h2>
                 <div class="recognition__grid">
-                    <div>
-                        <h3 class="recognition__head">Exhibitions</h3>
+                    <div class="recognition__col">
+                        <h3 class="recognition__head">Papers <span class="recognition__count">3</span></h3>
                         <ul class="recognition__list">
-                            <li><strong>Into the Veins</strong>Ongoing display, Immersive Media Design Department, July 2026 to present</li>
-                            <li><strong>Memento of Self</strong>New Works Incubator Showcase, Summer 2026</li>
-                            <li><strong>Memento of Self</strong>Henson Mania: A Night of Art, Innovation &amp; Imagination, Summer 2026</li>
-                            <li><strong>Telekinesis: Give Me a Hand</strong>Immersive Media Design Showcase, Spring 2025</li>
+                            <li class="rec"><h4 class="rec__title">Deep learning for satellite-based plankton estimation</h4><p class="rec__meta"><b>Z. Rahman</b> (first author) et al.</p><span class="rec__status">Under review, 2026</span></li>
+                            <li class="rec"><h4 class="rec__title">Representation learning for protein structure</h4><p class="rec__meta"><b>Z. Rahman*</b> et al.</p><span class="rec__status">Under review, 2026</span></li>
+                            <li class="rec"><h4 class="rec__title">Probabilistic representation learning for protein structure</h4><p class="rec__meta"><b>Z. Rahman*</b> et al.</p><span class="rec__status">Under review, 2026</span></li>
+                        </ul>
+                        <p class="recognition__fine">* Co-first author. Titles generalized and co-authors omitted for confidentiality during review.</p>
+                    </div>
+                    <div class="recognition__col">
+                        <h3 class="recognition__head">Exhibitions <span class="recognition__count">4</span></h3>
+                        <ul class="recognition__list">
+                            <li class="rec"><h4 class="rec__title">Into the Veins</h4><p class="rec__meta">Ongoing display, Immersive Media Design Department</p><span class="rec__date">July 2026 to present</span></li>
+                            <li class="rec"><h4 class="rec__title">Memento of Self</h4><p class="rec__meta">New Works Incubator Showcase</p><span class="rec__date">Summer 2026</span></li>
+                            <li class="rec"><h4 class="rec__title">Memento of Self</h4><p class="rec__meta">Henson Mania: A Night of Art, Innovation &amp; Imagination</p><span class="rec__date">Summer 2026</span></li>
+                            <li class="rec"><h4 class="rec__title">Telekinesis: Give Me a Hand</h4><p class="rec__meta">Immersive Media Design Showcase</p><span class="rec__date">Spring 2025</span></li>
                         </ul>
                     </div>
-                    <div>
+                    <div class="recognition__col">
                         <h3 class="recognition__head">Presentations</h3>
                         <ul class="recognition__list">
-                            <li><strong>Poster presentation</strong>Satellite-based plankton research, Student Undergraduate Research Conference (SURC), July 2026</li>
+                            <li class="rec"><h4 class="rec__title">Poster presentation</h4><p class="rec__meta">Satellite-based plankton research, Student Undergraduate Research Conference (SURC)</p><span class="rec__date">July 2026</span></li>
                         </ul>
-                        <h3 class="recognition__head">Honors</h3>
+                        <h3 class="recognition__head recognition__head--spaced">Honors</h3>
                         <ul class="recognition__list">
-                            <li><strong>Selected Student Speaker</strong>Immersive Media Design Senior Capstone Exhibition, Spring 2026. Chosen from the junior class for demonstrated departmental leadership.</li>
-                            <li><strong>Dean's List</strong>College of Computer, Mathematical, and Natural Sciences and College of Arts and Humanities: Spring 2025, Fall 2025, Spring 2026</li>
+                            <li class="rec"><h4 class="rec__title">Selected Student Speaker</h4><p class="rec__meta">Immersive Media Design Senior Capstone Exhibition. Chosen from the junior class for demonstrated departmental leadership.</p><span class="rec__date">Spring 2026</span></li>
+                            <li class="rec"><h4 class="rec__title">Dean's List</h4><p class="rec__meta">College of Computer, Mathematical, and Natural Sciences and College of Arts and Humanities</p><span class="rec__date">Spring 2025, Fall 2025, Spring 2026</span></li>
                         </ul>
                     </div>
                 </div>
-                <p class="recognition__note">All at the University of Maryland.</p>
+                <p class="recognition__note">Exhibitions, presentations, and honors are all at the University of Maryland.</p>
             </div>
         </section>
 
@@ -700,7 +787,7 @@
                 <div class="art__head">
                     <div>
                         <h2 class="section-title">Art archive</h2>
-                        <p class="section-intro" id="artCaption">Favorite pieces across drawing, motion, and graphic
+                        <p class="section-intro" id="artCaption">Fun pieces across drawing, motion, and graphic
                             design.</p>
                     </div>
 
@@ -720,10 +807,10 @@
                             <li class="splide__slide" data-category="misc">
                                 <button class="art-tile" type="button" data-type="video"
                                     data-src="assets/images/old-portfolio/ARTT 110 Final copy.mp4"
-                                    data-title="Hand-drawn headphones animation">
+                                    data-title="Hand-drawn headphones animation (pencil)">
                                     <video muted loop playsinline autoplay preload="metadata"
                                         src="assets/images/old-portfolio/ARTT 110 Final copy.mp4"></video>
-                                    <span class="art-tile__label">Hand-drawn headphones animation</span>
+                                    <span class="art-tile__label">Hand-drawn headphones animation (pencil)</span>
                                 </button>
                             </li>
                             <li class="splide__slide" data-category="touchdesigner">
@@ -754,13 +841,13 @@
                             <li class="splide__slide" data-category="misc">
                                 <button class="art-tile" type="button" data-type="image"
                                     data-src="assets/images/old-portfolio/Self Portrait.jpeg"
-                                    data-title="Self-portrait drawing">
+                                    data-title="Self-portrait drawing (pencil)">
                                     <img src="assets/images/old-portfolio/Self Portrait.jpeg" alt="Self-portrait drawing"
                                         loading="lazy">
-                                    <span class="art-tile__label">Self-portrait drawing</span>
+                                    <span class="art-tile__label">Self-portrait drawing (pencil)</span>
                                 </button>
                             </li>
-                            <li class="splide__slide" data-category="misc">
+                            <li class="splide__slide" data-category="all">
                                 <button class="art-tile" type="button" data-type="image"
                                     data-src="assets/images/old-portfolio/Quick Animation.gif" data-title="Pig animation">
                                     <img src="assets/images/old-portfolio/Quick Animation.gif" alt="Pig animation"
@@ -770,13 +857,13 @@
                             </li>
                             <li class="splide__slide" data-category="misc">
                                 <button class="art-tile" type="button" data-type="image"
-                                    data-src="assets/images/old-portfolio/Surrealist.jpeg" data-title="Surrealist drawing">
+                                    data-src="assets/images/old-portfolio/Surrealist.jpeg" data-title="Surrealist drawing (photoshop)">
                                     <img src="assets/images/old-portfolio/Surrealist.jpeg" alt="Surrealist drawing"
                                         loading="lazy">
-                                    <span class="art-tile__label">Surrealist drawing</span>
+                                    <span class="art-tile__label">Surrealist (photoshop)</span>
                                 </button>
                             </li>
-                            <li class="splide__slide" data-category="misc">
+                            <li class="splide__slide" data-category="all">
                                 <button class="art-tile" type="button" data-type="image"
                                     data-src="assets/images/old-portfolio/pig.JPEG" data-title="Pig drawing">
                                     <img src="assets/images/old-portfolio/pig.JPEG" alt="Pig drawing" loading="lazy">
@@ -795,10 +882,10 @@
                                 <!-- Check this filename's case: GitHub Pages treats .JPG and .jpg as different files -->
                                 <button class="art-tile" type="button" data-type="image"
                                     data-src="assets/images/old-portfolio/ARTT110 Reduction.JPG"
-                                    data-title="Reduction drawing">
+                                    data-title="Reduction drawing (charcoal)">
                                     <img src="assets/images/old-portfolio/ARTT110 Reduction.JPG" alt="Reduction drawing"
                                         loading="lazy">
-                                    <span class="art-tile__label">Reduction drawing</span>
+                                    <span class="art-tile__label">Reduction drawing (charcoal)</span>
                                 </button>
                             </li>
                             <li class="splide__slide" data-category="touchdesigner">
@@ -811,46 +898,37 @@
                             </li>
                             <li class="splide__slide" data-category="misc">
                                 <button class="art-tile" type="button" data-type="image"
-                                    data-src="assets/images/old-portfolio/Fruits.JPG" data-title="Fruit still life">
-                                    <img src="assets/images/old-portfolio/Fruits.JPG" alt="Fruit still life drawing"
+                                    data-src="assets/images/old-portfolio/Fruits.JPG" data-title="Fruit still life (oil pastel)">
+                                    <img src="assets/images/old-portfolio/Fruits.JPG" alt="Fruit still life (oil pastel)"
                                         loading="lazy">
-                                    <span class="art-tile__label">Fruit still life</span>
+                                    <span class="art-tile__label">Fruit still life (oil pastel)</span>
                                 </button>
                             </li>
                             <li class="splide__slide" data-category="graphics">
                                 <button class="art-tile" type="button" data-type="image"
-                                    data-src="assets/images/AWC Graphic Scrap/btsONE.png"
-                                    data-title="AWC Behind the Scenes graphic">
-                                    <img src="assets/images/AWC Graphic Scrap/btsONE.png"
-                                        alt="AWC Behind the Scenes event graphic" loading="lazy">
-                                    <span class="art-tile__label">AWC Behind the Scenes, 1</span>
+                                    data-src="assets/images/graphic1.png"
+                                    data-title="AWC Keychain Night">
+                                    <img src="assets/images/graphic1.png"
+                                        alt="AWC Keychain Night" loading="lazy">
+                                    <span class="art-tile__label">AWC Keychain Night</span>
                                 </button>
                             </li>
                             <li class="splide__slide" data-category="graphics">
                                 <button class="art-tile" type="button" data-type="image"
-                                    data-src="assets/images/AWC Graphic Scrap/btsTWO.png"
-                                    data-title="AWC Behind the Scenes graphic">
-                                    <img src="assets/images/AWC Graphic Scrap/btsTWO.png"
-                                        alt="AWC Behind the Scenes event graphic, second version" loading="lazy">
-                                    <span class="art-tile__label">AWC Behind the Scenes, 2</span>
+                                    data-src="assets/images/graphic2.png"
+                                    data-title="AWC Merch Design">
+                                    <img src="assets/images/graphic2.png"
+                                        alt="AWC Merch Design" loading="lazy">
+                                    <span class="art-tile__label">AWC Merch Design</span>
                                 </button>
                             </li>
                             <li class="splide__slide" data-category="graphics">
                                 <button class="art-tile" type="button" data-type="image"
-                                    data-src="assets/images/AWC Graphic Scrap/cnONE.png"
-                                    data-title="AWC Casino Night graphic">
-                                    <img src="assets/images/AWC Graphic Scrap/cnONE.png" alt="AWC Casino Night event graphic"
+                                    data-src="assets/images/graphic3.png"
+                                    data-title="Join AWC Flyer">
+                                    <img src="assets/images/graphic3.png" alt="Join AWC Flye"
                                         loading="lazy">
-                                    <span class="art-tile__label">AWC Casino Night, 1</span>
-                                </button>
-                            </li>
-                            <li class="splide__slide" data-category="graphics">
-                                <button class="art-tile" type="button" data-type="image"
-                                    data-src="assets/images/AWC Graphic Scrap/cnTWO.png"
-                                    data-title="AWC Casino Night graphic">
-                                    <img src="assets/images/AWC Graphic Scrap/cnTWO.png"
-                                        alt="AWC Casino Night event graphic, second version" loading="lazy">
-                                    <span class="art-tile__label">AWC Casino Night, 2</span>
+                                    <span class="art-tile__label">Join AWC Flyer</span>
                                 </button>
                             </li>
                         </ul>

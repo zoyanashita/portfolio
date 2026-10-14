@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Every mounted carousel, keyed by its root element (used for hover + arrow keys)
+    const splideByRoot = new Map();
     const hasSplide = typeof Splide !== 'undefined';
 
     /* ---------- mobile nav ---------- */
@@ -41,7 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
         splide.on('mounted move resized', fitHeight);
         splide.mount();
         window.addEventListener('load', fitHeight);
+        // Images and videos keep their natural size, so refit once each one has loaded
+        el.querySelectorAll('img').forEach((m) => m.addEventListener('load', fitHeight));
+        el.querySelectorAll('video').forEach((m) => m.addEventListener('loadedmetadata', fitHeight));
         projectCarousels.set(panel, splide);
+        splideByRoot.set(el, splide);
     }
 
     /* ---------- tabs ---------- */
@@ -74,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* ---------- initiatives carousel ---------- */
     if (hasSplide) {
-        new Splide('#initiativeSplide', {
+        const initiativeSplide = new Splide('#initiativeSplide', {
             perPage: 3,
             gap: '2.5rem',
             pagination: false,
@@ -84,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 560: { perPage: 1 },
             },
         }).mount();
+        splideByRoot.set(document.getElementById('initiativeSplide'), initiativeSplide);
     }
 
     /* ---------- art archive: filter + lightbox ---------- */
@@ -94,8 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.querySelectorAll('.filter');
 
     const captions = {
-        all: 'Favorite pieces across drawing, motion, and graphic design.',
-        misc: 'Drawings, animation, and VR from my IMD coursework at UMD.',
+        all: 'Fun pieces across drawing, motion, and graphic design.',
+        misc: 'Drawings and VR from my art and IMD degree at UMD.',
         touchdesigner: 'Interactive visuals and motion studies built in TouchDesigner.',
         graphics: 'Event graphics for the Association for Women in Computing.',
     };
@@ -128,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         });
         artSplide.mount();
+        splideByRoot.set(artRoot, artSplide);
     }
 
     filterButtons.forEach((btn) => {
@@ -143,6 +151,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const dialogTitle = document.getElementById('artDialogTitle');
     const dialogBody = document.getElementById('artDialogBody');
 
+    // YouTube player for the lightbox, with a fallback link in case embedding is blocked
+    function youtubeEmbed(id, title) {
+        const frag = document.createDocumentFragment();
+        const wrap = document.createElement('div');
+        wrap.className = 'yt';
+        const f = document.createElement('iframe');
+        f.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1`;
+        f.title = title || 'Video';
+        f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+        f.allowFullscreen = true;
+        f.referrerPolicy = 'strict-origin-when-cross-origin';
+        wrap.append(f);
+        const fallback = document.createElement('a');
+        fallback.className = 'lightbox__fallback';
+        fallback.href = `https://www.youtube.com/watch?v=${id}`;
+        fallback.target = '_blank';
+        fallback.rel = 'noopener';
+        fallback.textContent = 'Video not playing? Watch on YouTube';
+        frag.append(wrap, fallback);
+        return frag;
+    }
+
     // One listener on the list survives re-renders from filtering.
     artList.addEventListener('click', (e) => {
         const tile = e.target.closest('.art-tile');
@@ -157,15 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Object.assign(v, { src, controls: true, autoplay: true, muted: true, loop: true, playsInline: true });
             dialogBody.append(v);
         } else if (type === 'youtube') {
-            const wrap = document.createElement('div');
-            wrap.className = 'yt';
-            const f = document.createElement('iframe');
-            f.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`;
-            f.title = title || 'Video';
-            f.allow = 'autoplay; encrypted-media; picture-in-picture';
-            f.allowFullscreen = true;
-            wrap.append(f);
-            dialogBody.append(wrap);
+            dialogBody.append(youtubeEmbed(youtubeId, title));
         } else {
             const img = document.createElement('img');
             img.src = src;
@@ -178,4 +200,90 @@ document.addEventListener('DOMContentLoaded', () => {
     dialog.querySelector('.lightbox__close').addEventListener('click', () => dialog.close());
     dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
     dialog.addEventListener('close', () => dialogBody.replaceChildren()); // stops video/audio
+
+    /* ---------- work cards: YouTube thumbnails play in the lightbox ---------- */
+    document.querySelectorAll('.project__media a.video-thumb').forEach((link) => {
+        const match = link.href.match(/[?&]v=([\w-]{6,})/) || link.href.match(/youtu\.be\/([\w-]{6,})/);
+        if (!match) return;
+        const title = (link.querySelector('img')?.alt || 'Video').replace(/,? video thumbnail$/i, '');
+        link.addEventListener('click', (e) => {
+            if (e.metaKey || e.ctrlKey || e.shiftKey) return; // let modified clicks open YouTube in a new tab
+            e.preventDefault();
+            dialogTitle.textContent = title;
+            dialogBody.replaceChildren(youtubeEmbed(match[1], title));
+            dialog.showModal();
+        });
+    });
+
+    /* ---------- work cards: click an image or video to expand it ---------- */
+    document.querySelectorAll('.project__media > img, .project__media > video').forEach((media) => {
+        const label = media.getAttribute('alt') || media.getAttribute('aria-label') || 'Project media';
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'media-zoom';
+        btn.setAttribute('aria-label', `Expand: ${label}`);
+        media.replaceWith(btn);
+        btn.append(media);
+        const hint = document.createElement('span');
+        hint.className = 'media-zoom__hint';
+        hint.setAttribute('aria-hidden', 'true');
+        hint.textContent = 'Expand';
+        btn.append(hint);
+
+        btn.addEventListener('click', () => {
+            dialogTitle.textContent = label;
+            dialogBody.replaceChildren();
+            if (media.tagName === 'VIDEO') {
+                const v = document.createElement('video');
+                v.controls = true; v.autoplay = true; v.muted = true; v.loop = true; v.playsInline = true;
+                media.querySelectorAll('source').forEach((src) => v.append(src.cloneNode()));
+                if (media.getAttribute('src')) v.src = media.getAttribute('src');
+                dialogBody.append(v);
+            } else {
+                const img = document.createElement('img');
+                img.src = media.currentSrc || media.src;
+                img.alt = media.alt || '';
+                dialogBody.append(img);
+            }
+            dialog.showModal();
+        });
+    });
+
+    /* ---------- arrow keys move whichever carousel the pointer is over ---------- */
+    let hoveredSplide = null;
+    document.querySelectorAll('.splide').forEach((root) => {
+        root.addEventListener('mouseenter', () => { hoveredSplide = root; });
+        root.addEventListener('mouseleave', () => { if (hoveredSplide === root) hoveredSplide = null; });
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+        if (!hoveredSplide || dialog.open || e.altKey || e.ctrlKey || e.metaKey) return;
+        if (e.target.closest('input, textarea, select, [contenteditable="true"], [role="tab"]')) return;
+        const inst = splideByRoot.get(hoveredSplide);
+        if (!inst) return;
+        e.preventDefault();
+        inst.go(e.key === 'ArrowRight' ? '>' : '<');
+    });
+
+    /* ---------- in-page links: land with the section's content just below the header ---------- */
+    const header = document.querySelector('.site-header');
+    function scrollToSection(section, smooth) {
+        const content = section.querySelector('.wrap') || section;
+        const y = content.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 32;
+        window.scrollTo({ top: Math.max(0, y), behavior: smooth && !reduceMotion ? 'smooth' : 'auto' });
+    }
+    document.addEventListener('click', (e) => {
+        const link = e.target.closest('a[href^="#"]');
+        if (!link) return;
+        const id = link.getAttribute('href').slice(1);
+        const section = id && document.getElementById(id);
+        if (!section || section.tagName !== 'SECTION') return; // #top, #main etc. keep default behavior
+        e.preventDefault();
+        history.pushState(null, '', '#' + id);
+        scrollToSection(section, true);
+    });
+    window.addEventListener('load', () => {
+        const section = location.hash && document.getElementById(location.hash.slice(1));
+        if (section && section.tagName === 'SECTION') scrollToSection(section, false);
+    });
 });
